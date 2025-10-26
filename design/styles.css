@@ -58,7 +58,7 @@ button, a {
             'footer';
         height: 100vh;
         grid-template-columns: 1fr;
-        grid-template-rows: 3.6rem 1fr 1.5rem;
+        grid-template-rows: 3.6rem 1fr 1fr 1fr 1.5rem;
     }
 }
 
