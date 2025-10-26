@@ -125,6 +125,8 @@ button, a {
 .scoreboard {
     background-color: #FFA100;
     grid-area: scoreboard;
+    display: flex;
+    flex-direction: column;
 }
 
 .scoreboard-title {
