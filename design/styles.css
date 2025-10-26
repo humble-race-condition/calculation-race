@@ -1,0 +1,196 @@
+* {
+    margin: 0;
+    /*
+    When height or width of an element is set, this property makes it so that the border and padding are included
+    in the height or width value. If left default, the height and width are set for the content and the padding and border
+    are added after that, leading to a bigger element.
+    */
+    box-sizing: border-box;
+}
+
+html {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 16px;
+}
+
+body {
+    margin: 0;
+}
+
+button, a {
+    background: none;
+    border: none;
+    padding: 0;
+    margin: 0;
+    font: inherit;
+    color: inherit;
+    cursor: pointer;
+    text-decoration: none;
+}
+
+.primary-color {
+    color: #0066FF;
+    background-color: #FEFEFE;
+}
+
+.secondary-color {
+    background-color: #F3F3F3;
+}
+
+.primary-color-dark {
+    color: #FFA100;
+    background-color: #333333;
+}
+
+.secondary-color-dark {
+    color: #FFA100;
+    background-color: #333333;
+}
+
+@media (max-width: 991px) {
+    .container {
+        display: grid;
+        grid-template-areas:
+            'header'
+            'main'
+            'scoreboard'
+            'chat'
+            'footer';
+        height: 100vh;
+        grid-template-columns: 1fr;
+        grid-template-rows: 3.6rem 1fr 1.5rem;
+    }
+}
+
+/* Extra large devices (large desktops, 992px+) */
+@media (min-width: 992px) and (max-width: 1199px) {
+    .container {
+        display: grid;
+        grid-template-areas:
+            'header header header'
+            'scoreboard main chat'
+            'footer footer footer';
+        height: 100vh;
+        grid-template-columns: 2.5fr 5fr 2.5fr;
+        grid-template-rows: 3.6rem 1fr 1.5rem;
+    }
+}
+
+@media (min-width: 1200px) {
+    .container {
+        display: grid;
+        grid-template-areas:
+            'header header header'
+            'scoreboard main chat'
+            'footer footer footer';
+        height: 100vh;
+        grid-template-columns: 400px 1fr 400px;
+        grid-template-rows: 3.6rem 1fr 1.5rem;
+    }
+}
+
+.header {
+    grid-area: header;
+    padding: 1rem;
+    align-content: center;
+}
+
+.header ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: left;
+}
+
+.header ul li {
+    margin-right: 1.6rem;
+}
+
+.header ul li a {
+    text-decoration: none;
+    font-weight: normal;
+    font-size: 1.6rem;
+}
+
+.header ul li a:hover {
+    text-decoration: underline;
+    cursor: pointer;
+}
+
+.scoreboard {
+    background-color: #FFA100;
+    grid-area: scoreboard;
+}
+
+.scoreboard h1 {
+    padding: 1rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.scoreboard table {
+    width: 100%;
+}
+
+.scoreboard tr {
+    margin: 0.5rem 2rem 0.5rem;
+    padding: 0.5rem;
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+    align-items: center;
+}
+
+/*ToDo fix color*/
+.scoreboard .scoreboard-header {
+    border-bottom: 0.1rem solid black;
+}
+
+.scoreboard .scoreboard-position {
+    border: 0.1rem solid black;
+    border-radius: 1rem;
+}
+
+.scoreboard .position-column {
+    width: 2rem;
+    text-align: right;
+}
+
+.scoreboard .username-column {
+    width: 10rem;
+    text-align: center;
+}
+
+.scoreboard .score-column {
+    width: 3rem;
+    text-align: right;
+}
+
+
+/*.scoreboard .scoreboard-position td:first-child {*/
+/*    width: 2rem;*/
+/*    text-align: right;*/
+/*}*/
+
+/*.scoreboard .scoreboard-position td:last-child {*/
+/*    width: 4rem;*/
+/*    text-align: right;*/
+/*}*/
+
+
+.main {
+    background-color: crimson;
+    grid-area: main;
+}
+
+.chat {
+    background-color: aqua;
+    grid-area: chat;
+}
+
+.footer {
+    background-color: beige;
+    grid-area: footer;
+}
