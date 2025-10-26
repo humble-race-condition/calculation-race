@@ -47,7 +47,7 @@ button, a {
     background-color: #333333;
 }
 
-@media (max-width: 991px) {
+@media (max-width: 992px) {
     .container {
         display: grid;
         grid-template-areas:
@@ -63,7 +63,7 @@ button, a {
 }
 
 /* Extra large devices (large desktops, 992px+) */
-@media (min-width: 992px) and (max-width: 1199px) {
+@media (min-width: 993px) and (max-width: 1200px) {
     .container {
         display: grid;
         grid-template-areas:
@@ -76,7 +76,7 @@ button, a {
     }
 }
 
-@media (min-width: 1200px) {
+@media (min-width: 1201px) {
     .container {
         display: grid;
         grid-template-areas:
