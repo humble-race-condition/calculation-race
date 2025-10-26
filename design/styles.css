@@ -95,7 +95,7 @@ button, a {
     align-content: center;
 }
 
-.header ul {
+.header-list {
     list-style-type: none;
     margin: 0;
     padding: 0;
@@ -103,17 +103,17 @@ button, a {
     justify-content: left;
 }
 
-.header ul li {
+.header-list-element {
     margin-right: 1.6rem;
 }
 
-.header ul li a {
+.header-list-element-link {
     text-decoration: none;
     font-weight: normal;
     font-size: 1.6rem;
 }
 
-.header ul li a:hover {
+.header-list-element-link:hover {
     text-decoration: underline;
     cursor: pointer;
 }
@@ -123,18 +123,18 @@ button, a {
     grid-area: scoreboard;
 }
 
-.scoreboard h1 {
+.scoreboard-title {
     padding: 1rem;
     display: flex;
     justify-content: center;
     align-items: center;
 }
 
-.scoreboard table {
+.scoreboard-table {
     width: 100%;
 }
 
-.scoreboard tr {
+.scoreboard-row {
     margin: 0.5rem 2rem 0.5rem;
     padding: 0.5rem;
     display: flex;
@@ -144,41 +144,29 @@ button, a {
 }
 
 /*ToDo fix color*/
-.scoreboard .scoreboard-header {
+.scoreboard-header-border {
     border-bottom: 0.1rem solid black;
 }
 
-.scoreboard .scoreboard-position {
+.scoreboard-row-border {
     border: 0.1rem solid black;
     border-radius: 1rem;
 }
 
-.scoreboard .position-column {
+.scoreboard-table-position-column {
     width: 2rem;
     text-align: right;
 }
 
-.scoreboard .username-column {
+.scoreboard-table-username-column {
     width: 10rem;
     text-align: center;
 }
 
-.scoreboard .score-column {
+.scoreboard-table-score-column {
     width: 3rem;
     text-align: right;
 }
-
-
-/*.scoreboard .scoreboard-position td:first-child {*/
-/*    width: 2rem;*/
-/*    text-align: right;*/
-/*}*/
-
-/*.scoreboard .scoreboard-position td:last-child {*/
-/*    width: 4rem;*/
-/*    text-align: right;*/
-/*}*/
-
 
 .main {
     background-color: crimson;
