@@ -14,9 +14,7 @@ html {
 }
 
 body, html {
-    width: 100%;
     height: 100%;
-    padding: 0;
     margin: 0;
 }
 
@@ -74,7 +72,6 @@ button, a {
             'header header header'
             'scoreboard main chat'
             'footer footer footer';
-        height: 100vh;
         grid-template-columns: 2.5fr 5fr 2.5fr;
         grid-template-rows: 3.6rem 1fr 1.5rem;
     }
@@ -89,7 +86,7 @@ button, a {
             'footer footer footer';
         height: 100vh;
         grid-template-columns: 400px 1fr 400px;
-        grid-template-rows: 3.6rem 1fr 1.5rem;
+        grid-template-rows: 3.5rem 1fr 1.5rem;
     }
 }
 
@@ -122,6 +119,15 @@ button, a {
     cursor: pointer;
 }
 
+.panel-title {
+    height: 4rem;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 2rem;
+}
+
 .scoreboard {
     grid-area: scoreboard;
     height: calc(100vh - 5rem);
@@ -131,14 +137,7 @@ button, a {
     align-items: center;
 }
 
-.scoreboard-title {
-    height: 4rem;
-    width: 100%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    font-size: 2rem;
-}
+
 
 .scoreboard-header-table-wrapper {
     height: 4rem;
@@ -204,14 +203,6 @@ button, a {
     grid-area: main;
 }
 
-.main-title {
-    height: 4rem;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    font-size: 2rem;
-}
-
 .main-description {
     padding: 1rem;
     font-size: 1.6rem;
@@ -248,14 +239,6 @@ button, a {
     grid-area: chat;
     display: flex;
     flex-direction: column;
-}
-
-.chat-title {
-    height: 4rem;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    font-size: 2rem;
 }
 
 .chat-container-wrapper {
