@@ -176,6 +176,7 @@ button, a {
     justify-content: center;
     align-items: start;
     overflow-y: auto;
+    scrollbar-gutter: stable;
 }
 
 .scoreboard-table-wrapper-position-column {
@@ -257,6 +258,7 @@ button, a {
     margin: 1rem;
     padding-top: 1rem;
     overflow-y: auto;
+    scrollbar-gutter: stable;
 }
 
 .chat-container::-webkit-scrollbar {
