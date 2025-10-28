@@ -179,7 +179,7 @@ button, a {
     scrollbar-gutter: stable;
 }
 
-.scoreboard-table-wrapper-position-column {
+.scoreboard-table-position-column {
     width: 2rem;
     text-align: right;
 }
@@ -296,3 +296,5 @@ button, a {
     background-color: beige;
     grid-area: footer;
 }
+
+/*gutter, media screen, vh na grid da se mahne*/
