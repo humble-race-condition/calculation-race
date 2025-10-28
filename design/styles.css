@@ -137,8 +137,6 @@ button, a {
     align-items: center;
 }
 
-
-
 .scoreboard-header-table-wrapper {
     height: 4rem;
     width: 100%;
@@ -150,14 +148,14 @@ button, a {
 .scoreboard-table {
     width: 100%;
 }
-
+/*ToDo fix scoreboard table body and scrollbar and styles*/
 .scoreboard-row {
     margin: 0.5rem 2rem 0.5rem;
     padding: 0.5rem;
     display: flex;
     justify-content: center;
-    gap: 1rem;
     align-items: center;
+    gap: 1rem;
 }
 
 /*ToDo fix color*/
@@ -174,8 +172,8 @@ button, a {
     height: calc(100% - 8rem);
     width: 100%;
     display: flex;
-    align-items: center;
     justify-content: center;
+    align-items: start;
     overflow-y: auto;
 }
 
