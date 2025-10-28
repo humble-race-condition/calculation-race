@@ -147,6 +147,7 @@ button, a {
 
 .scoreboard-table {
     width: 100%;
+    border-spacing: unset;
 }
 /*ToDo fix scoreboard table body and scrollbar and styles*/
 .scoreboard-row {
