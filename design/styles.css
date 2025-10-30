@@ -294,8 +294,10 @@ button, a {
 }
 
 .chat-message {
+    width: 100%;
     margin-bottom: 0.5rem;
     padding: 0.5rem;
+    text-align: left;
 }
 
 
