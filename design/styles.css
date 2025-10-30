@@ -289,11 +289,6 @@ button, a {
     background-color: rgba(128, 128, 128, 0.7);
 }
 
-/* Hover effect for the thumb */
-.chat-container::-webkit-scrollbar-thumb:hover {
-    background-color: #555;
-}
-
 .chat-message {
     margin-bottom: 0.5rem;
     padding: 0.5rem;
