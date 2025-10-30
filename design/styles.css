@@ -306,8 +306,12 @@ button, a {
 
 
 .footer {
+    padding: 0.5rem 0;
     background-color: beige;
     grid-area: footer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 /*gutter, media screen, vh na grid da se mahne*/
