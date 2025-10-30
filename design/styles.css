@@ -262,11 +262,12 @@ button, a {
 }
 
 .chat-container {
+    height: calc(100% - 4rem);
     display: flex;
     flex-direction: column;
-    height: 0;
-    flex-grow: 1;
-    margin: 1rem;
+    justify-content: flex-start;
+    align-items: center;
+    margin-right: 1rem;
     padding-top: 1rem;
 }
 
