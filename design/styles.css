@@ -1,28 +1,22 @@
 :root {
-    --main-color: white;
-    --secondary-color: black;
-    --border-color: #e1e9ea;
-    --border: 0.125rem solid var(--border-color);
+    --main-color: #ffffff;
+    --secondary-color: #121791;
+    --navigation-border-color: #e1e9ea;
+    --navigation-border: 0.125rem solid var(--navigation-border-color);
+    --element-border-color: #8b8c93;
+    --element-border: 0.125rem solid var(--element-border-color);
+    --secondary-font-size: 1.6rem;
 }
 
-.primary-color {
-    color: #0066FF;
-    background-color: white;
-}
+/*.primary-color-dark {*/
+/*    color: #FFA100;*/
+/*    background-color: #333333;*/
+/*}*/
 
-.secondary-color {
-    background-color: #F3F3F3;
-}
-
-.primary-color-dark {
-    color: #FFA100;
-    background-color: #333333;
-}
-
-.secondary-color-dark {
-    color: #FFA100;
-    background-color: #333333;
-}
+/*.secondary-color-dark {*/
+/*    color: #FFA100;*/
+/*    background-color: #333333;*/
+/*}*/
 
 * {
     margin: 0;
@@ -57,6 +51,10 @@ button, a {
     color: inherit;
     cursor: copy;
     text-decoration: underline;
+}
+
+.button {
+
 }
 
 @media (max-width: 992px) {
@@ -104,7 +102,7 @@ button, a {
     grid-area: header;
     padding: 1rem;
     align-content: center;
-    border-bottom: var(--border);
+    border-bottom: var(--navigation-border);
 }
 
 .header-list {
@@ -116,13 +114,13 @@ button, a {
 }
 
 .header-list-element {
-    margin-right: 1.6rem;
+    margin-right: var(--secondary-font-size);
 }
 
 .header-list-element-link {
     text-decoration: none;
     font-weight: normal;
-    font-size: 1.6rem;
+    font-size: var(--secondary-font-size);
 }
 
 .header-list-element-link:hover {
@@ -141,7 +139,7 @@ button, a {
 .scoreboard {
     grid-area: scoreboard;
     height: calc(100vh - 5rem);
-    border-right: var(--border);
+    border-right: var(--navigation-border);
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
@@ -172,11 +170,11 @@ button, a {
 
 /*ToDo fix color*/
 .scoreboard-header-border {
-    border-bottom: 0.1rem solid black;
+    border-bottom: var(--element-border);
 }
 
 .scoreboard-row-border {
-    border: 0.1rem solid black;
+    border: var(--element-border);
     border-radius: 1rem;
 }
 
@@ -223,14 +221,14 @@ button, a {
 
 .main-description {
     padding: 1rem;
-    font-size: 1.6rem;
+    font-size: var(--secondary-font-size);
     text-align: center;
 }
 
 .main-formula {
     padding: 1rem;
     margin-bottom: 5rem;
-    font-size: 1.6rem;
+    font-size: var(--secondary-font-size);
     text-align: center;
 }
 
@@ -238,24 +236,24 @@ button, a {
     padding: 0.5rem;
     margin-bottom: 1rem;
     height: 3.6rem;
-    font-size: 1.6rem;
+    font-size: var(--secondary-font-size);
     text-align: center;
-    border: 0.1rem solid black;
+    border: var(--element-border);
     border-radius: 1rem;
 }
 
 .main-button {
     margin-bottom: 5rem;
     padding: 1rem;
-    font-size: 1.6rem;
-    border: 0.1rem solid black;
+    font-size: var(--secondary-font-size);
+    border: var(--element-border);
     border-radius: 1rem;
     text-align: center;
 }
 
 .chat {
     height: calc(100vh - 5rem);
-    border-left: var(--border);
+    border-left: var(--navigation-border);
     grid-area: chat;
     flex-direction: column;
     justify-content: flex-start;
@@ -315,7 +313,7 @@ button, a {
 
 .footer {
     padding: 0.5rem 0;
-    border-top: var(--border);
+    border-top: var(--navigation-border);
     grid-area: footer;
     display: flex;
     justify-content: center;
