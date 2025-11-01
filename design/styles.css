@@ -1,3 +1,29 @@
+:root {
+    --main-color: white;
+    --secondary-color: black;
+    --border-color: #e1e9ea;
+    --border: 0.125rem solid var(--border-color);
+}
+
+.primary-color {
+    color: #0066FF;
+    background-color: white;
+}
+
+.secondary-color {
+    background-color: #F3F3F3;
+}
+
+.primary-color-dark {
+    color: #FFA100;
+    background-color: #333333;
+}
+
+.secondary-color-dark {
+    color: #FFA100;
+    background-color: #333333;
+}
+
 * {
     margin: 0;
     /*
@@ -16,9 +42,12 @@ html {
 body, html {
     height: 100%;
     margin: 0;
+    background-color: var(--main-color);
+    color: var(--secondary-color);
 }
 
-/* ToDo fix meee - combine with the other button styles */
+/* Disables default styles */
+/*ToDo see if these are needed. Just create two default styles... */
 button, a {
     background: none;
     border: none;
@@ -26,27 +55,8 @@ button, a {
     margin: 0;
     font: inherit;
     color: inherit;
-    cursor: pointer;
-    text-decoration: none;
-}
-
-.primary-color {
-    color: #0066FF;
-    background-color: #FEFEFE;
-}
-
-.secondary-color {
-    background-color: #F3F3F3;
-}
-
-.primary-color-dark {
-    color: #FFA100;
-    background-color: #333333;
-}
-
-.secondary-color-dark {
-    color: #FFA100;
-    background-color: #333333;
+    cursor: copy;
+    text-decoration: underline;
 }
 
 @media (max-width: 992px) {
@@ -94,6 +104,7 @@ button, a {
     grid-area: header;
     padding: 1rem;
     align-content: center;
+    border-bottom: var(--border);
 }
 
 .header-list {
@@ -130,7 +141,7 @@ button, a {
 .scoreboard {
     grid-area: scoreboard;
     height: calc(100vh - 5rem);
-    background-color: #FFA100;
+    border-right: var(--border);
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
@@ -207,7 +218,6 @@ button, a {
     flex-direction: column;
     justify-content: space-between;
     align-items: center;
-    background-color: lightyellow;
     grid-area: main;
 }
 
@@ -245,7 +255,7 @@ button, a {
 
 .chat {
     height: calc(100vh - 5rem);
-    background-color: aqua;
+    border-left: var(--border);
     grid-area: chat;
     flex-direction: column;
     justify-content: flex-start;
@@ -305,7 +315,7 @@ button, a {
 
 .footer {
     padding: 0.5rem 0;
-    background-color: beige;
+    border-top: var(--border);
     grid-area: footer;
     display: flex;
     justify-content: center;
