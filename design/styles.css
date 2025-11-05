@@ -2,8 +2,9 @@
     --background-color: #ffffff;
     --text-color: #121791;
     --navigation-border-color: #e1e9ea;
-    --navigation-border: 0.125rem solid var(--navigation-border-color);
     --element-border-color: #8b8c93;
+
+    --navigation-border: 0.125rem solid var(--navigation-border-color);
     --element-border: 0.125rem solid var(--element-border-color);
     --secondary-font-size: 1.6rem;
     --border-radius: 1rem;
@@ -21,6 +22,7 @@
 
 * {
     margin: 0;
+    padding: 0;
     /*
     When height or width of an element is set, this property makes it so that the border and padding are included
     in the height or width value. If left default, the height and width are set for the content and the padding and border
@@ -36,24 +38,25 @@ html {
 
 body, html {
     height: 100%;
-    margin: 0;
     background-color: var(--background-color);
     color: var(--text-color);
 }
 
 /* Disables default styles */
 /*ToDo see if these are needed. Just create two default styles... */
- a {
+a {
     background: none;
     border: none;
-    padding: 0;
-    margin: 0;
     font: inherit;
     color: inherit;
     cursor: copy;
-    text-decoration: underline;
+    text-decoration: none;
 }
 
+
+/* ToDo do on hover*/
+/* ToDo fix links */
+/* ToDo fix chat button and we should be done*/
 .button {
     padding: 1rem;
     background-color: var(--background-color);
@@ -64,6 +67,14 @@ body, html {
     text-align: center;
     text-decoration: none;
     cursor: pointer;
+    transition:
+            background-color .2s ease-out,
+            color .2s ease-out;
+}
+
+.button:hover {
+    background-color: var(--text-color);
+    color: var(--background-color);
 }
 
 @media screen and (max-width: 992px) {
@@ -133,7 +144,7 @@ body, html {
 }
 
 .header-list-element-link:hover {
-    text-decoration: underline;
+    text-decoration: none;
     cursor: pointer;
 }
 
@@ -167,6 +178,7 @@ body, html {
     width: 100%;
     border-spacing: unset;
 }
+
 /*ToDo fix scoreboard table body and scrollbar and styles*/
 .scoreboard-row {
     margin: 0.5rem 2rem 0.5rem;
