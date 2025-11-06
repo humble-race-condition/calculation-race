@@ -1,4 +1,5 @@
 :root {
+    /* can be overridden by a class for dark theme */
     --background-color: #ffffff;
     --text-color: #121791;
     --navigation-border-color: #e1e9ea;
@@ -114,13 +115,13 @@ a {
             'footer footer footer';
         height: 100vh;
         grid-template-columns: 400px 1fr 400px;
-        grid-template-rows: 3.5rem 1fr 1.5rem;
+        grid-template-rows: 3.6rem 1fr 1.5rem;
     }
 }
 
 .header {
     grid-area: header;
-    padding: 0.5rem 1rem;
+    padding: 0.5rem;
     display: flex;
     justify-content: start;
     align-items: center;
@@ -137,19 +138,28 @@ a {
 }
 
 .header-list-element {
-    padding: 0.5rem;
+    padding: 0.5rem 1rem;
     margin-right: 1rem;
+    color: var(--text-color);
+    background-color: var(--background-color);
+    border-radius: var(--border-radius);
+    transition:
+            background-color .2s ease-out,
+            color .2s ease-out;
+}
+
+.header-list-element:hover {
+    color: var(--background-color);
+    background-color: var(--text-color);
+    text-decoration: none;
+    cursor: pointer;
 }
 
 .header-list-element-link {
     text-decoration: none;
     font-weight: normal;
     font-size: var(--secondary-font-size);
-}
-
-.header-list-element-link:hover {
-    text-decoration: none;
-    cursor: pointer;
+    color: inherit;
 }
 
 .panel-title {
@@ -162,7 +172,7 @@ a {
 
 .scoreboard {
     grid-area: scoreboard;
-    height: calc(100vh - 5rem);
+    height: calc(100vh - 5.1rem);
     border-right: var(--navigation-border);
     display: flex;
     flex-direction: column;
@@ -272,7 +282,7 @@ a {
 }
 
 .chat {
-    height: calc(100vh - 5rem);
+    height: calc(100vh - 5.1rem);
     border-left: var(--navigation-border);
     grid-area: chat;
     flex-direction: column;
