@@ -43,20 +43,6 @@ body, html {
     color: var(--text-color);
 }
 
-/* Disables default styles */
-/*ToDo see if these are needed. Just create two default styles... */
-a {
-    background: none;
-    border: none;
-    font: inherit;
-    color: inherit;
-    cursor: copy;
-    text-decoration: none;
-}
-
-
-/* ToDo do on hover*/
-/* ToDo fix links */
 /* ToDo fix chat button and we should be done*/
 .button {
     padding: 1rem;
@@ -193,7 +179,6 @@ a {
     border-spacing: unset;
 }
 
-/*ToDo fix scoreboard table body and scrollbar and styles*/
 .scoreboard-row {
     margin: 0.5rem 2rem 0.5rem;
     padding: 0.5rem;
@@ -203,7 +188,6 @@ a {
     gap: 1rem;
 }
 
-/*ToDo fix color*/
 .scoreboard-header-border {
     border-bottom: var(--element-border);
 }
