@@ -133,10 +133,12 @@ a {
     padding: 0;
     display: flex;
     justify-content: left;
+    align-items: center;
 }
 
 .header-list-element {
-    margin-right: var(--secondary-font-size);
+    padding: 0.5rem;
+    margin-right: 1rem;
 }
 
 .header-list-element-link {
