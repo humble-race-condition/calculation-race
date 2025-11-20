@@ -245,13 +245,14 @@ body, html {
 .main {
     display: flex;
     flex-direction: column;
-    justify-content: space-between;
+    justify-content: start;
     align-items: center;
     grid-area: main;
 }
 
 .main-description {
     padding: 1rem;
+    margin-top: 1rem;
     font-size: var(--secondary-font-size);
     text-align: center;
 }
