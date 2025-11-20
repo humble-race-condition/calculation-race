@@ -7,6 +7,11 @@
     --navigation-border-color: #e1e9ea;
     --element-border-color: #121791;
 
+    /*--background-color: #333333;*/
+    /*--text-color: #FFA100;*/
+    /*--navigation-border-color: #444444;*/
+    /*--element-border-color: #FFA100;*/
+
     --navigation-border: 0.125rem solid var(--navigation-border-color);
     --element-border: 0.125rem solid var(--element-border-color);
     --secondary-font-size: 1.6rem;
@@ -24,16 +29,12 @@
     --chat-input-wrapper-height: 8rem;
 }
 
-/*TODO extract heights for elements in constants and reuse them*/
-/*.primary-color-dark {*/
-/*    color: #FFA100;*/
-/*    background-color: #333333;*/
-/*}*/
-
-/*.secondary-color-dark {*/
-/*    color: #FFA100;*/
-/*    background-color: #333333;*/
-/*}*/
+/*
+    --background-color: #333333;
+    --text-color: #FFA100;
+    --navigation-border-color: #444444;
+    --element-border-color: #FFA100;
+*/
 
 * {
     margin: 0;
@@ -57,7 +58,6 @@ body, html {
     color: var(--text-color);
 }
 
-/* ToDo fix chat button and we should be done*/
 .button {
     padding: 1rem;
     background-color: var(--background-color);
@@ -117,7 +117,6 @@ body, html {
     }
 }
 
-/*ToDo chat panel with not working*/
 .header {
     grid-area: header;
     padding: 0.5rem;
@@ -156,7 +155,7 @@ body, html {
     text-decoration: var(--text-decoration);
     font-weight: normal;
     font-size: var(--secondary-font-size);
-    color: var(--text-color);
+    color: inherit;
 }
 
 .panel-title {
@@ -270,6 +269,12 @@ body, html {
     text-align: center;
     border: var(--element-border);
     border-radius: var(--border-radius);
+    color: var(--text-color);
+    background-color: var(--background-color);
+}
+
+.main-input:hover {
+    outline: none;
 }
 
 .main-button {
@@ -301,12 +306,17 @@ body, html {
 .chat-input {
     padding: 1rem;
     color: var(--text-color);
+    background-color: var(--background-color);
     font-size: 1rem;
     border: var(--element-border);
     border-radius: var(--border-radius);
     height: 100%;
     width: 100%;
     resize: none;
+}
+
+.chat-input:hover {
+    outline: none;
 }
 
 .chat-messages-container {
