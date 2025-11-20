@@ -168,6 +168,15 @@ body, html {
     font-size: var(--panel-title-font-size);
 }
 
+.input-label {
+    padding: 1rem;
+    margin-bottom: 1.5rem;
+    height: var(--panel-title-height);
+    width: 100%;
+    text-align: center;
+    font-size: var(--panel-title-font-size);
+}
+
 .scoreboard {
     grid-area: scoreboard;
     height: calc(100vh - var(--header-height) - var(--footer-height));
