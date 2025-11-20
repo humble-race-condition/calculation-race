@@ -27,6 +27,7 @@
     --scoreboard-header-table-wrapper-height: 4rem;
     --main-input-height: 3.6rem;
     --chat-input-wrapper-height: 8rem;
+    --button-width: 300px;
 }
 
 /*
@@ -59,7 +60,8 @@ body, html {
 }
 
 .button {
-    padding: 1rem;
+    padding: 0.75rem 1rem;
+    width: var(--button-width);
     background-color: var(--background-color);
     color: var(--text-color);
     font-size: var(--secondary-font-size);
@@ -261,10 +263,11 @@ body, html {
     text-align: center;
 }
 
-.main-input {
+.base-text-input {
     padding: 0.5rem;
     margin-bottom: 1rem;
     height: var(--main-input-height);
+    width: var(--button-width);
     font-size: var(--secondary-font-size);
     text-align: center;
     border: var(--element-border);
@@ -273,7 +276,7 @@ body, html {
     background-color: var(--background-color);
 }
 
-.main-input:hover {
+.base-text-input:hover {
     outline: none;
 }
 
