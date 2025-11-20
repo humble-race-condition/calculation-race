@@ -275,7 +275,7 @@ body, html {
 
 .base-text-input {
     padding: 0.5rem;
-    margin-bottom: 1rem;
+    margin-bottom: 1.5rem;
     height: var(--main-input-height);
     width: var(--button-width);
     font-size: var(--secondary-font-size);
