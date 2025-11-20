@@ -14,7 +14,16 @@
 
     --on-hover-button-transition: background-color .2s ease-out, color .2s ease-out;
     --cursor: pointer;
+    --text-decoration: none;
+    --panel-title-height: 4rem;
+    --panel-title-font-size: 2rem;
+    --header-height: 3.6rem;
+    --footer-height: 1.5rem;
+    --scoreboard-header-table-wrapper-height: 4rem;
+    --main-input-height: 3.6rem;
+    --chat-input-wrapper-height: 8rem;
 }
+
 /*TODO extract heights for elements in constants and reuse them*/
 /*.primary-color-dark {*/
 /*    color: #FFA100;*/
@@ -57,7 +66,7 @@ body, html {
     border: var(--element-border);
     border-radius: var(--border-radius);
     text-align: center;
-    text-decoration: none;
+    text-decoration: var(--text-decoration);
     cursor: var(--cursor);
     transition: var(--on-hover-button-transition);
 }
@@ -78,7 +87,7 @@ body, html {
             'footer';
         height: 100vh;
         grid-template-columns: 1fr;
-        grid-template-rows: 3.6rem 1fr 1fr 1fr 1.5rem;
+        grid-template-rows: var(--header-height) 1fr 1fr 1fr var(--header-height);
     }
 }
 
@@ -89,8 +98,9 @@ body, html {
             'header header header'
             'scoreboard main chat'
             'footer footer footer';
-        grid-template-columns: 2fr 6fr 2fr;
-        grid-template-rows: 3.6rem 1fr 1.5rem;
+        height: 100vh;
+        grid-template-columns: 400px 1fr 400px;
+        grid-template-rows: var(--header-height) 1fr var(--footer-height);
     }
 }
 
@@ -103,10 +113,11 @@ body, html {
             'footer footer footer';
         height: 100vh;
         grid-template-columns: 400px 1fr 400px;
-        grid-template-rows: 3.6rem 1fr 1.5rem;
+        grid-template-rows: var(--header-height) 1fr var(--footer-height);
     }
 }
 
+/*ToDo chat panel with not working*/
 .header {
     grid-area: header;
     padding: 0.5rem;
@@ -137,37 +148,37 @@ body, html {
 .header-list-element:hover {
     color: var(--background-color);
     background-color: var(--text-color);
-    text-decoration: none;
+    text-decoration: var(--text-decoration);
     cursor: var(--cursor);
 }
 
 .header-list-element-link {
-    text-decoration: none;
+    text-decoration: var(--text-decoration);
     font-weight: normal;
     font-size: var(--secondary-font-size);
-    color: inherit;
+    color: var(--text-color);
 }
 
 .panel-title {
     padding: 1rem;
-    height: 4rem;
+    height: var(--panel-title-height);
     width: 100%;
     text-align: center;
-    font-size: 2rem;
+    font-size: var(--panel-title-font-size);
 }
 
 .scoreboard {
     grid-area: scoreboard;
-    height: calc(100vh - 5.1rem);
+    height: calc(100vh - var(--header-height) - var(--footer-height));
     border-right: var(--navigation-border);
     display: flex;
     flex-direction: column;
-    justify-content: flex-start;
+    justify-content: start;
     align-items: center;
 }
 
 .scoreboard-header-table-wrapper {
-    height: 4rem;
+    height: var(--scoreboard-header-table-wrapper-height);
     width: 100%;
     display: flex;
     align-items: center;
@@ -198,7 +209,7 @@ body, html {
 }
 
 .scoreboard-body-table-wrapper {
-    height: calc(100% - 8rem);
+    height: calc(100% - var(--panel-title-height) - var(--scoreboard-header-table-wrapper-height));
     width: 100%;
     padding: 1rem;
     display: flex;
@@ -216,17 +227,17 @@ body, html {
 }
 
 .scoreboard-table-position-column {
-    width: 2rem;
+    width: 20%;
     text-align: right;
 }
 
 .scoreboard-table-username-column {
-    width: 10rem;
+    width: 50%;
     text-align: center;
 }
 
 .scoreboard-table-score-column {
-    width: 3rem;
+    width: 30%;
     text-align: right;
 }
 
@@ -254,7 +265,7 @@ body, html {
 .main-input {
     padding: 0.5rem;
     margin-bottom: 1rem;
-    height: 3.6rem;
+    height: var(--main-input-height);
     font-size: var(--secondary-font-size);
     text-align: center;
     border: var(--element-border);
@@ -266,7 +277,7 @@ body, html {
 }
 
 .chat {
-    height: calc(100vh - 5.1rem);
+    height: calc(100vh - var(--header-height) - var(--footer-height));
     border-left: var(--navigation-border);
     grid-area: chat;
     flex-direction: column;
@@ -275,7 +286,7 @@ body, html {
 }
 
 .chat-container-wrapper {
-    height: calc(100% - 4rem - 8rem);
+    height: calc(100% - var(--panel-title-height) - 8rem);
     display: flex;
     justify-content: center;
     align-items: center;
@@ -284,7 +295,7 @@ body, html {
 
 .chat-input-wrapper {
     padding: 0 2rem 1rem 1rem;
-    height: 8rem;
+    height: var(--chat-input-wrapper-height);
 }
 
 .chat-input {
