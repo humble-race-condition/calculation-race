@@ -128,19 +128,19 @@ body, html {
     border-bottom: var(--navigation-border);
 }
 
-.switch {
+.theme-switch {
     position: relative;
     display: flex;
     width: 50px;
     height: 24px;
 }
 
-.switch-input {
+.theme-switch-input {
     opacity: 0;
     width: 0;
     height: 0;
 }
-.slider {
+.theme-slider {
     position: absolute;
     cursor: pointer;
     content: "";
@@ -153,7 +153,7 @@ body, html {
     border-radius: 24px;
 }
 
-.slider:before {
+.theme-slider:before {
     position: absolute;
     content: "";
     height: 18px;
@@ -165,7 +165,7 @@ body, html {
     border-radius: 50%;
 }
 
-.switch-input:checked + .slider:before {
+.theme-switch-input:checked + .theme-slider:before {
     transform: translateX(26px);
 }
 
