@@ -342,7 +342,7 @@ body, html {
     outline: none;
 }
 
-.room-input-wrapper {
+.room-input-container {
     display: flex;
     flex-direction: column;
     justify-content: center;
