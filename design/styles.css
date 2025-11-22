@@ -275,11 +275,12 @@ body, html {
     flex-grow: 1;
 }
 
-.main-formula-wrapper {
+.main-button-wrapper {
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    flex-grow: 1;
 }
 
 .base-text-input {
@@ -305,10 +306,6 @@ body, html {
     justify-content: center;
     align-items: center;
     flex: 1;
-}
-
-.main-button {
-    margin-bottom: 8rem;
 }
 
 .join-room-button {
