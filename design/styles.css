@@ -269,10 +269,9 @@ body, html {
 .main-formula {
     display: flex;
     align-items: center;
-    padding: 1rem;
     font-size: var(--secondary-font-size);
     text-align: center;
-    flex-grow: 1;
+    flex: 1;
 }
 
 .main-button-wrapper {
@@ -280,7 +279,7 @@ body, html {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    flex-grow: 1;
+    flex: 1;
 }
 
 .base-text-input {
@@ -306,10 +305,6 @@ body, html {
     justify-content: center;
     align-items: center;
     flex: 1;
-}
-
-.join-room-button {
-    margin-bottom: 8rem;
 }
 
 .chat {
