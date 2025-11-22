@@ -211,6 +211,33 @@ body, html {
     font-size: var(--panel-title-font-size);
 }
 
+.room-type-input {
+    opacity: 0;
+    width: 0;
+    height: 0;
+}
+
+.room-type-label {
+    display: inline-block;
+    /*TODO*/
+    /*!*ToDo the cursor does not work from the border?*! - this is fixed from inline block*/
+    /*the on click for the select has to happen on this label as well*/
+    padding: 0.75rem 1rem;
+    width: var(--button-width);
+    font-size: var(--secondary-font-size);
+    border: var(--element-border);
+    border-radius: var(--border-radius);
+    text-align: center;
+    text-decoration: var(--text-decoration);
+    cursor: var(--cursor);
+}
+
+.room-type-input:checked + .room-type-label {
+    background-color: var(--text-color);
+    color: var(--background-color);
+    transition: .2s ease-out;
+}
+
 .input-label {
     padding: 1rem;
     margin-bottom: 1.5rem;
