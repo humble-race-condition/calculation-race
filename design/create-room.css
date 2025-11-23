@@ -1,0 +1,49 @@
+.room-form-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    flex-grow: 1;
+}
+
+.room-name-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    flex-grow: 1;
+}
+
+.room-type-input {
+    opacity: 0;
+    width: 0;
+    height: 0;
+}
+
+/*ToDo header gets squished on low resolutions. Need to make it a dropdown. This also squishes the button for the theme*/
+.room-type-label {
+    display: inline-block;
+    padding: 1rem;
+    margin: 0 0.5rem;
+    width: var(--button-width);
+    font-size: var(--secondary-font-size);
+    border: var(--element-border);
+    border-radius: var(--border-radius);
+    text-align: center;
+    text-decoration: var(--text-decoration);
+    cursor: var(--cursor);
+}
+
+.room-type-input:checked + .room-type-label {
+    background-color: var(--text-color);
+    color: var(--background-color);
+    transition: .2s ease-out;
+}
+
+.room-button-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    flex-grow: 1;
+}
