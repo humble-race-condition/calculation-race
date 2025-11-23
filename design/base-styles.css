@@ -321,7 +321,7 @@ body, html {
     grid-area: main;
 }
 
-.main-description {
+.panel-description {
     padding: 1rem;
     margin-top: 1rem;
     font-size: var(--secondary-font-size);
@@ -360,13 +360,7 @@ body, html {
     outline: none;
 }
 
-.room-form-container {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    flex-grow: 1;
-}
+
 
 .room-name-container {
     display: flex;
