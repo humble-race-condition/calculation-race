@@ -3,7 +3,7 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    flex-grow: 1;
+    flex: 1;
 }
 
 .room-name-container {
@@ -11,7 +11,7 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    flex-grow: 1;
+    flex: 1;
 }
 
 .room-type-container {
@@ -19,7 +19,7 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    flex-grow: 1;
+    flex: 1;
 }
 
 .room-type-input {
@@ -53,5 +53,5 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    flex-grow: 1;
+    flex: 1;
 }

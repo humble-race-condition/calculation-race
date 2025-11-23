@@ -1,15 +1,8 @@
-.main {
-    grid-area: main;
-    display: flex;
-    flex-direction: column;
-    justify-content: start;
-    align-items: center;
+.rankings-table-container {
+    width: 100%;
 }
 
-.room-form-container {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    flex-grow: 1;
+.rankings-table {
+    width: 100%;
+    border-spacing: unset;
 }

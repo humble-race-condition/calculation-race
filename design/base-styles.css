@@ -113,7 +113,7 @@ body, html {
     display: flex;
     justify-content: left;
     align-items: center;
-    flex-grow: 1;
+    flex: 1;
 }
 
 .header-list-element {

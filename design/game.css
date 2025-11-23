@@ -99,17 +99,17 @@
 }
 
 .scoreboard-table-position-column {
-    width: 20%;
+    flex: 2;
     text-align: right;
 }
 
 .scoreboard-table-username-column {
-    width: 50%;
+    flex: 5;
     text-align: center;
 }
 
 .scoreboard-table-score-column {
-    width: 30%;
+    flex: 3;
     text-align: right;
 }
 
@@ -127,7 +127,7 @@
     align-items: center;
     font-size: var(--secondary-font-size);
     text-align: center;
-    flex-grow: 1;
+    flex: 1;
 }
 
 .submit-result-container {
@@ -135,7 +135,7 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    flex-grow: 1;
+    flex: 1;
 }
 
 .chat {

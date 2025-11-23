@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Calculation Race</title>
     <link rel="stylesheet" href="base-styles.css">
-    <link rel="stylesheet" href="index.css">
+    <link rel="stylesheet" href="rankings.css">
 </head>
 <body>
 <div class="container">
@@ -22,12 +22,26 @@
         </label>
     </nav>
     <div class="main">
-        <h1 class="panel-title">How fast can you calculate?</h1>
-        <p class="panel-description">You must calculate the given formula and submit the result to win this game!</p>
-        <div class="room-form-container">
-            <label class="base-label" for="room-name-input">Join room?</label>
-            <input class="base-text-input" type="text" id="room-name-input" placeholder="Room name">
-            <button class="button" type="button">Join room</button>
+        <h1 class="panel-title">Rankings</h1>
+        <div class="rankings-table-container">
+            <table class="rankings-table">
+                <thead>
+                <tr class="scoreboard-row scoreboard-header-border">
+                    <th class="rankings-table-position-column">Position</th>
+                    <th class="rankings-table-username-column">Username</th>
+                    <th class="rankings-table-username-column">Room name</th>
+                    <th class="rankings-table-score-column">Score</th>
+                </tr>
+                </thead>
+                <tbody>
+                <tr class="scoreboard-row scoreboard-row-border">
+                    <td class="rankings-table-position-column">1</td>
+                    <td class="rankings-table-username-column">Gosho</td>
+                    <td class="rankings-table-username-column">Gosho</td>
+                    <td class="rankings-table-score-column">15</td>
+                </tr>
+                </tbody>
+            </table>
         </div>
     </div>
     <footer class="footer">@Calculation Race 2025</footer>
