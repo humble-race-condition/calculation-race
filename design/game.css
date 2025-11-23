@@ -71,7 +71,9 @@
     gap: 1rem;
 }
 
-.scoreboard-header-border {
+.scoreboard-header-row {
+    margin-left: 3rem;
+    margin-right: 3rem;
     border-bottom: var(--element-border);
 }
 
