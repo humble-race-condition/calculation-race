@@ -22,18 +22,21 @@
     </nav>
     <div class="main">
         <h1 class="panel-title">Create a room</h1>
-        <div class="room-input-container">
-            <div>
+        <div class="room-form-container">
+            <div class="room-name-container">
+                <label for="room-name" class="room-name-label">Name your room?</label>
+                <input type="text" id="room-name" placeholder="Enter room name" class="base-text-input">
+            </div>
+            <div class="room-type-container">
+
                 <input class="room-type-input" type="radio" id="red" name="color">
                 <label class="room-type-label" for="red">Cooperative</label>
                 <input class="room-type-input" type="radio" id="blue" name="color">
                 <label class="room-type-label" for="blue">Competitive</label>
             </div>
-            <h2 class="input-label">Join room?</h2>
-            <label>
-                <input type="text" placeholder="Room name" class="base-text-input">
-            </label>
-            <button type="button" class="button">Join room</button>
+            <div class="room-button-container">
+                <button type="button" class="create-room-button button">Create room</button>
+            </div>
         </div>
     </div>
     <footer class="footer">@Calculation Race 2025</footer>

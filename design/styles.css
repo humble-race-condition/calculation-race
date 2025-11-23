@@ -369,7 +369,34 @@ body, html {
     outline: none;
 }
 
-.room-input-container {
+.room-form-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    flex-grow: 1;
+}
+
+.room-name-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    flex-grow: 1;
+}
+
+.room-name-label {
+    font-size: var(--secondary-font-size);
+    padding: 1rem;
+}
+.room-type-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-grow: 1;
+}
+
+.room-button-container {
     display: flex;
     flex-direction: column;
     justify-content: center;
