@@ -223,6 +223,7 @@ body, html {
 .room-type-label {
     display: inline-block;
     padding: 1rem;
+    margin: 0 0.5rem;
     width: var(--button-width);
     font-size: var(--secondary-font-size);
     border: var(--element-border);
@@ -236,15 +237,6 @@ body, html {
     background-color: var(--text-color);
     color: var(--background-color);
     transition: .2s ease-out;
-}
-
-.input-label {
-    padding: 1rem;
-    margin-bottom: 1.5rem;
-    height: var(--panel-title-height);
-    width: 100%;
-    text-align: center;
-    font-size: var(--panel-title-font-size);
 }
 
 .scoreboard {
@@ -352,12 +344,9 @@ body, html {
     flex-grow: 1;
 }
 
-.submit-result-label {
-    margin-bottom: 1rem;
-}
-
 .base-text-input {
     padding: 1rem;
+    margin-bottom: 1.5rem;
     width: var(--button-width);
     font-size: var(--secondary-font-size);
     text-align: center;
@@ -387,21 +376,18 @@ body, html {
     flex-grow: 1;
 }
 
-.room-name-label {
-    font-size: var(--secondary-font-size);
-    padding: 1rem;
-}
 .room-type-container {
     display: flex;
     flex-direction: column;
-    justify-content: space-evenly;
+    justify-content: center;
     align-items: center;
     flex-grow: 1;
 }
 
-.room-type-heading {
+.base-label {
     font-size: var(--secondary-font-size);
     padding: 1rem;
+    margin-bottom: 1rem;
 }
 
 .room-button-container {
