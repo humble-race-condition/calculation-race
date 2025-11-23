@@ -1,8 +1,39 @@
 .rankings-table-container {
-    width: 100%;
+    width: 60%;
 }
 
 .rankings-table {
     width: 100%;
     border-spacing: unset;
+}
+
+.rankings-row {
+    margin: 0.5rem 0;
+    padding: 0.5rem;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    border-bottom: var(--element-border);
+}
+
+.rankings-table-position-column {
+    margin-left: 1rem;
+    flex: 1;
+    text-align: left;
+}
+
+.rankings-table-username-column {
+    flex: 1;
+    text-align: center;
+}
+
+.rankings-table-room-name-column {
+    flex: 1;
+    text-align: center;
+}
+
+.rankings-table-score-column {
+    margin-right: 1rem;
+    flex: 1;
+    text-align: right;
 }
