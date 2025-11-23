@@ -288,7 +288,7 @@ body, html {
     border-radius: var(--border-radius);
 }
 
-.scoreboard-body-table-container {
+.scoreboard-body-table-parent-container {
     height: calc(100% - var(--panel-title-height) - var(--scoreboard-header-table-wrapper-height));
     width: 100%;
     padding: 1rem;
