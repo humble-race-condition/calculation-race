@@ -127,6 +127,7 @@ body, html {
     align-items: center;
     border-bottom: var(--navigation-border);
 }
+
 /*ToDo the absolute stuff breaks when resizing*/
 .theme-switch {
     position: relative;
@@ -178,6 +179,7 @@ body, html {
     display: flex;
     justify-content: left;
     align-items: center;
+    flex-grow: 1;
 }
 
 .header-list-element {
@@ -217,11 +219,9 @@ body, html {
     height: 0;
 }
 
+/*ToDo header gets squished on low resolutions. Need to make it a dropdown. This also squishes the button for the theme*/
 .room-type-label {
     display: inline-block;
-    /*TODO*/
-    /*!*ToDo the cursor does not work from the border?*! - this is fixed from inline block*/
-    /*the on click for the select has to happen on this label as well*/
     padding: 0.75rem 1rem;
     width: var(--button-width);
     font-size: var(--secondary-font-size);
@@ -341,7 +341,7 @@ body, html {
     align-items: center;
     font-size: var(--secondary-font-size);
     text-align: center;
-    flex: 1;
+    flex-grow: 1;
 }
 
 .main-button-container {
@@ -349,7 +349,7 @@ body, html {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    flex: 1;
+    flex-grow: 1;
 }
 
 .base-text-input {
@@ -374,7 +374,7 @@ body, html {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    flex: 1;
+    flex-grow: 1;
 }
 
 .chat {
