@@ -1,5 +1,19 @@
-.rankings-table-container {
-    width: 60%;
+@media screen and (max-width: 992px) {
+    .rankings-table-container {
+        width: 90%;
+    }
+}
+
+@media screen and (min-width: 993px) and (max-width: 1200px) {
+    .rankings-table-container {
+        width: 80%;
+    }
+}
+
+@media screen and (min-width: 1201px) {
+    .rankings-table-container {
+        width: 60%;
+    }
 }
 
 .rankings-table {
