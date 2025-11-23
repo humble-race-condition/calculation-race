@@ -77,47 +77,6 @@ body, html {
     color: var(--background-color);
 }
 
-@media screen and (max-width: 992px) {
-    .container {
-        display: grid;
-        grid-template-areas:
-            'header'
-            'main'
-            'scoreboard'
-            'chat'
-            'footer';
-        height: 100vh;
-        grid-template-columns: 1fr;
-        grid-template-rows: var(--header-height) 1fr 1fr 1fr var(--header-height);
-    }
-}
-
-@media screen and (min-width: 993px) and (max-width: 1200px) {
-    .container {
-        display: grid;
-        grid-template-areas:
-            'header header header'
-            'scoreboard main chat'
-            'footer footer footer';
-        height: 100vh;
-        grid-template-columns: 400px 1fr 400px;
-        grid-template-rows: var(--header-height) 1fr var(--footer-height);
-    }
-}
-
-@media screen and (min-width: 1201px) {
-    .container {
-        display: grid;
-        grid-template-areas:
-            'header header header'
-            'scoreboard main chat'
-            'footer footer footer';
-        height: 100vh;
-        grid-template-columns: 400px 1fr 400px;
-        grid-template-rows: var(--header-height) 1fr var(--footer-height);
-    }
-}
-
 .header {
     grid-area: header;
     padding: 0.5rem;
