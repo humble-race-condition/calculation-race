@@ -119,6 +119,7 @@
     justify-content: start;
     align-items: center;
     grid-area: main;
+    background-color: var(--background-color);
 }
 
 .main-formula {
