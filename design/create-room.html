@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Calculation Race</title>
     <link rel="stylesheet" href="base-styles.css">
-    <link rel="stylesheet" href="index.css">
+    <link rel="stylesheet" href="create-room.css">
 </head>
 <body>
 <div class="container">
@@ -22,12 +22,26 @@
         </label>
     </nav>
     <div class="main">
-        <h1 class="panel-title">How fast can you calculate?</h1>
-        <p class="panel-description">You must calculate the given formula and submit the result to win this game!</p>
+        <h1 class="panel-title">Create a room</h1>
         <div class="room-form-container">
-            <label class="base-label" for="room-name-input">Join room?</label>
-            <input class="base-text-input" type="text" id="room-name-input" placeholder="Room name">
-            <button class="button" type="button">Join room</button>
+            <div class="room-name-container">
+                <label for="room-name" class="base-label">Name your room?</label>
+                <input type="text" id="room-name" placeholder="Enter room name" class="base-text-input">
+            </div>
+            <div class="room-type-container">
+                <p class="base-label">Type of room?
+                    Select game type
+                </p>
+                <div>
+                    <input class="room-type-input" type="radio" id="red" name="color">
+                    <label class="room-type-label" for="red">Cooperative</label>
+                    <input class="room-type-input" type="radio" id="blue" name="color">
+                    <label class="room-type-label" for="blue">Competitive</label>
+                </div>
+            </div>
+            <div class="room-button-container">
+                <button type="button" class="button">Create room</button>
+            </div>
         </div>
     </div>
     <footer class="footer">@Calculation Race 2025</footer>
