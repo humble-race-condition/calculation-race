@@ -51,3 +51,50 @@
     flex: 1;
     text-align: right;
 }
+
+.rankings-page-container {
+    display: flex;
+    justify-content: end;
+    align-items: center;
+    margin-top: 1rem;
+    --element-padding: 0.5rem;
+    --element-height: 2rem;
+    --element-width: 2rem;
+}
+
+.previous-page-button {
+    padding: var(--element-padding);
+    height: var(--element-height);
+    width: var(--element-width);
+    background-color: var(--text-color);
+    color: var(--background-color);
+    border: var(--element-border);
+    border-bottom-left-radius: var(--border-radius);
+    border-top-left-radius: var(--border-radius);
+    text-align: center;
+    text-decoration: var(--text-decoration);
+    cursor: var(--cursor);
+}
+
+.page-number {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: var(--element-padding);
+    height: var(--element-height);
+    width: var(--element-width);
+}
+
+.next-page-button {
+    padding: var(--element-padding);
+    height: var(--element-height);
+    width: var(--element-width);
+    background-color: var(--text-color);
+    color: var(--background-color);
+    border: var(--element-border);
+    border-bottom-right-radius: var(--border-radius);
+    border-top-right-radius: var(--border-radius);
+    text-align: center;
+    text-decoration: var(--text-decoration);
+    cursor: var(--cursor);
+}
