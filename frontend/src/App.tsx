@@ -1,18 +1,23 @@
 import React, {useState} from 'react';
 import './App.css';
+import { useSelector, useDispatch } from 'react-redux'
+import {RootState} from "./store";
+import {increment} from "./counterSlice";
 
 function App() {
-    const [value, setValue] = useState<number>(0);
-    const addition = () => setValue(prevValue => prevValue + 1);
+
+    const count = useSelector((state: RootState) => state.counter.value)
+    const dispatch = useDispatch()
+
     return (
         <div className="App">
             <div>
                 Hello there
             </div>
-            <div style={{ display: 'flex', justifyContent: 'center', height: '500px' }}>
-                {value}
+            <div style={{ display: 'flex', justifyContent: 'center', height: '50px' }}>
+                {count}
             </div>
-            <button type="button" onClick={addition}>
+            <button type="button" onClick={() => dispatch(increment())}>
                 Click me!
             </button>
         </div>
