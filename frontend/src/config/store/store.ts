@@ -1,6 +1,6 @@
-import { configureStore } from '@reduxjs/toolkit'
-import counterReducer from './counterSlice'
-import type { Middleware } from '@reduxjs/toolkit';
+import type {Middleware} from '@reduxjs/toolkit';
+import {configureStore} from '@reduxjs/toolkit'
+import counterReducer from './globalState'
 
 const loggerMiddleware: Middleware = store => next => action => {
     console.log('Dispatching:', action);
