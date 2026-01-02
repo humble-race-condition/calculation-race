@@ -139,8 +139,6 @@ body, html {
     color: inherit;
 }
 
-
-/*ToDo the absolute stuff breaks when resizing*/
 .theme-switch {
     position: relative;
     display: flex;

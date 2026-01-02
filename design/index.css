@@ -156,7 +156,7 @@ body, html {
     height: 0;
 }
 
-.theme-slider {
+.theme-slider-container {
     position: absolute;
     cursor: pointer;
     content: "";
@@ -169,7 +169,7 @@ body, html {
     border-radius: 24px;
 }
 
-.theme-slider:before {
+.theme-slider-container:before {
     position: absolute;
     content: "";
     height: 18px;
@@ -181,7 +181,7 @@ body, html {
     border-radius: 50%;
 }
 
-.theme-switch-input:checked + .theme-slider:before {
+.theme-switch-input:checked + .theme-slider-container:before {
     transform: translateX(26px);
 }
 
