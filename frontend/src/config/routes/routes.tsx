@@ -1,6 +1,6 @@
 import {createBrowserRouter} from "react-router";
-import App from "./App";
-import Navbar from "./shared/navbar/Navbar";
+import App from "../../App";
+import Navbar from "../../shared/navbar/Navbar";
 
 const router = createBrowserRouter([
     {

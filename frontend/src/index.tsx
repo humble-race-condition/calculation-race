@@ -1,10 +1,10 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
 import './index.css';
-import {store} from './store'
+import {store} from './config/store/store'
 import {Provider} from 'react-redux'
 import {RouterProvider} from "react-router";
-import router from "./routes";
+import router from "./config/routes/routes";
 
 const root = ReactDOM.createRoot(
     document.getElementById('root') as HTMLElement

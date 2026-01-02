@@ -1,5 +1,5 @@
 import { configureStore } from '@reduxjs/toolkit'
-import counterReducer from './counterSlice'
+import counterReducer from '../../counterSlice'
 import type { Middleware } from '@reduxjs/toolkit';
 
 const loggerMiddleware: Middleware = store => next => action => {
