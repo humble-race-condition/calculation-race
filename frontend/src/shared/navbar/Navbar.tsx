@@ -1,4 +1,4 @@
-import {NavLink, Outlet} from "react-router";
+import {NavLink} from "react-router";
 
 function Navbar() {
     return <>
@@ -22,7 +22,6 @@ function Navbar() {
                 <span className="theme-slider"></span>
             </label>
         </nav>
-        <Outlet/>
     </>;
 }
 

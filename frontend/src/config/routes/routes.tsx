@@ -1,13 +1,19 @@
 import {createBrowserRouter} from "react-router";
-import App from "../../App";
+import Layout from "../../shared/layout/Layout";
 import Navbar from "../../shared/navbar/Navbar";
 
 const router = createBrowserRouter([
     {
         path: "/",
-        element: <Navbar />,
+        element: <Layout/>,
         children: [
+            {
+                path: "/",
+                element: <Navbar/>,
+                children: [
 
+                ]
+            },
         ]
     },
 ]);
