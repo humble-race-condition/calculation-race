@@ -1,6 +1,10 @@
 import {NavLink} from "react-router";
+import {useDispatch} from "react-redux";
+import {toggle} from "../../config/store/globalState";
 
 function Navbar() {
+    const dispatch = useDispatch();
+
     return <>
         <nav className="header">
             <ul className="header-list">
@@ -17,7 +21,7 @@ function Navbar() {
                     <NavLink className={'header-list-element-link'} to="/rankings">Rankings</NavLink>
                 </li>
             </ul>
-            <label className="theme-switch">
+            <label className="theme-switch" onClick={() => dispatch(toggle())}>
                 <input className="theme-switch-input" type="checkbox"/>
                 <span className="theme-slider"></span>
             </label>
