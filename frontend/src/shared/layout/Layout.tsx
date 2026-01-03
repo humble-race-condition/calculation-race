@@ -10,22 +10,21 @@ import {Constants} from "../Constants";
 function Layout() {
     const [searchParams, setSearchParams] = useSearchParams();
     const dispatch = useDispatch();
-
     const theme = useSelector((state: RootState) => state.global.theme);
+    const themeHeader = searchParams.get(Constants.THEME_KEY);
 
     useEffect(() => {
-        const themeName = searchParams.get(Constants.THEME_KEY);
-        if (themeName) {
-            dispatch(setTheme(themeName));
+        if (themeHeader) {
+            dispatch(setTheme(themeHeader));
         }
-        // eslint-disable-next-line
-    }, [searchParams]);
+    }, [dispatch, themeHeader]);
 
     useEffect(() => {
-        searchParams.set(Constants.THEME_KEY, theme);
-        setSearchParams(searchParams);
-        // eslint-disable-next-line
-    }, [searchParams, theme]);
+        const updatedParams = new URLSearchParams(searchParams);
+        updatedParams.set(Constants.THEME_KEY, theme);
+        setSearchParams(updatedParams);
+        // eslint-disable-next-line react-hooks/exhaustive-deps
+    }, [themeHeader, setSearchParams, theme]);
 
     useEffect(() => {
         const root = document.documentElement
