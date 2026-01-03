@@ -20,11 +20,12 @@ function Layout() {
     }, [themeHeader, dispatch]);
 
     useEffect(() => {
-        const updatedParams = new URLSearchParams(searchParams);
-        updatedParams.set(Constants.THEME_KEY, theme);
-        setSearchParams(updatedParams);
-        // eslint-disable-next-line react-hooks/exhaustive-deps
-    }, [themeHeader, theme, setSearchParams]);
+        setSearchParams(prev => {
+            const params = new URLSearchParams(prev);
+            params.set(Constants.THEME_KEY, theme);
+            return params;
+        });
+    }, [theme, setSearchParams]);
 
     useEffect(() => {
         const root = document.documentElement
