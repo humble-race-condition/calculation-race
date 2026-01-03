@@ -1,11 +1,15 @@
 import React, {useEffect} from 'react';
-import {Outlet} from "react-router";
+import {Outlet, useSearchParams} from "react-router";
 import Navbar from "../navbar/Navbar";
-import {useSelector} from "react-redux";
+import {useDispatch, useSelector} from "react-redux";
 import {RootState} from "../../config/store/storeConfiguration";
 import {Theme} from "./Theme";
+import {setTheme} from "../../config/store/global";
 
 function Layout() {
+    const [searchParams, setSearchParams] = useSearchParams();
+    const dispatch = useDispatch();
+
     const theme = useSelector((state: RootState) => state.global.theme);
 
     const themeKey = "theme";
