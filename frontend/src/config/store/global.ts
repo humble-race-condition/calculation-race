@@ -1,19 +1,20 @@
 import {createSlice, PayloadAction} from '@reduxjs/toolkit'
+import {Theme} from "../../shared/layout/Theme";
 
 export interface GlobalState {
-    theme: string
+    theme: Theme
 }
 
 const initialState: GlobalState = {
-    theme: 'white',
+    theme: Theme.LIGHT,
 }
 
 export const global = createSlice({
     name: 'global',
     initialState,
     reducers: {
-        setTheme: (state, action: PayloadAction<string>) => {
-            state.theme = action.payload === 'white' ? action.payload : 'dark'
+        setTheme: (state, action: PayloadAction<boolean>) => {
+            state.theme = action.payload ? Theme.DARK : Theme.LIGHT
         }
     },
 })
