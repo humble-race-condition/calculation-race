@@ -239,12 +239,3 @@ body, html {
     background-color: var(--text-color);
     color: var(--background-color);
 }
-
-.footer {
-    padding: 0.5rem 0;
-    border-top: var(--navigation-border);
-    grid-area: footer;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}

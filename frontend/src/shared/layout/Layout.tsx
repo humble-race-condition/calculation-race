@@ -6,6 +6,7 @@ import {RootState} from "../../config/store/storeConfiguration";
 import {Theme} from "./Theme";
 import {setTheme} from "../../config/store/global";
 import {Constants} from "../Constants";
+import Footer from "../footer/Footer";
 
 function Layout() {
     const [searchParams, setSearchParams] = useSearchParams();
@@ -59,6 +60,7 @@ function Layout() {
         <>
             <Navbar/>
             <Outlet/>
+            <Footer/>
         </>
     );
 }
