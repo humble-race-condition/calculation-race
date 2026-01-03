@@ -1,6 +1,6 @@
 import {NavLink} from "react-router";
 import {useDispatch, useSelector} from "react-redux";
-import {setTheme} from "../../config/store/global";
+import {setDark} from "../../config/store/global";
 import {RootState} from "../../config/store/storeConfiguration";
 import {Theme} from "../layout/Theme";
 
@@ -29,7 +29,7 @@ function Navbar() {
                 <input className="theme-switch-input"
                        type="checkbox"
                        checked={isChecked}
-                       onChange={(e) => dispatch(setTheme(e.target.checked))}
+                       onChange={(e) => dispatch(setDark(e.target.checked))}
                 />
                 <span className="theme-slider"></span>
             </label>
