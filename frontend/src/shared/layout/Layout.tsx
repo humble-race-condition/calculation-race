@@ -17,14 +17,14 @@ function Layout() {
         if (themeHeader) {
             dispatch(setTheme(themeHeader));
         }
-    }, [dispatch, themeHeader]);
+    }, [themeHeader, dispatch]);
 
     useEffect(() => {
         const updatedParams = new URLSearchParams(searchParams);
         updatedParams.set(Constants.THEME_KEY, theme);
         setSearchParams(updatedParams);
         // eslint-disable-next-line react-hooks/exhaustive-deps
-    }, [themeHeader, setSearchParams, theme]);
+    }, [themeHeader, theme, setSearchParams]);
 
     useEffect(() => {
         const root = document.documentElement
