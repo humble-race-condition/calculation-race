@@ -5,6 +5,7 @@ import {useDispatch, useSelector} from "react-redux";
 import {RootState} from "../../config/store/storeConfiguration";
 import {Theme} from "./Theme";
 import {setTheme} from "../../config/store/global";
+import {Constants} from "../Constants";
 
 function Layout() {
     const [searchParams, setSearchParams] = useSearchParams();
@@ -12,18 +13,19 @@ function Layout() {
 
     const theme = useSelector((state: RootState) => state.global.theme);
 
-    const themeKey = "theme";
     useEffect(() => {
-        const themeName = searchParams.get(themeKey);
+        const themeName = searchParams.get(Constants.THEME_KEY);
         if (themeName) {
             dispatch(setTheme(themeName));
         }
-    }, [searchParams, dispatch]);
+        // eslint-disable-next-line
+    }, [searchParams]);
 
     useEffect(() => {
-        searchParams.set(themeKey, theme);
+        searchParams.set(Constants.THEME_KEY, theme);
         setSearchParams(searchParams);
-    }, [searchParams, setSearchParams, theme]);
+        // eslint-disable-next-line
+    }, [searchParams, theme]);
 
     useEffect(() => {
         const root = document.documentElement
