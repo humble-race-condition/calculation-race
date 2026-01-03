@@ -8,6 +8,19 @@ import {Theme} from "./Theme";
 function Layout() {
     const theme = useSelector((state: RootState) => state.global.theme);
 
+    const themeKey = "theme";
+    useEffect(() => {
+        const themeName = searchParams.get(themeKey);
+        if (themeName) {
+            dispatch(setTheme(themeName));
+        }
+    }, [searchParams, dispatch]);
+
+    useEffect(() => {
+        searchParams.set(themeKey, theme);
+        setSearchParams(searchParams);
+    }, [searchParams, setSearchParams, theme]);
+
     useEffect(() => {
         const root = document.documentElement
         const backgroundColor = '--background-color';
