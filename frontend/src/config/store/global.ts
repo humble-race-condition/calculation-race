@@ -2,11 +2,13 @@ import {createSlice, PayloadAction} from '@reduxjs/toolkit'
 import {Theme} from "../../shared/layout/Theme";
 
 export interface GlobalState {
-    theme: Theme
+    theme: Theme,
+    isDarkThemeChecked: boolean,
 }
 
 const initialState: GlobalState = {
     theme: Theme.LIGHT,
+    isDarkThemeChecked: false,
 }
 
 export const global = createSlice({
@@ -15,14 +17,16 @@ export const global = createSlice({
     reducers: {
         setDark: (state, action: PayloadAction<boolean>) => {
             state.theme = action.payload ? Theme.DARK : Theme.LIGHT
+            state.isDarkThemeChecked = action.payload
         },
-        setTheme(state, action: PayloadAction<string>) {
+        setTheme: (state, action: PayloadAction<string>) => {
             let theme = Theme.LIGHT;
-            if (Object.values(Theme).includes(action.payload as Theme)) {
+            if (Object.values(Theme).includes(action.payload.toLowerCase() as Theme)) {
                 theme = action.payload as Theme;
             }
 
             state.theme = theme;
+            state.isDarkThemeChecked = theme == Theme.DARK;
         }
     },
 })
