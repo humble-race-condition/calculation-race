@@ -13,13 +13,21 @@ export const global = createSlice({
     name: 'global',
     initialState,
     reducers: {
-        setTheme: (state, action: PayloadAction<boolean>) => {
+        setDark: (state, action: PayloadAction<boolean>) => {
             state.theme = action.payload ? Theme.DARK : Theme.LIGHT
+        },
+        setTheme(state, action: PayloadAction<string>) {
+            let theme = Theme.LIGHT;
+            if (Object.values(Theme).includes(action.payload as Theme)) {
+                theme = action.payload as Theme;
+            }
+
+            state.theme = theme;
         }
     },
 })
 
 // Action creators are generated for each case reducer function
-export const {setTheme} = global.actions
+export const {setDark, setTheme} = global.actions
 
 export default global.reducer
