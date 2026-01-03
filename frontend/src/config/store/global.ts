@@ -1,5 +1,5 @@
 import {createSlice, PayloadAction} from '@reduxjs/toolkit'
-import {Theme} from "../../shared/layout/Theme";
+import {parseTheme, Theme} from "../../shared/layout/Theme";
 
 export interface GlobalState {
     theme: Theme,
@@ -20,13 +20,9 @@ export const global = createSlice({
             state.isDarkThemeChecked = action.payload
         },
         setTheme: (state, action: PayloadAction<string>) => {
-            let theme = Theme.LIGHT;
-            if (Object.values(Theme).includes(action.payload.toLowerCase() as Theme)) {
-                theme = action.payload as Theme;
-            }
-
+            const theme = parseTheme(action.payload) || Theme.LIGHT;
             state.theme = theme;
-            state.isDarkThemeChecked = theme == Theme.DARK;
+            state.isDarkThemeChecked = theme === Theme.DARK;
         }
     },
 })
