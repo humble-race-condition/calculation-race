@@ -1,6 +1,6 @@
 import type {Middleware} from '@reduxjs/toolkit';
-import {configureStore} from '@reduxjs/toolkit'
-import counterReducer from './globalState'
+import {configureStore} from '@reduxjs/toolkit';
+import globalReducer from './global';
 
 const loggerMiddleware: Middleware = store => next => action => {
     console.log('Dispatching:', action);
@@ -9,16 +9,18 @@ const loggerMiddleware: Middleware = store => next => action => {
     return result;
 };
 
-export const store = configureStore({
+
+//ToDo linter to add semicolons
+export const storeConfiguration = configureStore({
     reducer: {
-        counter: counterReducer,
+        global: globalReducer,
     },
     middleware: (getDefaultMiddleware) =>
         getDefaultMiddleware().concat(loggerMiddleware)
 })
 
 
-// Infer the `RootState` and `AppDispatch` types from the store itself
-export type RootState = ReturnType<typeof store.getState>
+// Infer the `RootState` and `AppDispatch` types from the storeConfiguration itself
+export type RootState = ReturnType<typeof storeConfiguration.getState>
 // Inferred type: {posts: PostsState, comments: CommentsState, users: UsersState}
-export type AppDispatch = typeof store.dispatch
+export type AppDispatch = typeof storeConfiguration.dispatch
