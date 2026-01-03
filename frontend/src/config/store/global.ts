@@ -20,7 +20,7 @@ export const global = createSlice({
             state.isDarkThemeChecked = action.payload
         },
         setTheme: (state, action: PayloadAction<string>) => {
-            const theme = parseTheme(action.payload) || Theme.LIGHT;
+            const theme = parseTheme(action.payload) ?? Theme.LIGHT;
             state.theme = theme;
             state.isDarkThemeChecked = theme === Theme.DARK;
         }
