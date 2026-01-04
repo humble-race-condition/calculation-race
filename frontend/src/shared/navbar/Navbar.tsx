@@ -1,8 +1,8 @@
 import {NavLink} from "react-router";
 import {useDispatch, useSelector} from "react-redux";
 import {setDark} from "../../config/store/global";
-import {RootState} from "../../config/store/storeConfiguration";
-import * as styles from "./Navbar.module.css";
+import {type RootState} from "../../config/store/storeConfiguration";
+import styles from "./Navbar.module.css";
 
 function Navbar() {
     const dispatch = useDispatch();

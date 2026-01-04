@@ -1,8 +1,8 @@
-import React, {useEffect} from 'react';
+import {useEffect} from 'react';
 import {Outlet, useSearchParams} from "react-router";
 import Navbar from "../navbar/Navbar";
 import {useDispatch, useSelector} from "react-redux";
-import {RootState} from "../../config/store/storeConfiguration";
+import {type RootState} from "../../config/store/storeConfiguration";
 import {Theme} from "./Theme";
 import {setTheme} from "../../config/store/global";
 import {Constants} from "../Constants";
