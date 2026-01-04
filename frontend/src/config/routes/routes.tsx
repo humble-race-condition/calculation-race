@@ -1,18 +1,16 @@
 import {createBrowserRouter} from "react-router";
 import Layout from "../../shared/layout/Layout";
+import CreateRoom from "../../features/create-room/CreateRoom.tsx";
 
 const router = createBrowserRouter([
     {
-        path: "/",
         element: <Layout/>,
         children: [
-            // {
-            //     path: "/",
-            //     element: <Navbar/>,
-            //     children: [
-            //
-            //     ]
-            // },
+            {
+                path: "/",
+                element: <CreateRoom/>,
+                children: []
+            },
         ]
     },
 ]);
