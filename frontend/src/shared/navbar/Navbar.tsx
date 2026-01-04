@@ -2,34 +2,35 @@ import {NavLink} from "react-router";
 import {useDispatch, useSelector} from "react-redux";
 import {setDark} from "../../config/store/global";
 import {RootState} from "../../config/store/storeConfiguration";
+import * as styles from "./Navbar.module.css";
 
 function Navbar() {
     const dispatch = useDispatch();
     const isDarkThemeChecked = useSelector((state: RootState) => state.global.isDarkThemeChecked);
 
     return <>
-        <nav className="header">
-            <ul className="header-list">
-                <li className="header-list-element">
-                    <NavLink className={'header-list-element-link'} to="/">CalculationRace</NavLink>
+        <nav className={styles.header}>
+            <ul className={styles.headerList}>
+                <li className={styles.headerListElement}>
+                    <NavLink className={styles.headerListElementLink} to="/">CalculationRace</NavLink>
                 </li>
-                <li className="header-list-element">
-                    <NavLink className={'header-list-element-link'} to="/join-room"> Join Room</NavLink>
+                <li className={styles.headerListElement}>
+                    <NavLink className={styles.headerListElementLink} to="/join-room"> Join Room</NavLink>
                 </li>
-                <li className="header-list-element">
-                    <NavLink className={'header-list-element-link'} to="/create-room">Create Room</NavLink>
+                <li className={styles.headerListElement}>
+                    <NavLink className={styles.headerListElementLink} to="/create-room">Create Room</NavLink>
                 </li>
-                <li className="header-list-element">
-                    <NavLink className={'header-list-element-link'} to="/rankings">Rankings</NavLink>
+                <li className={styles.headerListElement}>
+                    <NavLink className={styles.headerListElementLink} to="/rankings">Rankings</NavLink>
                 </li>
             </ul>
-            <label className="theme-switch">
-                <input className="theme-switch-input"
+            <label className={styles.themeSwitch}>
+                <input className={styles.themeSwitchInput}
                        type="checkbox"
                        checked={isDarkThemeChecked}
                        onChange={(e) => dispatch(setDark(e.target.checked))}
                 />
-                <span className="theme-slider"></span>
+                <span className={styles.themeSlider}></span>
             </label>
         </nav>
     </>;
