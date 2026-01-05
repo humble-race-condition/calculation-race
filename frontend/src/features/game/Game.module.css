@@ -1,41 +1,32 @@
 @media screen and (max-width: 992px) {
-    .container {
+    .main {
         display: grid;
         grid-template-areas:
-            'header'
-            'main'
+            'game'
             'scoreboard'
-            'chat'
-            'footer';
-        height: 100vh;
-        grid-template-columns: 1fr;
-        grid-template-rows: var(--header-height) 1fr 1fr 1fr var(--header-height);
+            'chat';
+        height: 100%;
+        grid-template-rows: 1fr 1fr 1fr;
     }
 }
 
 @media screen and (min-width: 993px) and (max-width: 1200px) {
-    .container {
+    .main {
         display: grid;
         grid-template-areas:
-            'header header header'
-            'scoreboard main chat'
-            'footer footer footer';
-        height: 100vh;
+            'scoreboard game chat';
+        height: 100%;
         grid-template-columns: 400px 1fr 400px;
-        grid-template-rows: var(--header-height) 1fr var(--footer-height);
     }
 }
 
 @media screen and (min-width: 1201px) {
-    .container {
+    .main {
         display: grid;
         grid-template-areas:
-            'header header header'
-            'scoreboard main chat'
-            'footer footer footer';
-        height: 100vh;
+            'scoreboard game chat';
+        height: 100%;
         grid-template-columns: 400px 1fr 400px;
-        grid-template-rows: var(--header-height) 1fr var(--footer-height);
     }
 }
 
@@ -115,16 +106,16 @@
     text-align: right;
 }
 
-.main {
+.game {
     display: flex;
     flex-direction: column;
     justify-content: start;
     align-items: center;
-    grid-area: main;
+    grid-area: game;
     background-color: var(--background-color);
 }
 
-.main-formula {
+.game-formula {
     display: flex;
     align-items: center;
     font-size: var(--secondary-font-size);

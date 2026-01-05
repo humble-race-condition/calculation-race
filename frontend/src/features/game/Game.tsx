@@ -2,7 +2,7 @@ import styles from './Game.module.css';
 
 function Game() {
     return (
-        <>
+        <div className={styles.main}>
             <div className={styles.scoreboard}>
                 <h1 className="panel-title">Scoreboard</h1>
                 <div className={styles.scoreboardHeaderTableContainer}>
@@ -130,16 +130,16 @@ function Game() {
                     </div>
                 </div>
             </div>
-            <div className={styles.main}>
+            <div className={styles.game}>
                 <h1 className="panel-title">How fast can you calculate?</h1>
                 <p className="panel-description">You must calculate the given formula and submit the result to win this
                     game!</p>
-                <h2 className={styles.mainFormula}>This is the mighty formula</h2>
+                <h2 className={styles.gameFormula}>This is the mighty formula</h2>
                 <div className={styles.submitResultContainer}>
                     <label htmlFor="submit-result-input"> </label>
                     <input type="text" placeholder="Enter your result here" id="submit-result-input"
                            className="base-text-input"/>
-                    <button type="button" className="main-button button">Submit the Result</button>
+                    <button type="button" className="button">Submit the Result</button>
                 </div>
             </div>
             <div className={styles.chat}>
@@ -186,7 +186,9 @@ function Game() {
                     </label>
                 </div>
             </div>
-        </>);
+        </div>);
 }
 
+{/*//ToDo all buttons should be a shared component, so no need for their css.*/
+}
 export default Game;
