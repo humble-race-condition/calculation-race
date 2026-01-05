@@ -17,7 +17,7 @@ function Game() {
                     </table>
                 </div>
                 <div className={styles.scoreboardBodyTableParentContainer}>
-                    <div className={`${styles.scoreboardBodyTableParentContainer} ${styles.scrollbarContainer}`}>
+                    <div className={`${styles.scoreboardBodyTableContainer} ${styles.scrollbarContainer}`}>
                         <table className={styles.scoreboardTable}>
                             <tbody>
                             <tr className={`${styles.scoreboardRow} ${styles.scoreboardRowBorder}`}>
@@ -145,7 +145,7 @@ function Game() {
             <div className={styles.chat}>
                 <h1 className="panel-title">Collaborate?</h1>
                 <div className={styles.chatContainerParentContainer}>
-                    <div className={`${styles.chatMessage} ${styles.scrollbarContainer}`}>
+                    <div className={`${styles.chatMessagesContainer} ${styles.scrollbarContainer}`}>
                         <div className={styles.chatMessage}>User1: Hello there</div>
                         <div className={styles.chatMessage}>User2: Whats appppppssssssssssssssss</div>
                         <div className={styles.chatMessage}>User3: Whats appppppssssssssssssssss. HERE WE GO
