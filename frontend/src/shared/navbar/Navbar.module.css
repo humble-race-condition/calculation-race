@@ -26,6 +26,16 @@
     transition: var(--on-hover-button-transition);
 }
 
+.active {
+}
+
+.header-list-element:has(.active) {
+    color: var(--background-color);
+    background-color: var(--text-color);
+    text-decoration: var(--text-decoration);
+    cursor: var(--cursor);
+}
+
 .header-list-element:hover {
     color: var(--background-color);
     background-color: var(--text-color);
