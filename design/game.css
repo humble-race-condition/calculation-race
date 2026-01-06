@@ -1,5 +1,6 @@
 @media screen and (max-width: 992px) {
     .main {
+        grid-area: main;
         display: grid;
         grid-template-areas:
             'game'
@@ -12,6 +13,7 @@
 
 @media screen and (min-width: 993px) and (max-width: 1200px) {
     .main {
+        grid-area: main;
         display: grid;
         grid-template-areas:
             'scoreboard game chat';
@@ -22,6 +24,7 @@
 
 @media screen and (min-width: 1201px) {
     .main {
+        grid-area: main;
         display: grid;
         grid-template-areas:
             'scoreboard game chat';
@@ -107,11 +110,12 @@
 }
 
 .game {
+    grid-area: game;
+    height: 100%;
     display: flex;
     flex-direction: column;
     justify-content: start;
     align-items: center;
-    grid-area: game;
     background-color: var(--background-color);
 }
 
@@ -132,9 +136,9 @@
 }
 
 .chat {
+    grid-area: chat;
     height: calc(100vh - var(--header-height) - var(--footer-height));
     border-left: var(--navigation-border);
-    grid-area: chat;
     flex-direction: column;
     justify-content: start;
     align-items: center;
