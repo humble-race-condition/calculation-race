@@ -1,0 +1,18 @@
+.button {
+    padding: 1rem;
+    width: var(--button-width);
+    background-color: var(--background-color);
+    color: var(--text-color);
+    font-size: var(--secondary-font-size);
+    border: var(--element-border);
+    border-radius: var(--border-radius);
+    text-align: center;
+    text-decoration: var(--text-decoration);
+    cursor: var(--cursor);
+    transition: var(--on-hover-button-transition);
+}
+
+.button:hover {
+    background-color: var(--text-color);
+    color: var(--background-color);
+}

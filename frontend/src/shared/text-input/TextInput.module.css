@@ -1,0 +1,15 @@
+.base-text-input {
+    padding: 1rem;
+    margin-bottom: 1.5rem;
+    width: var(--button-width);
+    font-size: var(--secondary-font-size);
+    text-align: center;
+    border: var(--element-border);
+    border-radius: var(--border-radius);
+    color: var(--text-color);
+    background-color: var(--background-color);
+}
+
+.base-text-input:hover {
+    outline: none;
+}

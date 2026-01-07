@@ -1,5 +1,7 @@
 import styles from "./CreateRoom.module.css";
 import PanelTitle from "../../shared/panel-title/PanelTitle.tsx";
+import Button from "../../shared/button/Button.tsx";
+import TextInput from "../../shared/text-input/TextInput.tsx";
 
 export default function CreateRoom() {
     return (
@@ -8,7 +10,7 @@ export default function CreateRoom() {
             <div className={styles.roomFormContainer}>
                 <div className={styles.roomNameContainer}>
                     <label htmlFor="room-name" className="base-label">Name your room?</label>
-                    <input type="text" id="room-name" placeholder="Enter room name" className="base-text-input"/>
+                    <TextInput id={"room-name"} placeholder={"Enter room name"}/>
                 </div>
                 <div className={styles.roomTypeContainer}>
                     <p className="base-label">Type of room?
@@ -22,7 +24,7 @@ export default function CreateRoom() {
                     </div>
                 </div>
                 <div className={styles.roomButtonContainer}>
-                    <button type="button" className="button">Create room</button>
+                    <Button text={"Create room"}/>
                 </div>
             </div>
         </div>
