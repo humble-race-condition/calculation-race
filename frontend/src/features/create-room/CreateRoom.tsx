@@ -9,12 +9,11 @@ export default function CreateRoom() {
             <PanelTitle title={"Create a room"}/>
             <div className={styles.roomFormContainer}>
                 <div className={styles.roomNameContainer}>
-                    <label htmlFor="room-name" className="room-label">Name your room?</label>
+                    <label htmlFor="room-name" className={styles.roomLabel}>Name your room?</label>
                     <TextInput id={"room-name"} placeholder={"Enter room name"}/>
                 </div>
                 <div className={styles.roomTypeContainer}>
-                    <p className="room-label">Type of room? Select game type
-                    </p>
+                    <p className={styles.roomLabel}>Type of room? Select game type</p>
                     <div>
                         <input className={styles.roomTypeInput} type="radio" id="red" name="color"/>
                         <label className={styles.roomTypeLabel} htmlFor="red">Cooperative</label>
