@@ -98,13 +98,6 @@ body, html {
     align-items: center;
 }
 
-.panel-description {
-    padding: 1rem;
-    margin-top: 1rem;
-    font-size: var(--secondary-font-size);
-    text-align: center;
-}
-
 .base-text-input {
     padding: 1rem;
     margin-bottom: 1.5rem;

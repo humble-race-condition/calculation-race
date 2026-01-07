@@ -4,7 +4,7 @@ import {type RootState} from "../../config/store/storeConfiguration";
 import styles from "./Navbar.module.css";
 import {NavbarElement} from "./NavbarElement.tsx";
 
-type NavbarElement = {
+interface NavbarElement {
     id: number,
     path: string,
     label: string,

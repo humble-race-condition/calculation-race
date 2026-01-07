@@ -1,7 +1,7 @@
 import styles from "./Navbar.module.css";
 import {NavLink} from "react-router";
 
-type NavbarElementProps = {
+interface NavbarElementProps {
     path: string,
     label: string
 }

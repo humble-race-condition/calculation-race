@@ -1,5 +1,6 @@
 import styles from './Game.module.css';
-import {PanelTitle} from "../../shared/panel-title/PanelTitle.tsx";
+import PanelDescription from "../../shared/panel-description/PanelDescription.tsx";
+import PanelTitle from "../../shared/panel-title/PanelTitle.tsx";
 
 function Scoreboard() {
     return (
@@ -183,12 +184,12 @@ function Chat() {
     );
 }
 
+
 function MainGamePanel() {
     return (
         <div className={styles.game}>
-            <PanelTitle title={'How fast can you calculate?'}/>
-            <p className="panel-description">You must calculate the given formula and submit the result to win this
-                game!</p>
+            <PanelTitle title={"How fast can you calculate?"}/>
+            <PanelDescription title={"You must calculate the given formula and submit the result to win this game!"}/>
             <h2 className={styles.gameFormula}>This is the mighty formula</h2>
             <div className={styles.submitResultContainer}>
                 <label htmlFor="submit-result-input"> </label>
