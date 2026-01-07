@@ -1,0 +1,7 @@
+.panel-title {
+    padding: 1rem;
+    height: var(--panel-title-height);
+    width: 100%;
+    text-align: center;
+    font-size: var(--panel-title-font-size);
+}

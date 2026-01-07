@@ -1,137 +1,145 @@
 import styles from './Game.module.css';
+import {PanelTitle} from "../../shared/panel-title/PanelTitle.tsx";
+
+function Scoreboard() {
+    return (
+        <div className={styles.scoreboard}>
+            <PanelTitle title={"Scoreboard"}/>
+            <div className={styles.scoreboardHeaderTableContainer}>
+                <table className={styles.scoreboardTable}>
+                    <thead>
+                    <tr className={`${styles.scoreboardRow} ${styles.scoreboardHeaderRow}`}>
+                        <th className={styles.scoreboardTablePositionColumn}>Position</th>
+                        <th className={styles.scoreboardTableUsernameColumn}>Username</th>
+                        <th className={styles.scoreboardTableScoreColumn}>Score</th>
+                    </tr>
+                    </thead>
+                </table>
+            </div>
+            <div className={styles.scoreboardBodyTableParentContainer}>
+                <div className={`${styles.scoreboardBodyTableContainer} ${styles.scrollbarContainer}`}>
+                    <table className={styles.scoreboardTable}>
+                        <tbody>
+                        <tr className={`${styles.scoreboardRow} ${styles.scoreboardRowBorder}`}>
+                            <td className={styles.scoreboardTablePositionColumn}>1</td>
+                            <td className={styles.scoreboardTableUsernameColumn}>Gosho</td>
+                            <td className={styles.scoreboardTableScoreColumn}>15</td>
+                        </tr>
+                        <tr className={`${styles.scoreboardRow} ${styles.scoreboardRowBorder}`}>
+                            <td className={styles.scoreboardTablePositionColumn}>2</td>
+                            <td className={styles.scoreboardTableUsernameColumn}>ToshoTodorov</td>
+                            <td className={styles.scoreboardTableScoreColumn}>1</td>
+                        </tr>
+                        <tr className={`${styles.scoreboardRow} ${styles.scoreboardRowBorder}`}>
+                            <td className={styles.scoreboardTablePositionColumn}>321</td>
+                            <td className={styles.scoreboardTableUsernameColumn}>Gosho123</td>
+                            <td className={styles.scoreboardTableScoreColumn}>15</td>
+                        </tr>
+                        <tr className={`${styles.scoreboardRow} ${styles.scoreboardRowBorder}`}>
+                            <td className={styles.scoreboardTablePositionColumn}>4</td>
+                            <td className={styles.scoreboardTableUsernameColumn}>Gosho</td>
+                            <td className={styles.scoreboardTableScoreColumn}>125</td>
+                        </tr>
+                        <tr className={`${styles.scoreboardRow} ${styles.scoreboardRowBorder}`}>
+                            <td className={styles.scoreboardTablePositionColumn}>4</td>
+                            <td className={styles.scoreboardTableUsernameColumn}>Gosho</td>
+                            <td className={styles.scoreboardTableScoreColumn}>125</td>
+                        </tr>
+                        <tr className={`${styles.scoreboardRow} ${styles.scoreboardRowBorder}`}>
+                            <td className={styles.scoreboardTablePositionColumn}>4</td>
+                            <td className={styles.scoreboardTableUsernameColumn}>Gosho</td>
+                            <td className={styles.scoreboardTableScoreColumn}>125</td>
+                        </tr>
+                        <tr className={`${styles.scoreboardRow} ${styles.scoreboardRowBorder}`}>
+                            <td className={styles.scoreboardTablePositionColumn}>4</td>
+                            <td className={styles.scoreboardTableUsernameColumn}>Gosho</td>
+                            <td className={styles.scoreboardTableScoreColumn}>125</td>
+                        </tr>
+                        <tr className={`${styles.scoreboardRow} ${styles.scoreboardRowBorder}`}>
+                            <td className={styles.scoreboardTablePositionColumn}>4</td>
+                            <td className={styles.scoreboardTableUsernameColumn}>Gosho</td>
+                            <td className={styles.scoreboardTableScoreColumn}>125</td>
+                        </tr>
+                        <tr className={`${styles.scoreboardRow} ${styles.scoreboardRowBorder}`}>
+                            <td className={styles.scoreboardTablePositionColumn}>4</td>
+                            <td className={styles.scoreboardTableUsernameColumn}>Gosho</td>
+                            <td className={styles.scoreboardTableScoreColumn}>125</td>
+                        </tr>
+                        <tr className={`${styles.scoreboardRow} ${styles.scoreboardRowBorder}`}>
+                            <td className={styles.scoreboardTablePositionColumn}>4</td>
+                            <td className={styles.scoreboardTableUsernameColumn}>Gosho</td>
+                            <td className={styles.scoreboardTableScoreColumn}>125</td>
+                        </tr>
+                        <tr className={`${styles.scoreboardRow} ${styles.scoreboardRowBorder}`}>
+                            <td className={styles.scoreboardTablePositionColumn}>4</td>
+                            <td className={styles.scoreboardTableUsernameColumn}>Gosho</td>
+                            <td className={styles.scoreboardTableScoreColumn}>125</td>
+                        </tr>
+                        <tr className={`${styles.scoreboardRow} ${styles.scoreboardRowBorder}`}>
+                            <td className={styles.scoreboardTablePositionColumn}>4</td>
+                            <td className={styles.scoreboardTableUsernameColumn}>Gosho</td>
+                            <td className={styles.scoreboardTableScoreColumn}>125</td>
+                        </tr>
+                        <tr className={`${styles.scoreboardRow} ${styles.scoreboardRowBorder}`}>
+                            <td className={styles.scoreboardTablePositionColumn}>4</td>
+                            <td className={styles.scoreboardTableUsernameColumn}>Gosho</td>
+                            <td className={styles.scoreboardTableScoreColumn}>125</td>
+                        </tr>
+                        <tr className={`${styles.scoreboardRow} ${styles.scoreboardRowBorder}`}>
+                            <td className={styles.scoreboardTablePositionColumn}>4</td>
+                            <td className={styles.scoreboardTableUsernameColumn}>Gosho</td>
+                            <td className={styles.scoreboardTableScoreColumn}>125</td>
+                        </tr>
+                        <tr className={`${styles.scoreboardRow} ${styles.scoreboardRowBorder}`}>
+                            <td className={styles.scoreboardTablePositionColumn}>4</td>
+                            <td className={styles.scoreboardTableUsernameColumn}>Gosho</td>
+                            <td className={styles.scoreboardTableScoreColumn}>125</td>
+                        </tr>
+                        <tr className={`${styles.scoreboardRow} ${styles.scoreboardRowBorder}`}>
+                            <td className={styles.scoreboardTablePositionColumn}>4</td>
+                            <td className={styles.scoreboardTableUsernameColumn}>Gosho</td>
+                            <td className={styles.scoreboardTableScoreColumn}>125</td>
+                        </tr>
+                        <tr className={`${styles.scoreboardRow} ${styles.scoreboardRowBorder}`}>
+                            <td className={styles.scoreboardTablePositionColumn}>4</td>
+                            <td className={styles.scoreboardTableUsernameColumn}>Gosho</td>
+                            <td className={styles.scoreboardTableScoreColumn}>125</td>
+                        </tr>
+                        <tr className={`${styles.scoreboardRow} ${styles.scoreboardRowBorder}`}>
+                            <td className={styles.scoreboardTablePositionColumn}>4</td>
+                            <td className={styles.scoreboardTableUsernameColumn}>Gosho</td>
+                            <td className={styles.scoreboardTableScoreColumn}>125</td>
+                        </tr>
+                        <tr className={`${styles.scoreboardRow} ${styles.scoreboardRowBorder}`}>
+                            <td className={styles.scoreboardTablePositionColumn}>4</td>
+                            <td className={styles.scoreboardTableUsernameColumn}>Gosho</td>
+                            <td className={styles.scoreboardTableScoreColumn}>125</td>
+                        </tr>
+                        <tr className={`${styles.scoreboardRow} ${styles.scoreboardRowBorder}`}>
+                            <td className={styles.scoreboardTablePositionColumn}>4</td>
+                            <td className={styles.scoreboardTableUsernameColumn}>Gosho</td>
+                            <td className={styles.scoreboardTableScoreColumn}>125</td>
+                        </tr>
+                        <tr className={`${styles.scoreboardRow} ${styles.scoreboardRowBorder}`}>
+                            <td className={styles.scoreboardTablePositionColumn}>4</td>
+                            <td className={styles.scoreboardTableUsernameColumn}>Gosho</td>
+                            <td className={styles.scoreboardTableScoreColumn}>125</td>
+                        </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+
+    );
+}
 
 function Game() {
     return (
         <div className={styles.main}>
-            <div className={styles.scoreboard}>
-                <h1 className="panel-title">Scoreboard</h1>
-                <div className={styles.scoreboardHeaderTableContainer}>
-                    <table className={styles.scoreboardTable}>
-                        <thead>
-                        <tr className={`${styles.scoreboardRow} ${styles.scoreboardHeaderRow}`}>
-                            <th className={styles.scoreboardTablePositionColumn}>Position</th>
-                            <th className={styles.scoreboardTableUsernameColumn}>Username</th>
-                            <th className={styles.scoreboardTableScoreColumn}>Score</th>
-                        </tr>
-                        </thead>
-                    </table>
-                </div>
-                <div className={styles.scoreboardBodyTableParentContainer}>
-                    <div className={`${styles.scoreboardBodyTableContainer} ${styles.scrollbarContainer}`}>
-                        <table className={styles.scoreboardTable}>
-                            <tbody>
-                            <tr className={`${styles.scoreboardRow} ${styles.scoreboardRowBorder}`}>
-                                <td className={styles.scoreboardTablePositionColumn}>1</td>
-                                <td className={styles.scoreboardTableUsernameColumn}>Gosho</td>
-                                <td className={styles.scoreboardTableScoreColumn}>15</td>
-                            </tr>
-                            <tr className={`${styles.scoreboardRow} ${styles.scoreboardRowBorder}`}>
-                                <td className={styles.scoreboardTablePositionColumn}>2</td>
-                                <td className={styles.scoreboardTableUsernameColumn}>ToshoTodorov</td>
-                                <td className={styles.scoreboardTableScoreColumn}>1</td>
-                            </tr>
-                            <tr className={`${styles.scoreboardRow} ${styles.scoreboardRowBorder}`}>
-                                <td className={styles.scoreboardTablePositionColumn}>321</td>
-                                <td className={styles.scoreboardTableUsernameColumn}>Gosho123</td>
-                                <td className={styles.scoreboardTableScoreColumn}>15</td>
-                            </tr>
-                            <tr className={`${styles.scoreboardRow} ${styles.scoreboardRowBorder}`}>
-                                <td className={styles.scoreboardTablePositionColumn}>4</td>
-                                <td className={styles.scoreboardTableUsernameColumn}>Gosho</td>
-                                <td className={styles.scoreboardTableScoreColumn}>125</td>
-                            </tr>
-                            <tr className={`${styles.scoreboardRow} ${styles.scoreboardRowBorder}`}>
-                                <td className={styles.scoreboardTablePositionColumn}>4</td>
-                                <td className={styles.scoreboardTableUsernameColumn}>Gosho</td>
-                                <td className={styles.scoreboardTableScoreColumn}>125</td>
-                            </tr>
-                            <tr className={`${styles.scoreboardRow} ${styles.scoreboardRowBorder}`}>
-                                <td className={styles.scoreboardTablePositionColumn}>4</td>
-                                <td className={styles.scoreboardTableUsernameColumn}>Gosho</td>
-                                <td className={styles.scoreboardTableScoreColumn}>125</td>
-                            </tr>
-                            <tr className={`${styles.scoreboardRow} ${styles.scoreboardRowBorder}`}>
-                                <td className={styles.scoreboardTablePositionColumn}>4</td>
-                                <td className={styles.scoreboardTableUsernameColumn}>Gosho</td>
-                                <td className={styles.scoreboardTableScoreColumn}>125</td>
-                            </tr>
-                            <tr className={`${styles.scoreboardRow} ${styles.scoreboardRowBorder}`}>
-                                <td className={styles.scoreboardTablePositionColumn}>4</td>
-                                <td className={styles.scoreboardTableUsernameColumn}>Gosho</td>
-                                <td className={styles.scoreboardTableScoreColumn}>125</td>
-                            </tr>
-                            <tr className={`${styles.scoreboardRow} ${styles.scoreboardRowBorder}`}>
-                                <td className={styles.scoreboardTablePositionColumn}>4</td>
-                                <td className={styles.scoreboardTableUsernameColumn}>Gosho</td>
-                                <td className={styles.scoreboardTableScoreColumn}>125</td>
-                            </tr>
-                            <tr className={`${styles.scoreboardRow} ${styles.scoreboardRowBorder}`}>
-                                <td className={styles.scoreboardTablePositionColumn}>4</td>
-                                <td className={styles.scoreboardTableUsernameColumn}>Gosho</td>
-                                <td className={styles.scoreboardTableScoreColumn}>125</td>
-                            </tr>
-                            <tr className={`${styles.scoreboardRow} ${styles.scoreboardRowBorder}`}>
-                                <td className={styles.scoreboardTablePositionColumn}>4</td>
-                                <td className={styles.scoreboardTableUsernameColumn}>Gosho</td>
-                                <td className={styles.scoreboardTableScoreColumn}>125</td>
-                            </tr>
-                            <tr className={`${styles.scoreboardRow} ${styles.scoreboardRowBorder}`}>
-                                <td className={styles.scoreboardTablePositionColumn}>4</td>
-                                <td className={styles.scoreboardTableUsernameColumn}>Gosho</td>
-                                <td className={styles.scoreboardTableScoreColumn}>125</td>
-                            </tr>
-                            <tr className={`${styles.scoreboardRow} ${styles.scoreboardRowBorder}`}>
-                                <td className={styles.scoreboardTablePositionColumn}>4</td>
-                                <td className={styles.scoreboardTableUsernameColumn}>Gosho</td>
-                                <td className={styles.scoreboardTableScoreColumn}>125</td>
-                            </tr>
-                            <tr className={`${styles.scoreboardRow} ${styles.scoreboardRowBorder}`}>
-                                <td className={styles.scoreboardTablePositionColumn}>4</td>
-                                <td className={styles.scoreboardTableUsernameColumn}>Gosho</td>
-                                <td className={styles.scoreboardTableScoreColumn}>125</td>
-                            </tr>
-                            <tr className={`${styles.scoreboardRow} ${styles.scoreboardRowBorder}`}>
-                                <td className={styles.scoreboardTablePositionColumn}>4</td>
-                                <td className={styles.scoreboardTableUsernameColumn}>Gosho</td>
-                                <td className={styles.scoreboardTableScoreColumn}>125</td>
-                            </tr>
-                            <tr className={`${styles.scoreboardRow} ${styles.scoreboardRowBorder}`}>
-                                <td className={styles.scoreboardTablePositionColumn}>4</td>
-                                <td className={styles.scoreboardTableUsernameColumn}>Gosho</td>
-                                <td className={styles.scoreboardTableScoreColumn}>125</td>
-                            </tr>
-                            <tr className={`${styles.scoreboardRow} ${styles.scoreboardRowBorder}`}>
-                                <td className={styles.scoreboardTablePositionColumn}>4</td>
-                                <td className={styles.scoreboardTableUsernameColumn}>Gosho</td>
-                                <td className={styles.scoreboardTableScoreColumn}>125</td>
-                            </tr>
-                            <tr className={`${styles.scoreboardRow} ${styles.scoreboardRowBorder}`}>
-                                <td className={styles.scoreboardTablePositionColumn}>4</td>
-                                <td className={styles.scoreboardTableUsernameColumn}>Gosho</td>
-                                <td className={styles.scoreboardTableScoreColumn}>125</td>
-                            </tr>
-                            <tr className={`${styles.scoreboardRow} ${styles.scoreboardRowBorder}`}>
-                                <td className={styles.scoreboardTablePositionColumn}>4</td>
-                                <td className={styles.scoreboardTableUsernameColumn}>Gosho</td>
-                                <td className={styles.scoreboardTableScoreColumn}>125</td>
-                            </tr>
-                            <tr className={`${styles.scoreboardRow} ${styles.scoreboardRowBorder}`}>
-                                <td className={styles.scoreboardTablePositionColumn}>4</td>
-                                <td className={styles.scoreboardTableUsernameColumn}>Gosho</td>
-                                <td className={styles.scoreboardTableScoreColumn}>125</td>
-                            </tr>
-                            <tr className={`${styles.scoreboardRow} ${styles.scoreboardRowBorder}`}>
-                                <td className={styles.scoreboardTablePositionColumn}>4</td>
-                                <td className={styles.scoreboardTableUsernameColumn}>Gosho</td>
-                                <td className={styles.scoreboardTableScoreColumn}>125</td>
-                            </tr>
-                            </tbody>
-                        </table>
-                    </div>
-                </div>
-            </div>
+            <Scoreboard/>
             <div className={styles.game}>
-                <h1 className="panel-title">How fast can you calculate?</h1>
+                <PanelTitle title={'How fast can you calculate?'}/>
                 <p className="panel-description">You must calculate the given formula and submit the result to win this
                     game!</p>
                 <h2 className={styles.gameFormula}>This is the mighty formula</h2>
@@ -143,7 +151,7 @@ function Game() {
                 </div>
             </div>
             <div className={styles.chat}>
-                <h1 className="panel-title">Collaborate?</h1>
+                <PanelTitle title={"Collaborate?"}/>
                 <div className={styles.chatContainerParentContainer}>
                     <div className={`${styles.chatMessagesContainer} ${styles.scrollbarContainer}`}>
                         <div className={styles.chatMessage}>User1: Hello there</div>

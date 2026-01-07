@@ -1,9 +1,10 @@
 import styles from "./CreateRoom.module.css";
+import {PanelTitle} from "../../shared/panel-title/PanelTitle.tsx";
 
 function CreateRoom() {
     return (
         <div className="main">
-            <h1 className="panel-title">Create a room</h1>
+            <PanelTitle title={"Create a room"}/>
             <div className={styles.roomFormContainer}>
                 <div className={styles.roomNameContainer}>
                     <label htmlFor="room-name" className="base-label">Name your room?</label>
