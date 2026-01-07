@@ -295,7 +295,7 @@ export default function Scoreboard() {
                 <div className={`${styles.scoreboardBodyTableContainer} ${styles.scrollbarContainer}`}>
                     <table className={styles.scoreboardTable}>
                         <tbody>
-                        {values.map((value) => <ScoreboardRow {...value} id={value.id}/>)}
+                        {values.map((value) => <ScoreboardRow {...value} key={value.id}/>)}
                         </tbody>
                     </table>
                 </div>

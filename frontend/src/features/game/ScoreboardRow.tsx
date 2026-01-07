@@ -1,7 +1,6 @@
 import styles from "./Game.module.css";
 
 type ScoreboardRowProps = {
-    id: string;
     position: number;
     username: string;
     score: number;
