@@ -10,7 +10,7 @@ interface NavbarElement {
     label: string,
 }
 
-function Navbar() {
+export default function Navbar() {
     const dispatch = useDispatch();
     const isDarkThemeChecked = useSelector((state: RootState) => state.global.isDarkThemeChecked);
     const navbarData: NavbarElement[] = [
@@ -52,5 +52,3 @@ function Navbar() {
         </nav>
     </>;
 }
-
-export default Navbar;

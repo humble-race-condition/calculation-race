@@ -8,7 +8,7 @@ import {setTheme} from "../../config/store/global";
 import {Constants} from "../Constants";
 import Footer from "../footer/Footer";
 
-function Layout() {
+export default function Layout() {
     const [searchParams, setSearchParams] = useSearchParams();
     const dispatch = useDispatch();
     const theme = useSelector((state: RootState) => state.global.theme);
@@ -64,5 +64,3 @@ function Layout() {
         </>
     );
 }
-
-export default Layout;

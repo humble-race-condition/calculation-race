@@ -4,10 +4,8 @@ interface PanelTitleProps {
     title: string;
 }
 
-function PanelTitle({title}: PanelTitleProps) {
+export default function PanelTitle({title}: PanelTitleProps) {
     return (
         <h1 className={styles.panelTitle}>{title}</h1>
     );
 }
-
-export default PanelTitle;

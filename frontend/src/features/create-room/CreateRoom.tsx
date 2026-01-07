@@ -1,7 +1,7 @@
 import styles from "./CreateRoom.module.css";
-import {PanelTitle} from "../../shared/panel-title/PanelTitle.tsx";
+import PanelTitle from "../../shared/panel-title/PanelTitle.tsx";
 
-function CreateRoom() {
+export default function CreateRoom() {
     return (
         <div className="main">
             <PanelTitle title={"Create a room"}/>
@@ -28,5 +28,3 @@ function CreateRoom() {
         </div>
     );
 }
-
-export default CreateRoom;
