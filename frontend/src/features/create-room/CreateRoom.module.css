@@ -28,6 +28,12 @@
     height: 0;
 }
 
+.room-label {
+    font-size: var(--secondary-font-size);
+    padding: 1rem;
+    margin-bottom: 1rem;
+}
+
 /*ToDo header gets squished on low resolutions. Need to make it a dropdown. This also squishes the button for the theme*/
 .room-type-label {
     display: inline-block;

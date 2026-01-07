@@ -97,9 +97,3 @@ body, html {
     justify-content: start;
     align-items: center;
 }
-
-.base-label {
-    font-size: var(--secondary-font-size);
-    padding: 1rem;
-    margin-bottom: 1rem;
-}
