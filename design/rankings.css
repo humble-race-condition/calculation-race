@@ -21,6 +21,14 @@
     border-spacing: unset;
 }
 
+.main {
+    grid-area: main;
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    align-items: center;
+}
+
 .rankings-row {
     margin: 0.5rem 0;
     padding: 0.5rem;
