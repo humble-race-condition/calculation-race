@@ -1,69 +1,70 @@
 import styles from './Game.module.css';
-import PanelDescription from "../../shared/panel-description/PanelDescription.tsx";
 import PanelTitle from "../../shared/panel-title/PanelTitle.tsx";
 import Scoreboard from "./Scoreboard.tsx";
-import Button from "../../shared/button/Button.tsx";
-import TextInput from "../../shared/text-input/TextInput.tsx";
+import GamePanel from "./GamePanel.tsx";
+import ChatMessage from "./ChatMessage.tsx";
 
-function Chat() {
+interface Message {
+    id: string;
+    message: string;
+}
+
+export function Chat() {
+    const messages: Message[] = [
+        {
+            id: "1",
+            message: "User1: Hello there"
+        },
+        {
+            id: "2",
+            message: "User2: Whats appppppssssssssssssssss"
+        },
+        {
+            id: "3",
+            message: "User3: Whats appppppssssssssssssssss. HERE WE GO AGAINNNNNNNNNNNNNNNNNNNNNN"
+        },
+        {
+            id: "4",
+            message: "User3: Whats appppppssssssssssssssss. HERE WE GO AGAINNNNNNNNNNNNNNNNNNNNNN"
+        },
+        {
+            id: "5",
+            message: "User3: Whats appppppssssssssssssssss. HERE WE GO AGAINNNNNNNNNNNNNNNNNNNNNN"
+        },
+        {
+            id: "6",
+            message: "User3: Whats appppppssssssssssssssss. HERE WE GO AGAINNNNNNNNNNNNNNNNNNNNNN"
+        },
+        {
+            id: "7",
+            message: "User3: Whats appppppssssssssssssssss. HERE WE GO AGAINNNNNNNNNNNNNNNNNNNNNN"
+        },
+        {
+            id: "8",
+            message: "User3: Whats appppppssssssssssssssss. HERE WE GO AGAINNNNNNNNNNNNNNNNNNNNNN"
+        },
+        {
+
+            id: "9",
+            message: "User3: Whats appppppssssssssssssssss. HERE WE GO AGAINNNNNNNNNNNNNNNNNNNNNN"
+        },
+        {
+            id: "10",
+            message: "User3: Whats appppppssssssssssssssss. HERE WE GO AGAINNNNNNNNNNNNNNNNNNNNNN"
+        }
+    ];
     return (
         <div className={styles.chat}>
             <PanelTitle title={"Collaborate?"}/>
             <div className={styles.chatContainerParentContainer}>
                 <div className={`${styles.chatMessagesContainer} ${styles.scrollbarContainer}`}>
-                    <div className={styles.chatMessage}>User1: Hello there</div>
-                    <div className={styles.chatMessage}>User2: Whats appppppssssssssssssssss</div>
-                    <div className={styles.chatMessage}>User3: Whats appppppssssssssssssssss. HERE WE GO
-                        AGAINNNNNNNNNNNNNNNNNNNNNN
-                    </div>
-                    <div className={styles.chatMessage}>User3: Whats appppppssssssssssssssss. HERE WE GO
-                        AGAINNNNNNNNNNNNNNNNNNNNNN
-                    </div>
-                    <div className={styles.chatMessage}>User3: Whats appppppssssssssssssssss. HERE WE GO
-                        AGAINNNNNNNNNNNNNNNNNNNNNN
-                    </div>
-                    <div className={styles.chatMessage}>User3: Whats appppppssssssssssssssss. HERE WE GO
-                        AGAINNNNNNNNNNNNNNNNNNNNNN
-                    </div>
-                    <div className={styles.chatMessage}>User3: Whats appppppssssssssssssssss. HERE WE GO
-                        AGAINNNNNNNNNNNNNNNNNNNNNN
-                    </div>
-                    <div className={styles.chatMessage}>User3: Whats appppppssssssssssssssss. HERE WE GO
-                        AGAINNNNNNNNNNNNNNNNNNNNNN
-                    </div>
-                    <div className={styles.chatMessage}>User3: Whats appppppssssssssssssssss. HERE WE GO
-                        AGAINNNNNNNNNNNNNNNNNNNNNN
-                    </div>
-                    <div className={styles.chatMessage}>User3: Whats appppppssssssssssssssss. HERE WE GO
-                        AGAINNNNNNNNNNNNNNNNNNNNNN
-                    </div>
-                    <div className={styles.chatMessage}>User3: Whats appppppssssssssssssssss. HERE WE GO
-                        AGAINNNNNNNNNNNNNNNNNNNNNN
-                    </div>
-                    <div className={styles.chatMessage}>User3: Whats appppppssssssssssssssss. HERE WE GO
-                        AGAINNNNNNNNNNNNNNNNNNNNNN
-                    </div>
+                    {messages.map((message) => <ChatMessage message={message.message} key={message.id}/>)}
                 </div>
             </div>
             <div className={styles.chatInputContainer}>
                 <label>
                     <textarea className={styles.chatInput} placeholder="Want to collaborate?"></textarea>
                 </label>
-            </div>
-        </div>
-    );
-}
-
-export function GamePanel() {
-    return (
-        <div className={styles.game}>
-            <PanelTitle title={"How fast can you calculate?"}/>
-            <PanelDescription title={"You must calculate the given formula and submit the result to win this game!"}/>
-            <h2 className={styles.gameFormula}>This is the mighty formula</h2>
-            <div className={styles.submitResultContainer}>
-                <label htmlFor="submit-result-input"> </label>
-                <TextInput id={"submit-result-input"} placeholder={"Enter your result here"}/>
-                <Button text={"Submit the Result"}/>
             </div>
         </div>
     );
