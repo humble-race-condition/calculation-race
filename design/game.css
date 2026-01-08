@@ -1,4 +1,4 @@
-@media screen and (max-width: 992px) {
+@media screen and (max-width: 1200px) {
     .main {
         grid-area: main;
         display: grid;
@@ -8,17 +8,6 @@
             'chat';
         height: 100%;
         grid-template-rows: 1fr 1fr 1fr;
-    }
-}
-
-@media screen and (min-width: 993px) and (max-width: 1200px) {
-    .main {
-        grid-area: main;
-        display: grid;
-        grid-template-areas:
-            'scoreboard game chat';
-        height: 100%;
-        grid-template-columns: 400px 1fr 400px;
     }
 }
 
