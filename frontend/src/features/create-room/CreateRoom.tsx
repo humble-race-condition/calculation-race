@@ -5,7 +5,7 @@ import TextInput from "../../shared/text-input/TextInput.tsx";
 
 export default function CreateRoom() {
     return (
-        <div className="main">
+        <div className={styles.main}>
             <PanelTitle title={"Create a room"}/>
             <div className={styles.roomFormContainer}>
                 <div className={styles.roomNameContainer}>
