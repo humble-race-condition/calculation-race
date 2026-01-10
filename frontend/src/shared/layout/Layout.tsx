@@ -5,7 +5,7 @@ import {useDispatch, useSelector} from "react-redux";
 import {type RootState} from "../../config/store/storeConfiguration";
 import {Theme} from "./Theme";
 import {setTheme} from "../../config/store/global";
-import {Constants} from "../Constants";
+import {Constants} from "../constants.ts";
 import Footer from "../footer/Footer";
 
 export default function Layout() {

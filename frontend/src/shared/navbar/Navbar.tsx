@@ -3,6 +3,7 @@ import {setDark} from "../../config/store/global";
 import {type RootState} from "../../config/store/storeConfiguration";
 import styles from "./Navbar.module.css";
 import {NavbarElement} from "./NavbarElement.tsx";
+import {Paths} from "../paths.ts";
 
 interface NavbarElement {
     id: number,
@@ -16,22 +17,22 @@ export default function Navbar() {
     const navbarData: NavbarElement[] = [
         {
             id: 1,
-            path: '/',
+            path: Paths.HOME_PATH,
             label: 'CalculationRace',
         },
         {
             id: 2,
-            path: '/join-room',
-            label: 'Join Room',
+            path: Paths.GAME_PATH,
+            label: 'Game',
         },
         {
             id: 3,
-            path: '/create-room',
-            label: 'Create Room',
+            path: Paths.JOIN_ROOM_PATH,
+            label: 'Join Room',
         },
         {
             id: 4,
-            path: '/rankings',
+            path: Paths.RANKINGS_PATH,
             label: 'Rankings',
         },
     ];

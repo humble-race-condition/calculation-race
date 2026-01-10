@@ -2,6 +2,7 @@ import {createBrowserRouter} from "react-router";
 import Layout from "../../shared/layout/Layout";
 import CreateRoom from "../../features/create-room/CreateRoom.tsx";
 import Game from "../../features/game/Game.tsx";
+import JoinRoom from "../../features/join-room/JoinRoom.tsx";
 
 const router = createBrowserRouter([
     {
@@ -13,8 +14,13 @@ const router = createBrowserRouter([
                 children: []
             },
             {
-                path: "/join-room",
+                path: "/game",
                 element: <Game/>,
+                children: []
+            },
+            {
+                path: "/join-room",
+                element: <JoinRoom/>,
                 children: []
             },
         ]
