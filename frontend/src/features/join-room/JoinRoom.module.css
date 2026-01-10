@@ -13,3 +13,9 @@
     align-items: center;
     flex: 1;
 }
+
+.room-label {
+    font-size: var(--secondary-font-size);
+    padding: 1rem;
+    margin-bottom: 1rem;
+}

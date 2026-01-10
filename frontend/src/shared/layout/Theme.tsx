@@ -1,7 +1,7 @@
-export enum Theme {
-    LIGHT = 'light',
-    DARK = 'dark',
-}
+export const Theme = {
+    LIGHT: 'light',
+    DARK: 'dark',
+} as const;
 
 export function parseTheme(theme: string | null | undefined): Theme | null {
     if (!theme) {
