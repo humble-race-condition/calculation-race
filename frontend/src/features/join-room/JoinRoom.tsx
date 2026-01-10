@@ -4,10 +4,7 @@ import Button from "../../shared/button/Button.tsx";
 import TextInput from "../../shared/text-input/TextInput.tsx";
 import PanelDescription from "../../shared/panel-description/PanelDescription.tsx";
 
-interface JoinRoomProps {
-}
-
-export default function JoinRoom(props: JoinRoomProps) {
+export default function JoinRoom() {
     return (
         <div className={styles.main}>
             <PanelTitle title={"How fast can you calculate?"}/>

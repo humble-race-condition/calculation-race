@@ -1,8 +1,8 @@
 import {createSlice, type PayloadAction} from '@reduxjs/toolkit'
-import {parseTheme, Theme} from "../../shared/layout/Theme";
+import {parseTheme, Theme} from "../../shared/layout/theme.tsx";
 
 export interface GlobalState {
-    theme: Theme,
+    theme: string,
     isDarkThemeChecked: boolean,
 }
 

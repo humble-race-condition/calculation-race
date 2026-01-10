@@ -3,7 +3,7 @@ import {Outlet, useSearchParams} from "react-router";
 import Navbar from "../navbar/Navbar";
 import {useDispatch, useSelector} from "react-redux";
 import {type RootState} from "../../config/store/storeConfiguration";
-import {Theme} from "./Theme";
+import {Theme} from "./theme.tsx";
 import {setTheme} from "../../config/store/global";
 import {Constants} from "../constants.ts";
 import Footer from "../footer/Footer";
