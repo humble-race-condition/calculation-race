@@ -36,7 +36,7 @@ export default function Navbar() {
             label: 'Rankings',
         },
     ];
-
+    // TODo add catchall redirect for urls?
     return <>
         <nav className={styles.header}>
             <ul className={styles.headerList}>

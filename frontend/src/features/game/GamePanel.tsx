@@ -9,7 +9,7 @@ export default function GamePanel() {
         <div className={styles.game}>
             <PanelTitle title={"How fast can you calculate?"}/>
             <PanelDescription title={"You must calculate the given formula and submit the result to win this game!"}/>
-            <div className="game-container">
+            <div className={styles.gameContainer}>
                 <h2 className={styles.gameFormula}>This is the mighty formula</h2>
                 <form className={styles.submitResultContainer}>
                     <label htmlFor="submit-result-input"> </label>
