@@ -132,6 +132,10 @@
     flex: 1;
 }
 
+.counter {
+    font-size: 8rem;
+}
+
 .chat {
     grid-area: chat;
     height: calc(100vh - var(--header-height) - var(--footer-height));
