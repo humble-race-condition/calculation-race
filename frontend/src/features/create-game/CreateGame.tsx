@@ -1,9 +1,9 @@
-import styles from "./CreateRoom.module.css";
+import styles from "./CreateGame.module.css";
 import PanelTitle from "../../shared/panel-title/PanelTitle.tsx";
 import Button from "../../shared/button/Button.tsx";
 import TextInput from "../../shared/text-input/TextInput.tsx";
 
-export default function CreateRoom() {
+export default function CreateGame() {
     return (
         <div className={styles.main}>
             <PanelTitle title={"Create a room"}/>

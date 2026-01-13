@@ -1,8 +1,8 @@
 import {createBrowserRouter} from "react-router";
 import Layout from "../../shared/layout/Layout";
-import CreateRoom from "../../features/create-room/CreateRoom.tsx";
+import CreateGame from "../../features/create-game/CreateGame.tsx";
 import Game from "../../features/game/Game.tsx";
-import JoinRoom from "../../features/join-room/JoinRoom.tsx";
+import JoinGame from "../../features/join-game/JoinGame.tsx";
 import {Paths} from "../../shared/paths.ts";
 
 const router = createBrowserRouter([
@@ -11,12 +11,12 @@ const router = createBrowserRouter([
         children: [
             {
                 path: Paths.HOME_PATH,
-                element: <CreateRoom/>,
+                element: <CreateGame/>,
                 children: []
             },
             {
-                path: Paths.CREATE_ROOM_PATH,
-                element: <CreateRoom/>,
+                path: Paths.CREATE_GAME_PATH,
+                element: <CreateGame/>,
                 children: []
             },
             {
@@ -25,8 +25,8 @@ const router = createBrowserRouter([
                 children: []
             },
             {
-                path: Paths.JOIN_ROOM_PATH,
-                element: <JoinRoom/>,
+                path: Paths.JOIN_GAME_PATH,
+                element: <JoinGame/>,
                 children: []
             },
             //ToDo catch all route and page

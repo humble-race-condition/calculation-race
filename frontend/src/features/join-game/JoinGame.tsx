@@ -1,10 +1,10 @@
-import styles from './JoinRoom.module.css';
+import styles from './JoinGame.module.css';
 import PanelTitle from "../../shared/panel-title/PanelTitle.tsx";
 import Button from "../../shared/button/Button.tsx";
 import TextInput from "../../shared/text-input/TextInput.tsx";
 import PanelDescription from "../../shared/panel-description/PanelDescription.tsx";
 
-export default function JoinRoom() {
+export default function JoinGame() {
     return (
         <div className={styles.main}>
             <PanelTitle title={"How fast can you calculate?"}/>
