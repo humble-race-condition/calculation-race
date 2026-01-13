@@ -37,7 +37,7 @@
 }
 
 /*ToDo header gets squished on low resolutions. Need to make it a dropdown. This also squishes the button for the theme*/
-.room-type-label {
+.game-type-label {
     display: inline-block;
     padding: 1rem;
     margin: 0 0.5rem;
@@ -50,13 +50,13 @@
     cursor: var(--cursor);
 }
 
-.game-type-input:checked + .room-type-label {
+.game-type-input:checked + .game-type-label {
     background-color: var(--text-color);
     color: var(--background-color);
     transition: .2s ease-out;
 }
 
-.room-button-container {
+.game-button-container {
     display: flex;
     flex-direction: column;
     justify-content: center;
