@@ -2,15 +2,38 @@ import styles from "./CreateGame.module.css";
 import PanelTitle from "../../shared/panel-title/PanelTitle.tsx";
 import Button from "../../shared/button/Button.tsx";
 import TextInput from "../../shared/text-input/TextInput.tsx";
+import {useDispatch} from "react-redux";
+import React, {useState} from "react";
+
+export interface CreateGameState {
+    name: string | null;
+    type: string | null;
+}
 
 export default function CreateGame() {
+    const dispatch = useDispatch();
+    const [gameDetails, setGameDetails] = useState<CreateGameState>();
+
+    const handleInputChange = (e: React.ChangeEvent<HTMLInputElement>) => {
+        setGameDetails(prevState => ({...prevState, name: e.target.value}));
+    };
+
+    const handleClick = (e: React.MouseEvent) => {
+        e.preventDefault();
+        dispatch({})
+    };
+
     return (
         <div className={styles.main}>
             <PanelTitle title={"Create a game"}/>
-            <div className={styles.gameFormContainer}>
+            <form className={styles.gameFormContainer}>
                 <div className={styles.gameNameContainer}>
                     <label htmlFor="game-name" className={styles.gameLabel}>Name your game?</label>
-                    <TextInput id={"game-name"} placeholder={"Enter game name"}/>
+                    <TextInput id={"game-name"}
+                               placeholder={"Enter game name"}
+                               value={gameDetails.name}
+                               onChange={handleInputChange}
+                    />
                 </div>
                 <div className={styles.gameTypeContainer}>
                     <p className={styles.gameLabel}>Type of game? Select game type</p>
@@ -22,9 +45,9 @@ export default function CreateGame() {
                     </div>
                 </div>
                 <div className={styles.gameButtonContainer}>
-                    <Button text={"Create game"}/>
+                    <Button text={"Create game"} onClick={handleClick}/>
                 </div>
-            </div>
+            </form>
         </div>
     );
 }
