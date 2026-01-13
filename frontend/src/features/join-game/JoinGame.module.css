@@ -6,7 +6,7 @@
     align-items: center;
 }
 
-.room-form-container {
+.game-form-container {
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -14,7 +14,7 @@
     flex: 1;
 }
 
-.room-label {
+.game-label {
     font-size: var(--secondary-font-size);
     padding: 1rem;
     margin-bottom: 1rem;

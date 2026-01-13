@@ -28,7 +28,7 @@ export default function Navbar() {
         {
             id: 3,
             path: Paths.JOIN_GAME_PATH,
-            label: 'Join Room',
+            label: 'Join Game',
         },
         {
             id: 4,

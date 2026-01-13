@@ -6,23 +6,23 @@ import TextInput from "../../shared/text-input/TextInput.tsx";
 export default function CreateGame() {
     return (
         <div className={styles.main}>
-            <PanelTitle title={"Create a room"}/>
-            <div className={styles.roomFormContainer}>
-                <div className={styles.roomNameContainer}>
-                    <label htmlFor="room-name" className={styles.roomLabel}>Name your room?</label>
-                    <TextInput id={"room-name"} placeholder={"Enter room name"}/>
+            <PanelTitle title={"Create a game"}/>
+            <div className={styles.gameFormContainer}>
+                <div className={styles.gameNameContainer}>
+                    <label htmlFor="game-name" className={styles.gameLabel}>Name your game?</label>
+                    <TextInput id={"game-name"} placeholder={"Enter game name"}/>
                 </div>
-                <div className={styles.roomTypeContainer}>
-                    <p className={styles.roomLabel}>Type of room? Select game type</p>
+                <div className={styles.gameTypeContainer}>
+                    <p className={styles.gameLabel}>Type of game? Select game type</p>
                     <div>
-                        <input className={styles.roomTypeInput} type="radio" id="red" name="color"/>
-                        <label className={styles.roomTypeLabel} htmlFor="red">Cooperative</label>
-                        <input className={styles.roomTypeInput} type="radio" id="blue" name="color"/>
-                        <label className={styles.roomTypeLabel} htmlFor="blue">Competitive</label>
+                        <input className={styles.gameTypeInput} type="radio" id="red" name="color"/>
+                        <label className={styles.gameTypeLabel} htmlFor="red">Cooperative</label>
+                        <input className={styles.gameTypeInput} type="radio" id="blue" name="color"/>
+                        <label className={styles.gameTypeLabel} htmlFor="blue">Competitive</label>
                     </div>
                 </div>
-                <div className={styles.roomButtonContainer}>
-                    <Button text={"Create room"}/>
+                <div className={styles.gameButtonContainer}>
+                    <Button text={"Create game"}/>
                 </div>
             </div>
         </div>

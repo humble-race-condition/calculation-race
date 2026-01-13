@@ -13,7 +13,7 @@ export interface InitializeGameState {
     gameName: string;
 
 }
-//ToDo all room should be removed from domain names. Only use game ane lobby. No need for room.
+
 const initialState: GameState = {
     gameId: "",
     gameName: "",
