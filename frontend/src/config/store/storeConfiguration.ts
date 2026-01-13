@@ -1,6 +1,7 @@
 import type {Middleware} from '@reduxjs/toolkit';
 import {configureStore} from '@reduxjs/toolkit';
 import globalReducer from './global';
+import gameReducer from './game';
 
 const loggerMiddleware: Middleware = store => next => action => {
     console.log('Dispatching:', action);
@@ -14,6 +15,7 @@ const loggerMiddleware: Middleware = store => next => action => {
 export const storeConfiguration = configureStore({
     reducer: {
         global: globalReducer,
+        game: gameReducer,
     },
     middleware: (getDefaultMiddleware) =>
         getDefaultMiddleware().concat(loggerMiddleware)
