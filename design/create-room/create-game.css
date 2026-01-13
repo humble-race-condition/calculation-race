@@ -14,7 +14,7 @@
     flex: 1;
 }
 
-.room-name-container {
+.game-name-container {
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -22,7 +22,7 @@
     flex: 1;
 }
 
-.room-type-container {
+.game-type-container {
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -30,7 +30,7 @@
     flex: 1;
 }
 
-.room-type-input {
+.game-type-input {
     opacity: 0;
     width: 0;
     height: 0;
@@ -50,7 +50,7 @@
     cursor: var(--cursor);
 }
 
-.room-type-input:checked + .room-type-label {
+.game-type-input:checked + .room-type-label {
     background-color: var(--text-color);
     color: var(--background-color);
     transition: .2s ease-out;
