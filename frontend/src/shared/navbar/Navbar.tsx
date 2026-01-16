@@ -3,7 +3,7 @@ import {setDark} from "../../config/store/global";
 import {type RootState} from "../../config/store/storeConfiguration";
 import styles from "./Navbar.module.css";
 import {NavbarElement} from "./NavbarElement.tsx";
-import {Paths} from "../paths.ts";
+import {Paths} from "../constants.ts";
 
 interface NavbarElement {
     id: number,
