@@ -3,7 +3,7 @@ import Layout from "../../shared/layout/Layout";
 import CreateGame from "../../features/create-game/CreateGame.tsx";
 import Game from "../../features/game/Game.tsx";
 import JoinGame from "../../features/join-game/JoinGame.tsx";
-import {Paths} from "../../shared/paths.ts";
+import {Paths} from "../../shared/constants.ts";
 
 const router = createBrowserRouter([
     {
