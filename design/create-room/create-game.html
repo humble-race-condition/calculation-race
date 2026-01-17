@@ -24,13 +24,15 @@
     <div class="main">
         <h1 class="panel-title">Create a game</h1>
         <form class="game-form-container">
-            <div class="game-name-container">
+            <div class="text-input-container">
                 <label for="game-name" class="base-label">Name your game?</label>
                 <input type="text" id="game-name" placeholder="Enter game name" class="base-text-input"/>
-                <label for="host-name" class="base-label">Your name?</label>
-                <input type="text" id="host-name" placeholder="Enter host name" class="base-text-input"/>
             </div>
-            <div class="game-type-container">
+            <div class="text-input-container">
+                <label for="player-name" class="base-label">Player name?</label>
+                <input type="text" id="player-name" placeholder="Enter player name" class="base-text-input"/>
+            </div>
+            <div class="radio-container">
                 <p class="base-label">Type of game? Select game type</p>
                 <div>
                     <input class="game-type-input" type="radio" id="cooperative" name="type"/>
@@ -39,7 +41,7 @@
                     <label class="game-type-label" for="competitive">Competitive</label>
                 </div>
             </div>
-            <div class="game-button-container">
+            <div class="button-container">
                 <button type="button" class="button">Create game</button>
             </div>
         </form>

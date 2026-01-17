@@ -14,15 +14,7 @@
     flex: 1;
 }
 
-.game-name-container {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    flex: 1;
-}
-
-.game-type-container {
+.text-input-container {
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -34,6 +26,21 @@
     opacity: 0;
     width: 0;
     height: 0;
+}
+
+.radio-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    flex: 1;
+}
+
+.button-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex: 1;
 }
 
 /*ToDo header gets squished on low resolutions. Need to make it a dropdown. This also squishes the button for the theme*/
@@ -54,12 +61,4 @@
     background-color: var(--text-color);
     color: var(--background-color);
     transition: .2s ease-out;
-}
-
-.game-button-container {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    flex: 1;
 }
