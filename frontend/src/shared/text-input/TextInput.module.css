@@ -1,4 +1,4 @@
-.base-text-input {
+.text-input {
     padding: 1rem;
     margin-bottom: 1.5rem;
     width: var(--button-width);
@@ -10,6 +10,11 @@
     background-color: var(--background-color);
 }
 
-.base-text-input:hover {
+.text-input:hover {
     outline: none;
+}
+
+.label {
+    font-size: var(--secondary-font-size);
+    padding: 1rem;
 }

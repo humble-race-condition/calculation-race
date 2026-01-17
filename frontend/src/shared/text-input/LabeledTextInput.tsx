@@ -5,11 +5,14 @@ interface TextInputProps {
     id: string;
     placeholder: string;
     value: string;
+    label: string;
     onChange: (e: React.ChangeEvent<HTMLInputElement>) => void;
 }
 
-export default function TextInput({id, placeholder, value, onChange}: TextInputProps) {
+export default function LabeledTextInput({id, placeholder, value, label, onChange}: TextInputProps) {
     return (
+        <>
+            <label htmlFor="game-name" className={styles.label}>{label}</label>
             <input type="text"
                    placeholder={placeholder}
                    id={id}
@@ -17,5 +20,6 @@ export default function TextInput({id, placeholder, value, onChange}: TextInputP
                    value={value}
                    onChange={onChange}
             />
+        </>
     );
 }
