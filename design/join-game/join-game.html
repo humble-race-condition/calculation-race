@@ -24,11 +24,19 @@
     <div class="main">
         <h1 class="panel-title">How fast can you calculate?</h1>
         <p class="panel-description">You must calculate the given formula and submit the result to win this game!</p>
-        <div class="game-form-container">
-            <label class="base-label" for="game-name-input">Join game?</label>
-            <input class="base-text-input" type="text" id="game-name-input" placeholder="Game name">
-            <button class="button" type="button">Join game</button>
-        </div>
+        <form class="form-container">
+            <div class="text-input-container">
+                <label class="base-label" for="game-name-input">Join game?</label>
+                <input class="base-text-input" type="text" id="game-name-input" placeholder="Game name">
+            </div>
+            <div class="text-input-container">
+                <label class="base-label" for="player-name-input">Player name?</label>
+                <input class="base-text-input" type="text" id="player-name-input" placeholder="Player name">
+            </div>
+            <div class="button-container">
+                <button class="button" type="button">Join game</button>
+            </div>
+        </form>
     </div>
     <footer class="footer">@Calculation Race 2025</footer>
 </div>

@@ -181,6 +181,14 @@ body, html {
     text-align: center;
 }
 
+.text-input-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    flex: 1;
+}
+
 .base-text-input {
     padding: 1rem;
     width: var(--button-width);
