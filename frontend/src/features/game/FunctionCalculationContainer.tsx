@@ -1,5 +1,6 @@
 import styles from "./Game.module.css";
 import Button from "../../shared/button/Button.tsx";
+import LabeledTextInput from "../../shared/text-input/LabeledTextInput.tsx";
 import TextInput from "../../shared/text-input/TextInput.tsx";
 
 export default function FunctionCalculationContainer() {
