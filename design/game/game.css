@@ -211,3 +211,10 @@
     padding: 0.5rem;
     text-align: left;
 }
+
+.button-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex: 1;
+}
