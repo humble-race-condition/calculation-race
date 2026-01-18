@@ -3,14 +3,15 @@ import PanelTitle from "../../shared/panel-title/PanelTitle.tsx";
 import Button from "../../shared/button/Button.tsx";
 import LabeledTextInput from "../../shared/text-input/LabeledTextInput.tsx";
 import {useDispatch} from "react-redux";
-import React, {useState} from "react";
+import React, {useCallback, useEffect, useState} from "react";
 import {createSetField} from "../../shared/set-state-utilities/setStateUtility.ts";
-import {GameTypes} from "../../shared/constants.ts";
+import {Constants, GameType} from "../../shared/constants.ts";
+import {useSearchParams} from "react-router";
 
 export interface CreateGameState {
     name: string;
     hostName: string;
-    type: GameTypes.COMPETITIVE_TYPE | GameTypes.COOPERATIVE_TYPE;
+    type: string;
 }
 
 export default function CreateGame() {
@@ -19,10 +20,31 @@ export default function CreateGame() {
     const [gameDetails, setState] = useState<CreateGameState>({
         name: "",
         hostName: "",
-        type: GameTypes.COOPERATIVE_TYPE,
+        type: GameType.COOPERATIVE_TYPE,
     });
 
-    const setField = createSetField<CreateGameState>(setState);
+    const setField = useCallback(
+        <K extends keyof CreateGameState>(key: K, value: CreateGameState[K]) =>
+            createSetField<CreateGameState>(setState)(key, value),
+        [setState]);
+
+    const [searchParams, setSearchParams] = useSearchParams();
+    const gameType = searchParams.get(Constants.GAME_TYPE_KEY);
+
+    useEffect(() => {
+        if (gameType) {
+            setField("type", gameType);
+        }
+    }, [gameType, setField]);
+
+    useEffect(() => {
+        setSearchParams(prev => {
+            const params = new URLSearchParams(prev);
+            params.set(Constants.GAME_TYPE_KEY, gameDetails.type);
+            return params;
+        });
+    }, [gameDetails.type, setSearchParams]);
+
 
     const handleClick = (e: React.MouseEvent) => {
         e.preventDefault();
@@ -49,22 +71,22 @@ export default function CreateGame() {
                     <div>
                         <input className={styles.gameTypeInput}
                                type="radio"
-                               id={GameTypes.COOPERATIVE_TYPE}
+                               id={GameType.COOPERATIVE_TYPE}
                                name={gameTypeKey}
-                               checked={GameTypes.COOPERATIVE_TYPE === gameDetails.type}
-                               value={GameTypes.COOPERATIVE_TYPE}
+                               checked={GameType.COOPERATIVE_TYPE === gameDetails.type}
+                               value={GameType.COOPERATIVE_TYPE}
                                onChange={(e) => setField(gameTypeKey, e.target.value)}
                         />
-                        <label className={styles.gameTypeLabel} htmlFor={GameTypes.COOPERATIVE_TYPE}>Cooperative</label>
+                        <label className={styles.gameTypeLabel} htmlFor={GameType.COOPERATIVE_TYPE}>Cooperative</label>
                         <input className={styles.gameTypeInput}
                                type="radio"
-                               id={GameTypes.COMPETITIVE_TYPE}
+                               id={GameType.COMPETITIVE_TYPE}
                                name={gameTypeKey}
-                               checked={GameTypes.COMPETITIVE_TYPE === gameDetails.type}
-                               value={GameTypes.COMPETITIVE_TYPE}
+                               checked={GameType.COMPETITIVE_TYPE === gameDetails.type}
+                               value={GameType.COMPETITIVE_TYPE}
                                onChange={(e) => setField(gameTypeKey, e.target.value)}
                         />
-                        <label className={styles.gameTypeLabel} htmlFor={GameTypes.COMPETITIVE_TYPE}>Competitive</label>
+                        <label className={styles.gameTypeLabel} htmlFor={GameType.COMPETITIVE_TYPE}>Competitive</label>
                     </div>
                 </div>
                 <div className={styles.buttonContainer}>
