@@ -1,7 +1,7 @@
 import styles from "./CreateGame.module.css";
 import PanelTitle from "../../shared/panel-title/PanelTitle.tsx";
 import Button from "../../shared/button/Button.tsx";
-import LabeledTextInput from "../../shared/text-input/LabeledTextInput.tsx";
+import TextInput from "../../shared/text-input/TextInput.tsx";
 import {useDispatch, useSelector} from "react-redux";
 import React, {useCallback, useEffect, useState} from "react";
 import {createSetField} from "../../shared/set-state-utilities/setStateUtility.ts";
@@ -110,17 +110,17 @@ export default function CreateGame() {
         <div className={styles.main}>
             <PanelTitle title={"Create a game"}/>
             <form className={styles.formContainer}>
-                <LabeledTextInput id={"game-name"}
-                                  placeholder={"Enter game name"}
-                                  value={state.gameName}
-                                  label={'Name your game?'}
-                                  onChange={e => setField("gameName", e.target.value)}
+                <TextInput id={"game-name"}
+                           placeholder={"Enter game name"}
+                           value={state.gameName}
+                           label={'Name your game?'}
+                           onChange={e => setField("gameName", e.target.value)}
                 />
-                <LabeledTextInput id={"player-name"}
-                                  placeholder={"Enter player name"}
-                                  value={state.playerName}
-                                  label={'Player name?'}
-                                  onChange={e => setField("playerName", e.target.value)}
+                <TextInput id={"player-name"}
+                           placeholder={"Enter player name"}
+                           value={state.playerName}
+                           label={'Player name?'}
+                           onChange={e => setField("playerName", e.target.value)}
                 />
                 <div className={styles.gameTypeContainer}>
                     <p className={styles.gameLabel}>Type of game? Select game type</p>
