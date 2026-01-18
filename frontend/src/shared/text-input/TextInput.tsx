@@ -4,7 +4,7 @@ import React from "react";
 interface TextInputProps {
     id: string;
     placeholder: string;
-    value: string;
+    value?: string;
     label?: string | null | undefined;
     labelStyle?: string | null | undefined;
     onChange: (e: React.ChangeEvent<HTMLInputElement>) => void;
