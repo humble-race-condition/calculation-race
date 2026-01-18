@@ -32,22 +32,18 @@ export default function CreateGame() {
         <div className={styles.main}>
             <PanelTitle title={"Create a game"}/>
             <form className={styles.formContainer}>
-                <div className={styles.textInputContainer}>
-                    <LabeledTextInput id={"game-name"}
-                                      placeholder={"Enter game name"}
-                                      value={gameDetails.name}
-                                      label={'Name your game?'}
-                                      onChange={e => setField("name", e.target.value)}
-                    />
-                </div>
-                <div className={styles.textInputContainer}>
-                    <LabeledTextInput id={"player-name"}
-                                      placeholder={"Enter player name"}
-                                      value={gameDetails.hostName}
-                                      label={'Player name?'}
-                                      onChange={e => setField("hostName", e.target.value)}
-                    />
-                </div>
+                <LabeledTextInput id={"game-name"}
+                                  placeholder={"Enter game name"}
+                                  value={gameDetails.name}
+                                  label={'Name your game?'}
+                                  onChange={e => setField("name", e.target.value)}
+                />
+                <LabeledTextInput id={"player-name"}
+                                  placeholder={"Enter player name"}
+                                  value={gameDetails.hostName}
+                                  label={'Player name?'}
+                                  onChange={e => setField("hostName", e.target.value)}
+                />
                 <div className={styles.gameTypeContainer}>
                     <p className={styles.gameLabel}>Type of game? Select game type</p>
                     <div>
