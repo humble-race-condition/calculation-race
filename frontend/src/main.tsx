@@ -5,6 +5,7 @@ import {storeConfiguration} from './config/store/storeConfiguration'
 import {Provider} from 'react-redux'
 import {RouterProvider} from "react-router";
 import router from "./config/routes/routes";
+import {ToastContainer} from "react-toastify";
 
 const root = ReactDOM.createRoot(
     document.getElementById('root') as HTMLElement
@@ -13,6 +14,7 @@ const root = ReactDOM.createRoot(
 root.render(
     <React.StrictMode>
         <Provider store={storeConfiguration}>
+            <ToastContainer/>
             <RouterProvider router={router}/>
         </Provider>
     </React.StrictMode>
