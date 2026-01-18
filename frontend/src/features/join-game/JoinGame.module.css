@@ -6,7 +6,7 @@
     align-items: center;
 }
 
-.game-form-container {
+.form-container {
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -14,8 +14,9 @@
     flex: 1;
 }
 
-.game-label {
-    font-size: var(--secondary-font-size);
-    padding: 1rem;
-    margin-bottom: 1rem;
+.button-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex: 2;
 }

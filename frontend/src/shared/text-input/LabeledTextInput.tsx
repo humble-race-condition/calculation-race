@@ -11,8 +11,8 @@ interface TextInputProps {
 
 export default function LabeledTextInput({id, placeholder, value, label, onChange}: TextInputProps) {
     return (
-        <>
-            <label htmlFor="game-name" className={styles.label}>{label}</label>
+        <div className={styles.textInputContainer}>
+            <label htmlFor={id} className={styles.label}>{label}</label>
             <input type="text"
                    placeholder={placeholder}
                    id={id}
@@ -20,6 +20,6 @@ export default function LabeledTextInput({id, placeholder, value, label, onChang
                    value={value}
                    onChange={onChange}
             />
-        </>
+        </div>
     );
 }
