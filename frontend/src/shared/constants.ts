@@ -5,7 +5,7 @@ export const Constants = {
 
 export const Path = {
     HOME_PATH: "/",
-    GAME_PATH: "/game",
+    GAME_PATH: "/game/:id",
     CREATE_GAME_PATH: "/create-game",
     JOIN_GAME_PATH: "/join-game",
     RANKINGS_PATH: "/rankings",
