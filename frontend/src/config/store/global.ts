@@ -12,7 +12,7 @@ const initialState: GlobalState = {
 }
 
 export const global = createSlice({
-    name: 'global',
+    name: "global",
     initialState,
     reducers: {
         setDark: (state, action: PayloadAction<boolean>) => {
@@ -23,9 +23,9 @@ export const global = createSlice({
             const theme = parseTheme(action.payload) ?? Theme.LIGHT;
             state.theme = theme;
             state.isDarkThemeChecked = theme === Theme.DARK;
-        }
+        },
     },
-})
+});
 
 // Action creators are generated for each case reducer function
 export const {setDark, setTheme} = global.actions

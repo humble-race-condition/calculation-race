@@ -8,7 +8,7 @@ import {createSetField} from "../../shared/set-state-utilities/setStateUtility.t
 import {Constants, GameType} from "../../shared/constants.ts";
 import {useNavigate, useSearchParams} from "react-router";
 import {toast} from "react-toastify";
-import {initializeGame, type InitializeGameState} from "../../config/store/game.ts";
+import {type GameDetails, initializeGame, type InitializeGameState} from "../../config/store/game.ts";
 import type {RootState} from "../../config/store/storeConfiguration.ts";
 
 export interface CreateGameState {
@@ -20,9 +20,9 @@ export interface CreateGameState {
 export default function CreateGame() {
     const gameTypeKey: keyof CreateGameState = "gameType";
     const dispatch = useDispatch();
-    const isInGame: boolean = !!useSelector((state: RootState) => state.gameSlice);
-
+    const globalGameDetails: GameDetails | null = useSelector((state: RootState) => state.gameSlice.game);
     const navigate = useNavigate();
+
     const [state, setState] = useState<CreateGameState>({
         gameName: "",
         playerName: "",
@@ -36,6 +36,12 @@ export default function CreateGame() {
 
     const [searchParams, setSearchParams] = useSearchParams();
     const gameType = searchParams.get(Constants.GAME_TYPE_KEY);
+
+    useEffect(() => {
+        if (globalGameDetails) {
+            navigate(`/game/${globalGameDetails.id}`);
+        }
+    }, [globalGameDetails, navigate]);
 
     useEffect(() => {
         if (gameType) {
@@ -65,7 +71,7 @@ export default function CreateGame() {
             errors.push("Game type is not valid");
         }
 
-        if (state.gameType && state.gameType !== GameType.COOPERATIVE_TYPE && state.gameType !== GameType.COOPERATIVE_TYPE) {
+        if (state.gameType && state.gameType !== GameType.COOPERATIVE_TYPE && state.gameType !== GameType.COMPETITIVE_TYPE) {
             errors.push("Game type must be Cooperative or Competitive");
         }
 
