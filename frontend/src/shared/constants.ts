@@ -9,6 +9,7 @@ export const Path = {
     CREATE_GAME_PATH: "/create-game",
     JOIN_GAME_PATH: "/join-game",
     RANKINGS_PATH: "/rankings",
+    ERROR_PATH: "/*",
 } as const;
 
 

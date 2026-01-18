@@ -4,6 +4,7 @@ import CreateGame from "../../features/create-game/CreateGame.tsx";
 import Game from "../../features/game/Game.tsx";
 import JoinGame from "../../features/join-game/JoinGame.tsx";
 import {Path} from "../../shared/constants.ts";
+import ErrorPage from "../../features/error-page/ErrorPage.tsx";
 
 const router = createBrowserRouter([
     {
@@ -29,7 +30,10 @@ const router = createBrowserRouter([
                 element: <JoinGame/>,
                 children: []
             },
-            //ToDo catch all route and page
+            {
+                path: Path.ERROR_PATH,
+                element: <ErrorPage/>,
+            },
         ]
     },
 ]);
