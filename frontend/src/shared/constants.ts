@@ -1,8 +1,9 @@
 export const Constants = {
-    THEME_KEY: 'theme',
+    THEME_KEY: "theme",
+    GAME_TYPE_KEY: "game-type"
 } as const;
 
-export const Paths = {
+export const Path = {
     HOME_PATH: "/",
     GAME_PATH: "/game",
     CREATE_GAME_PATH: "/create-game",
@@ -11,7 +12,7 @@ export const Paths = {
 } as const;
 
 
-export const GameTypes = {
+export const GameType = {
     COMPETITIVE_TYPE: "competitive",
     COOPERATIVE_TYPE: "cooperative",
 } as const;
