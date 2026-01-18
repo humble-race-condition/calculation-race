@@ -11,9 +11,13 @@ interface TextInputProps {
 }
 
 export default function TextInput({id, placeholder, value, label, labelStyle, onChange}: TextInputProps) {
+    const selectedLabelStyle: string | undefined = label
+        ? labelStyle ?? styles.label
+        : undefined;
+
     return (
         <div className={styles.textInputContainer}>
-            <label htmlFor={id} className={labelStyle ?? styles.label}>{label}</label>
+            {<label htmlFor={id} className={selectedLabelStyle}>{label}</label>}
             <input type="text"
                    placeholder={placeholder}
                    id={id}
