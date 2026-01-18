@@ -11,7 +11,7 @@ import Footer from "../footer/Footer";
 export default function Layout() {
     const [searchParams, setSearchParams] = useSearchParams();
     const dispatch = useDispatch();
-    const theme = useSelector((state: RootState) => state.global.theme);
+    const theme = useSelector((state: RootState) => state.globalSlice.theme);
     const themeHeader = searchParams.get(Constants.THEME_KEY);
 
     useEffect(() => {

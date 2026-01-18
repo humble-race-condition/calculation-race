@@ -14,8 +14,8 @@ const loggerMiddleware: Middleware = store => next => action => {
 //ToDo linter to add semicolons
 export const storeConfiguration = configureStore({
     reducer: {
-        global: globalReducer,
-        game: gameReducer,
+        globalSlice: globalReducer,
+        gameSlice: gameReducer,
     },
     middleware: (getDefaultMiddleware) =>
         getDefaultMiddleware().concat(loggerMiddleware)

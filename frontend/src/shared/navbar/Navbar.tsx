@@ -13,7 +13,7 @@ interface NavbarElement {
 
 export default function Navbar() {
     const dispatch = useDispatch();
-    const isDarkThemeChecked = useSelector((state: RootState) => state.global.isDarkThemeChecked);
+    const isDarkThemeChecked = useSelector((state: RootState) => state.globalSlice.isDarkThemeChecked);
     const navbarData: NavbarElement[] = [
         {
             id: 1,

@@ -2,25 +2,31 @@ import styles from "./CreateGame.module.css";
 import PanelTitle from "../../shared/panel-title/PanelTitle.tsx";
 import Button from "../../shared/button/Button.tsx";
 import LabeledTextInput from "../../shared/text-input/LabeledTextInput.tsx";
-import {useDispatch} from "react-redux";
+import {useDispatch, useSelector} from "react-redux";
 import React, {useCallback, useEffect, useState} from "react";
 import {createSetField} from "../../shared/set-state-utilities/setStateUtility.ts";
 import {Constants, GameType} from "../../shared/constants.ts";
-import {useSearchParams} from "react-router";
+import {useNavigate, useSearchParams} from "react-router";
+import {toast} from "react-toastify";
+import {initializeGame, type InitializeGameState} from "../../config/store/game.ts";
+import type {RootState} from "../../config/store/storeConfiguration.ts";
 
 export interface CreateGameState {
-    name: string;
-    hostName: string;
-    type: string;
+    gameName: string;
+    playerName: string;
+    gameType: string;
 }
 
 export default function CreateGame() {
-    const gameTypeKey: string = "type";
+    const gameTypeKey: keyof CreateGameState = "gameType";
     const dispatch = useDispatch();
-    const [gameDetails, setState] = useState<CreateGameState>({
-        name: "",
-        hostName: "",
-        type: GameType.COOPERATIVE_TYPE,
+    const isInGame: boolean = !!useSelector((state: RootState) => state.gameSlice);
+
+    const navigate = useNavigate();
+    const [state, setState] = useState<CreateGameState>({
+        gameName: "",
+        playerName: "",
+        gameType: GameType.COOPERATIVE_TYPE,
     });
 
     const setField = useCallback(
@@ -33,38 +39,82 @@ export default function CreateGame() {
 
     useEffect(() => {
         if (gameType) {
-            setField("type", gameType);
+            setField(gameTypeKey, gameType);
         }
     }, [gameType, setField]);
 
     useEffect(() => {
         setSearchParams(prev => {
             const params = new URLSearchParams(prev);
-            params.set(Constants.GAME_TYPE_KEY, gameDetails.type);
+            params.set(Constants.GAME_TYPE_KEY, state.gameType);
             return params;
         });
-    }, [gameDetails.type, setSearchParams]);
+    }, [state.gameType, setSearchParams]);
 
+    const isStateValid = (): boolean => {
+        const errors: string[] = [];
+        if (!state.gameName || state.gameName.length < 3 || state.gameName.length > 50) {
+            errors.push("Game name must be between 3 and 50 characters.");
+        }
+
+        if (!state.playerName || state.playerName.length < 3 || state.playerName.length > 50) {
+            errors.push("Player name must be between 3 and 50 characters.");
+        }
+
+        if (!state.gameType) {
+            errors.push("Game type is not valid");
+        }
+
+        if (state.gameType && state.gameType !== GameType.COOPERATIVE_TYPE && state.gameType !== GameType.COOPERATIVE_TYPE) {
+            errors.push("Game type must be Cooperative or Competitive");
+        }
+
+        if (errors.length === 0) {
+            return true;
+        }
+
+        errors.forEach(error => {
+            toast.error(error);
+        });
+
+        return false;
+    }
 
     const handleClick = (e: React.MouseEvent) => {
         e.preventDefault();
+        const isValid = isStateValid();
+        if (!isValid) {
+            return;
+        }
+
+        const initializeGameState: InitializeGameState = {
+            playerName: state.playerName,
+            //ToDo this needs to be an Id
+            gameId: state.gameName,
+            gameName: state.gameName,
+            gameType: state.gameType,
+        }
+
+        dispatch(initializeGame(initializeGameState));
+        //ToDo create call
+        navigate(`/game/${initializeGameState.gameId}`);
     };
-    debugger;
+
     return (
         <div className={styles.main}>
             <PanelTitle title={"Create a game"}/>
             <form className={styles.formContainer}>
                 <LabeledTextInput id={"game-name"}
                                   placeholder={"Enter game name"}
-                                  value={gameDetails.name}
+                                  value={state.gameName}
                                   label={'Name your game?'}
-                                  onChange={e => setField("name", e.target.value)}
+                                  onChange={e => setField("gameName", e.target.value)}
                 />
                 <LabeledTextInput id={"player-name"}
                                   placeholder={"Enter player name"}
-                                  value={gameDetails.hostName}
+                                  value={state.playerName}
                                   label={'Player name?'}
-                                  onChange={e => setField("hostName", e.target.value)}
+                                  onChange={e => setField("playerName", e.target.value)}
                 />
                 <div className={styles.gameTypeContainer}>
                     <p className={styles.gameLabel}>Type of game? Select game type</p>
@@ -73,7 +123,7 @@ export default function CreateGame() {
                                type="radio"
                                id={GameType.COOPERATIVE_TYPE}
                                name={gameTypeKey}
-                               checked={GameType.COOPERATIVE_TYPE === gameDetails.type}
+                               checked={GameType.COOPERATIVE_TYPE === state.gameType}
                                value={GameType.COOPERATIVE_TYPE}
                                onChange={(e) => setField(gameTypeKey, e.target.value)}
                         />
@@ -82,7 +132,7 @@ export default function CreateGame() {
                                type="radio"
                                id={GameType.COMPETITIVE_TYPE}
                                name={gameTypeKey}
-                               checked={GameType.COMPETITIVE_TYPE === gameDetails.type}
+                               checked={GameType.COMPETITIVE_TYPE === state.gameType}
                                value={GameType.COMPETITIVE_TYPE}
                                onChange={(e) => setField(gameTypeKey, e.target.value)}
                         />
