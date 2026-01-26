@@ -7,7 +7,6 @@ export default function FunctionCalculationContainer() {
         <div className={styles.gameContainer}>
             <h2 className={styles.gameFormula}>This is the mighty formula</h2>
             <form className={styles.submitResultContainer}>
-                //ToDo add overriding style and a default style for text input and button
                 <TextInput id={"submit-result-input"} placeholder={"Enter your result here"}/>
                 <div className={styles.buttonContainer}>
                     <Button text={"Submit"}/>
