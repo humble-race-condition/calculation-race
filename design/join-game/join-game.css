@@ -6,6 +6,10 @@
     align-items: center;
 }
 
+.text-input-container-flex {
+    flex: 1;
+}
+
 .form-container {
     display: flex;
     flex-direction: column;
