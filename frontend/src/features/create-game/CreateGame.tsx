@@ -114,12 +114,14 @@ export default function CreateGame() {
                            placeholder={"Enter game name"}
                            value={state.gameName}
                            label={'Name your game?'}
+                           additionalContainerStyle={styles.textInputContainerFlex}
                            onChange={e => setField("gameName", e.target.value)}
                 />
                 <TextInput id={"player-name"}
                            placeholder={"Enter player name"}
                            value={state.playerName}
                            label={'Player name?'}
+                           additionalContainerStyle={styles.textInputContainerFlex}
                            onChange={e => setField("playerName", e.target.value)}
                 />
                 <div className={styles.gameTypeContainer}>

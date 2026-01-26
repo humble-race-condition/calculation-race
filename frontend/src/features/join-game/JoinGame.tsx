@@ -14,13 +14,13 @@ export default function JoinGame() {
                     placeholder={"Game name"}
                     id={"game-name-input"}
                     label={'Join game?'}
-
+                    additionalContainerStyle={styles.textInputContainerFlex}
                 />
                 <TextInput
                     placeholder={"Game name"}
                     id={"player-name-input"}
                     label={'Player name?'}
-
+                    additionalContainerStyle={styles.textInputContainerFlex}
                 />
                 <div className={styles.buttonContainer}>
                     <Button text={"Join Game"}/>

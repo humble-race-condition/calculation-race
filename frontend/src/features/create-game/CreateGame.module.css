@@ -14,11 +14,7 @@
     flex: 1;
 }
 
-.text-input-container {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
+.text-input-container-flex {
     flex: 1;
 }
 
