@@ -8,8 +8,8 @@ interface ButtonProps {
 
 export default function Button({text, onClick}: ButtonProps) {
     return (
-        <div>
+        <>
             <button type="button" className={styles.button} onClick={onClick}>{text}</button>
-        </div>
+        </>
     );
 }
