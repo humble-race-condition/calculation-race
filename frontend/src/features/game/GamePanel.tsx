@@ -1,12 +1,12 @@
 import styles from "./Game.module.css";
 import PanelTitle from "../../shared/panel-title/PanelTitle.tsx";
 import PanelDescription from "../../shared/panel-description/PanelDescription.tsx";
-import FunctionCalculationContainer from "./FunctionCalculationContainer.tsx";
 import type {GameDetails} from "../../config/store/game.ts";
 import {useSelector} from "react-redux";
 import type {RootState} from "../../config/store/storeConfiguration.ts";
 import HostLobby from "./HostLobby.tsx";
 import PlayerLobby from "./PlayerLobby.tsx";
+import LobbyCounter from "./LobbyCounter.tsx";
 
 export default function GamePanel() {
     const globalGameDetails: GameDetails | null = useSelector((state: RootState) => state.gameSlice.game);
@@ -14,7 +14,7 @@ export default function GamePanel() {
     const hasStarted = !!globalGameDetails?.hasStarted;
     const isHostAndIsLobby = !!(!globalGameDetails?.hasStarted && globalGameDetails?.isHost);
     const isPlayerAndIsLobby = !globalGameDetails?.hasStarted && !globalGameDetails?.isHost;
-    
+
     return (
         <div className={styles.game}>
             <PanelTitle title={"How fast can you calculate?"}/>
@@ -22,7 +22,7 @@ export default function GamePanel() {
             <div className={styles.gameContainer}>
                 {isHostAndIsLobby && <HostLobby/>}
                 {isPlayerAndIsLobby && <PlayerLobby/>}
-                {hasStarted && <FunctionCalculationContainer/>}
+                {hasStarted && <LobbyCounter/>}
             </div>
         </div>
     );
