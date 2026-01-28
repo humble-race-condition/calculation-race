@@ -4,7 +4,7 @@ import React from "react";
 import {startGame} from "../../config/store/game.ts";
 import {useDispatch} from "react-redux";
 
-export default function LobbyHost() {
+export default function PlayerLobby() {
     const dispatch = useDispatch();
 
     const handleClick = (e: React.MouseEvent) => {
@@ -15,7 +15,7 @@ export default function LobbyHost() {
 
     return (
         <div className={styles.gameContainer}>
-            <Button text={"Start game"} onClick={handleClick}/>
+            <Button text={"Leave lobby"} onClick={handleClick}/>
         </div>
     );
 }

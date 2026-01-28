@@ -13,6 +13,7 @@ export interface GameDetails {
     host: string;
     player: string;
     isHost: boolean;
+    hasStarted: boolean;
 }
 
 export interface InitializeGameState {
@@ -40,11 +41,17 @@ export const game = createSlice({
                 host: action.payload.playerName,
                 player: action.payload.playerName,
                 isHost: true,
+                hasStarted: false,
             };
+        },
+        startGame: (state) => {
+            if (state.game) {
+                state.game.hasStarted = true
+            }
         }
     },
 })
 
-export const {initializeGame} = game.actions
+export const {initializeGame, startGame} = game.actions
 
 export default game.reducer
