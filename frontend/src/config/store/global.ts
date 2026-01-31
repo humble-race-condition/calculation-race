@@ -1,8 +1,10 @@
 import {createSlice, type PayloadAction} from '@reduxjs/toolkit'
-import {parseTheme, Theme} from "../../shared/layout/theme.tsx";
+import {Theme} from "../../shared/constants.ts";
+
+type ThemeType = typeof Theme[keyof typeof Theme];
 
 export interface GlobalState {
-    theme: string,
+    theme: ThemeType,
     isDarkThemeChecked: boolean,
 }
 
@@ -20,12 +22,26 @@ export const global = createSlice({
             state.isDarkThemeChecked = action.payload
         },
         setTheme: (state, action: PayloadAction<string>) => {
-            const theme = parseTheme(action.payload) ?? Theme.LIGHT;
+            const theme = parseTheme(action.payload);
             state.theme = theme;
             state.isDarkThemeChecked = theme === Theme.DARK;
         },
     },
 });
+
+export function parseTheme(theme: string | null | undefined): ThemeType {
+    const defaultTheme = Theme.LIGHT
+    if (!theme) {
+        return defaultTheme;
+    }
+
+    const formattedTheme = theme.trim().toUpperCase();
+    if (Object.values(Theme).includes(formattedTheme as ThemeType)) {
+        return formattedTheme as ThemeType;
+    }
+
+    return defaultTheme;
+}
 
 // Action creators are generated for each case reducer function
 export const {setDark, setTheme} = global.actions
