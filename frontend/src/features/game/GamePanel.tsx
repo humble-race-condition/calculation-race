@@ -7,13 +7,16 @@ import type {RootState} from "../../config/store/storeConfiguration.ts";
 import HostLobby from "./HostLobby.tsx";
 import PlayerLobby from "./PlayerLobby.tsx";
 import LobbyCounter from "./LobbyCounter.tsx";
+import {GameState} from "../../shared/constants.ts";
+import FunctionCalculationContainer from "./FunctionCalculationContainer.tsx";
 
 export default function GamePanel() {
     const globalGameDetails: GameDetails | null = useSelector((state: RootState) => state.gameSlice.game);
 
-    const hasStarted = !!globalGameDetails?.hasStarted;
-    const isHostAndIsLobby = !!(!globalGameDetails?.hasStarted && globalGameDetails?.isHost);
-    const isPlayerAndIsLobby = !globalGameDetails?.hasStarted && !globalGameDetails?.isHost;
+    const hasStarted = globalGameDetails?.state === GameState.RUNNING;
+    const isHostAndIsLobby = !!(globalGameDetails?.state !== GameState.LOBBY && globalGameDetails?.isHost);
+    const isPlayerAndIsLobby = globalGameDetails?.state !== GameState.LOBBY && !globalGameDetails?.isHost;
+    const isGameRunning = globalGameDetails?.state !== GameState.RUNNING;
 
     return (
         <div className={styles.game}>
@@ -23,6 +26,7 @@ export default function GamePanel() {
                 {isHostAndIsLobby && <HostLobby/>}
                 {isPlayerAndIsLobby && <PlayerLobby/>}
                 {hasStarted && <LobbyCounter/>}
+                {isPlayerAndIsLobby && <FunctionCalculationContainer/>}
             </div>
         </div>
     );
