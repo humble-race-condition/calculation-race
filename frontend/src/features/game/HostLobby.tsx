@@ -1,7 +1,7 @@
 import styles from "./Game.module.css";
 import Button from "../../shared/button/Button.tsx";
 import React from "react";
-import {startGame} from "../../config/store/game.ts";
+import {loadGame} from "../../config/store/game.ts";
 import {useDispatch} from "react-redux";
 
 export default function HostLobby() {
@@ -10,7 +10,7 @@ export default function HostLobby() {
     const handleClick = (e: React.MouseEvent) => {
         e.preventDefault();
 
-        dispatch(startGame());
+        dispatch(loadGame());
     };
 
     return (

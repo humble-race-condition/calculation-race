@@ -12,8 +12,18 @@ export const Path = {
     ERROR_PATH: "/*",
 } as const;
 
-
 export const GameType = {
     COMPETITIVE_TYPE: "competitive",
     COOPERATIVE_TYPE: "cooperative",
+} as const;
+
+export const Theme = {
+    LIGHT: "light",
+    DARK: "dark",
+} as const;
+
+export const GameState = {
+    LOBBY: "LOBBY",
+    LOADING: "LOADING",
+    RUNNING: "RUNNING",
 } as const;
