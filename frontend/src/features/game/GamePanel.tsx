@@ -13,20 +13,25 @@ import FunctionCalculationContainer from "./FunctionCalculationContainer.tsx";
 export default function GamePanel() {
     const globalGameDetails: GameDetails | null = useSelector((state: RootState) => state.gameSlice.game);
 
-    const hasStarted = globalGameDetails?.state === GameState.RUNNING;
-    const isHostAndIsLobby = !!(globalGameDetails?.state !== GameState.LOBBY && globalGameDetails?.isHost);
-    const isPlayerAndIsLobby = globalGameDetails?.state !== GameState.LOBBY && !globalGameDetails?.isHost;
-    const isGameRunning = globalGameDetails?.state !== GameState.RUNNING;
+    let view = null;
+    switch (globalGameDetails?.state) {
+        case GameState.LOBBY:
+            view = globalGameDetails.isHost ? <HostLobby/> : <PlayerLobby/>;
+            break;
+        case GameState.LOADING:
+            view = <LobbyCounter/>;
+            break;
+        case GameState.RUNNING:
+            view = <FunctionCalculationContainer/>;
+            break;
+    }
 
     return (
         <div className={styles.game}>
             <PanelTitle title={"How fast can you calculate?"}/>
             <PanelDescription title={"You must calculate the given formula and submit the result to win this game!"}/>
             <div className={styles.gameContainer}>
-                {isHostAndIsLobby && <HostLobby/>}
-                {isPlayerAndIsLobby && <PlayerLobby/>}
-                {hasStarted && <LobbyCounter/>}
-                {isPlayerAndIsLobby && <FunctionCalculationContainer/>}
+                {view}
             </div>
         </div>
     );
