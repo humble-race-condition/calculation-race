@@ -145,6 +145,29 @@
     flex: 5;
 }
 
+.game-ending-score-container {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 2rem;
+}
+
+.game-ending {
+    font-size: 2rem;
+    text-align: center;
+}
+.game-ending-result {
+    font-size: 3rem;
+    font-weight: bold;
+    text-align: center;
+}
+
+.next-game-container-flex {
+    flex: 1;
+}
+
 .submit-result-container {
     display: flex;
     flex-direction: column;
