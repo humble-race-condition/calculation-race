@@ -127,12 +127,20 @@
     flex: 1;
 }
 
+.game-timer {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    font-size: 4rem;
+}
+
 .game-formula {
     display: flex;
     align-items: center;
     font-size: var(--secondary-font-size);
     text-align: center;
-    flex: 1;
+    flex: 5;
 }
 
 .submit-result-container {
@@ -140,7 +148,7 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    flex: 1;
+    flex: 5;
     gap: 1rem;
 }
 
