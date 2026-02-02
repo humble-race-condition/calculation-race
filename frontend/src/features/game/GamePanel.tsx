@@ -9,6 +9,7 @@ import PlayerLobby from "./PlayerLobby.tsx";
 import LobbyCounter from "./LobbyCounter.tsx";
 import {GameState} from "../../shared/constants.ts";
 import FunctionCalculationContainer from "./FunctionCalculationContainer.tsx";
+import GameEnded from "./GameEnded.tsx";
 
 export default function GamePanel() {
     const globalGameDetails: GameDetails | null = useSelector((state: RootState) => state.gameSlice.game);
@@ -23,6 +24,9 @@ export default function GamePanel() {
             break;
         case GameState.RUNNING:
             view = <FunctionCalculationContainer/>;
+            break;
+        case GameState.ENDED:
+            view = <GameEnded/>;
             break;
     }
 
