@@ -18,8 +18,8 @@ export const global = createSlice({
     initialState,
     reducers: {
         setDark: (state, action: PayloadAction<boolean>) => {
-            state.theme = action.payload ? Theme.DARK : Theme.LIGHT
-            state.isDarkThemeChecked = action.payload
+            state.theme = action.payload ? Theme.DARK : Theme.LIGHT;
+            state.isDarkThemeChecked = action.payload;
         },
         setTheme: (state, action: PayloadAction<string>) => {
             const theme = parseTheme(action.payload);
@@ -35,7 +35,7 @@ export function parseTheme(theme: string | null | undefined): ThemeType {
         return defaultTheme;
     }
 
-    const formattedTheme = theme.trim().toUpperCase();
+    const formattedTheme = theme.trim().toLowerCase();
     if (Object.values(Theme).includes(formattedTheme as ThemeType)) {
         return formattedTheme as ThemeType;
     }
