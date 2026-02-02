@@ -5,7 +5,7 @@ import TextInput from "../../shared/text-input/TextInput.tsx";
 import {useDispatch, useSelector} from "react-redux";
 import React, {useCallback, useEffect, useState} from "react";
 import {createSetField} from "../../shared/set-state-utilities/setStateUtility.ts";
-import {Constants, GameType} from "../../shared/constants.ts";
+import {Constants, GameType, UrlPath} from "../../shared/constants.ts";
 import {useNavigate, useSearchParams} from "react-router";
 import {toast} from "react-toastify";
 import {type GameDetails, initializeGame, type InitializeGameState} from "../../config/store/game.ts";
@@ -39,7 +39,8 @@ export default function CreateGame() {
 
     useEffect(() => {
         if (globalGameDetails) {
-            navigate(`/game/${globalGameDetails.id}`);
+            const path = UrlPath.GAME_PATH.replace(":id", globalGameDetails.id);
+            navigate(path);
         }
     }, [globalGameDetails, navigate]);
 

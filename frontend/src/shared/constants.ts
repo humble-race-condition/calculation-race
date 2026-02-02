@@ -3,7 +3,7 @@ export const Constants = {
     GAME_TYPE_KEY: "game-type"
 } as const;
 
-export const Path = {
+export const UrlPath = {
     HOME_PATH: "/",
     GAME_PATH: "/game/:id",
     CREATE_GAME_PATH: "/create-game",

@@ -2,7 +2,7 @@ import styles from './ErrorPage.module.css';
 import PanelTitle from "../../shared/panel-title/PanelTitle.tsx";
 import PanelDescription from "../../shared/panel-description/PanelDescription.tsx";
 import {NavLink} from "react-router";
-import {Path} from "../../shared/constants.ts";
+import {UrlPath} from "../../shared/constants.ts";
 
 export default function ErrorPage() {
     return (
@@ -12,7 +12,7 @@ export default function ErrorPage() {
             <div className={styles.linkContainer}>
                 <NavLink
                     className={styles.link}
-                    to={Path.HOME_PATH}>
+                    to={UrlPath.HOME_PATH}>
                     {"To Home page"}
                 </NavLink>
             </div>
