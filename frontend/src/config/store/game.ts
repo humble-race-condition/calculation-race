@@ -2,9 +2,9 @@ import {createSlice, type PayloadAction} from '@reduxjs/toolkit'
 import {GameState} from "../../shared/constants.ts";
 
 export interface GameState {
-    game: GameDetails | null,
+    game: GameDetails | null;
+    scores: string[];
     chatMessages: string[];
-    scores: string[]
 }
 
 export type GameStateType = typeof GameState[keyof typeof GameState];
@@ -62,10 +62,14 @@ export const game = createSlice({
                 state.game.state = GameState.ENDED;
             }
         },
-
+        resetGame: (state) => {
+            state.game = null;
+            state.chatMessages = [];
+            state.scores = [];
+        }
     },
 })
 
-export const {initializeGame, loadGame, startGame, endGame} = game.actions
+export const {initializeGame, loadGame, startGame, endGame, resetGame} = game.actions
 
 export default game.reducer
