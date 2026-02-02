@@ -11,9 +11,9 @@ export default function FunctionCalculationContainer() {
     const formatTimer = () => {
         const minutes = Math.floor(timer / 60);
         const seconds = timer % 60;
-        const formattedMinutes = minutes.toString().padStart(2, '0');
-        const formattedSeconds = seconds.toString().padStart(2, '0');
-        return `${formattedMinutes}:${formattedSeconds}`;
+        const formatNumber = (value: number): string =>
+            value.toString().padStart(2, "0");
+        return `${formatNumber(minutes)}:${formatNumber(seconds)}`;
     }
 
     useEffect(() => {
@@ -32,7 +32,10 @@ export default function FunctionCalculationContainer() {
 
     return (
         <div className={styles.gameContainer}>
-            <h2 className={styles.gameTimer}>{formatTimer()}</h2>
+            <div className={styles.gameTimerContainer}>
+                <p className={styles.gameTimerTitle}>Time remaining:</p>
+                <h2 className={styles.gameTimer}>{formatTimer()}</h2>
+            </div>
             <h2 className={styles.gameFormula}>This is the mighty formula</h2>
             <form className={styles.submitResultContainer}>
                 <TextInput
