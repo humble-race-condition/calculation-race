@@ -2,12 +2,13 @@ import styles from "./Game.module.css";
 import Button from "../../shared/button/Button.tsx";
 import TextInput from "../../shared/text-input/TextInput.tsx";
 import React, {useEffect, useState} from "react";
-
-
+import {useDispatch} from "react-redux";
+import {endGame} from "../../config/store/game.ts";
 
 export default function FunctionCalculationContainer() {
-    const [timer, setTimer] = useState<number>(180);
+    const dispatch = useDispatch();
 
+    const [timer, setTimer] = useState<number>(180);
     const formatTimer = () => {
         const minutes = Math.floor(timer / 60);
         const seconds = timer % 60;
@@ -46,7 +47,7 @@ export default function FunctionCalculationContainer() {
                     }}
                 />
                 <div className={styles.buttonContainer}>
-                    <Button text={"Submit"}/>
+                    <Button text={"Submit"} onClick={() => dispatch(endGame())}/>
                 </div>
             </form>
         </div>

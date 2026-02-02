@@ -26,4 +26,5 @@ export const GameState = {
     LOBBY: "LOBBY",
     LOADING: "LOADING",
     RUNNING: "RUNNING",
+    ENDED: "ENDED",
 } as const;

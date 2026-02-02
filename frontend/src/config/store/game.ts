@@ -57,10 +57,15 @@ export const game = createSlice({
                 state.game.state = GameState.RUNNING;
             }
         },
+        endGame: (state) => {
+            if (state.game) {
+                state.game.state = GameState.ENDED;
+            }
+        },
 
     },
 })
 
-export const {initializeGame, loadGame, startGame} = game.actions
+export const {initializeGame, loadGame, startGame, endGame} = game.actions
 
 export default game.reducer
