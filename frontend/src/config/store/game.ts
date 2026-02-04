@@ -3,8 +3,8 @@ import {GameState} from "../../shared/constants.ts";
 
 export interface GameState {
     game: GameDetails | null;
-    scores: string[];
-    chatMessages: string[];
+    scores: string[] | null;
+    chatMessages: string[] | null;
 }
 
 export type GameStateType = typeof GameState[keyof typeof GameState];
@@ -28,8 +28,8 @@ export interface InitializeGameState {
 
 const initialState: GameState = {
     game: null,
-    chatMessages: [],
-    scores: []
+    chatMessages: null,
+    scores: null
 }
 
 export const game = createSlice({
@@ -46,6 +46,8 @@ export const game = createSlice({
                 isHost: true,
                 state: GameState.LOBBY,
             };
+            state.scores = [];
+            state.chatMessages = [];
         },
         loadGame: (state) => {
             if (state.game) {
@@ -64,8 +66,8 @@ export const game = createSlice({
         },
         resetGame: (state) => {
             state.game = null;
-            state.chatMessages = [];
-            state.scores = [];
+            state.chatMessages = null;
+            state.scores = null;
         }
     },
 })
