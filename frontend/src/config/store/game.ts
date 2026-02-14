@@ -49,6 +49,11 @@ export const game = createSlice({
             state.scores = [];
             state.chatMessages = [];
         },
+        joinGame: (state, action: PayloadAction<string>) => {
+            if (state.scores) {
+                state.scores.push(action.payload);
+            }
+        },
         loadGame: (state) => {
             if (state.game) {
                 state.game.state = GameState.LOADING;
@@ -72,6 +77,6 @@ export const game = createSlice({
     },
 })
 
-export const {initializeGame, loadGame, startGame, endGame, resetGame} = game.actions
+export const {initializeGame, joinGame, loadGame, startGame, endGame, resetGame} = game.actions
 
 export default game.reducer
