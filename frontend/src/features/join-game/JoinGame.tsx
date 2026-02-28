@@ -5,8 +5,8 @@ import TextInput from "../../shared/text-input/TextInput.tsx";
 import PanelDescription from "../../shared/panel-description/PanelDescription.tsx";
 import {UrlPath} from "../../shared/constants.ts";
 import {toast} from "react-toastify";
-import React, {useCallback, useEffect, useState} from "react";
-import {createSetField} from "../../shared/set-state-utilities/setStateUtility.ts";
+import React, {useEffect} from "react";
+import {useSetStateField} from "../../shared/set-state-utilities/setStateFieldHook.ts";
 import {type GameDetails, joinGame} from "../../config/store/game.ts";
 import {useDispatch, useSelector} from "react-redux";
 import type {RootState} from "../../config/store/storeConfiguration.ts";
@@ -18,7 +18,7 @@ export interface JoinGameState {
 }
 
 export default function JoinGame() {
-    const [state, setState] = useState<JoinGameState>({
+    const {state, setField} = useSetStateField<JoinGameState>({
         gameName: "",
         playerName: ""
     });
@@ -33,11 +33,6 @@ export default function JoinGame() {
             navigate(path);
         }
     }, [globalGameDetails, navigate]);
-
-    const setField = useCallback(
-        <K extends keyof JoinGameState>(key: K, value: JoinGameState[K]) =>
-            createSetField<JoinGameState>(setState)(key, value),
-        [setState]);
 
     const isStateValid = (): boolean => {
         const errors: string[] = [];

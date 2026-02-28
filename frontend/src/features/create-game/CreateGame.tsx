@@ -3,8 +3,8 @@ import PanelTitle from "../../shared/panel-title/PanelTitle.tsx";
 import Button from "../../shared/button/Button.tsx";
 import TextInput from "../../shared/text-input/TextInput.tsx";
 import {useDispatch, useSelector} from "react-redux";
-import React, {useCallback, useEffect, useState} from "react";
-import {createSetField} from "../../shared/set-state-utilities/setStateUtility.ts";
+import React, {useEffect} from "react";
+import {useSetStateField} from "../../shared/set-state-utilities/setStateFieldHook.ts";
 import {Constants, GameType, UrlPath} from "../../shared/constants.ts";
 import {useNavigate, useSearchParams} from "react-router";
 import {toast} from "react-toastify";
@@ -23,16 +23,11 @@ export default function CreateGame() {
     const globalGameDetails: GameDetails | null = useSelector((state: RootState) => state.gameSlice.game);
     const navigate = useNavigate();
 
-    const [state, setState] = useState<CreateGameState>({
+    const {state, setField} = useSetStateField<CreateGameState>({
         gameName: "",
         playerName: "",
         gameType: GameType.COOPERATIVE_TYPE,
     });
-
-    const setField = useCallback(
-        <K extends keyof CreateGameState>(key: K, value: CreateGameState[K]) =>
-            createSetField<CreateGameState>(setState)(key, value),
-        [setState]);
 
     const [searchParams, setSearchParams] = useSearchParams();
     const gameType = searchParams.get(Constants.GAME_TYPE_KEY);
