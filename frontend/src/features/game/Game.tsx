@@ -2,70 +2,84 @@ import styles from './Game.module.css';
 import PanelTitle from "../../shared/panel-title/PanelTitle.tsx";
 import Scoreboard from "./Scoreboard.tsx";
 import GamePanel from "./GamePanel.tsx";
+import {addMessage, type ChatMessage as ChatMessageValue} from "../../config/store/game.ts";
+import {useDispatch, useSelector} from "react-redux";
+import type {RootState} from "../../config/store/storeConfiguration.ts";
+import {useSetStateField} from "../../shared/set-state-utilities/setStateFieldHook.ts";
 import ChatMessage from "./ChatMessage.tsx";
+import React from "react";
 
 interface Message {
-    id: string;
+    id: string | null;
+    player: string;
     message: string;
 }
 
 export function Chat() {
-    const messages: Message[] = [
-        {
-            id: "1",
-            message: "User1: Hello there"
-        },
-        {
-            id: "2",
-            message: "User2: Whats appppppssssssssssssssss"
-        },
-        {
-            id: "3",
-            message: "User3: Whats appppppssssssssssssssss. HERE WE GO AGAINNNNNNNNNNNNNNNNNNNNNN"
-        },
-        {
-            id: "4",
-            message: "User3: Whats appppppssssssssssssssss. HERE WE GO AGAINNNNNNNNNNNNNNNNNNNNNN"
-        },
-        {
-            id: "5",
-            message: "User3: Whats appppppssssssssssssssss. HERE WE GO AGAINNNNNNNNNNNNNNNNNNNNNN"
-        },
-        {
-            id: "6",
-            message: "User3: Whats appppppssssssssssssssss. HERE WE GO AGAINNNNNNNNNNNNNNNNNNNNNN"
-        },
-        {
-            id: "7",
-            message: "User3: Whats appppppssssssssssssssss. HERE WE GO AGAINNNNNNNNNNNNNNNNNNNNNN"
-        },
-        {
-            id: "8",
-            message: "User3: Whats appppppssssssssssssssss. HERE WE GO AGAINNNNNNNNNNNNNNNNNNNNNN"
-        },
-        {
+    const dispatch = useDispatch();
+    const player: string = useSelector((state: RootState) => state.gameSlice.game?.player) ?? "";
 
-            id: "9",
-            message: "User3: Whats appppppssssssssssssssss. HERE WE GO AGAINNNNNNNNNNNNNNNNNNNNNN"
-        },
-        {
-            id: "10",
-            message: "User3: Whats appppppssssssssssssssss. HERE WE GO AGAINNNNNNNNNNNNNNNNNNNNNN"
+    const messages: ChatMessageValue[] =
+        useSelector((state: RootState) => state.gameSlice.chatMessages) ?? [];
+
+    const {state, setField} = useSetStateField<Message>({
+        id: null,
+        player,
+        message: ""
+    });
+
+    //ToDo auto scroll to bottom
+    //ToDo validate input
+
+    function handleSendMessage() {
+        // const isValid = isStateValid();
+        // if (!isValid) {
+        //     return;
+        // }
+
+        dispatch(addMessage({
+            ...state,
+            id: "hello",
+        }));
+
+        setField("message", "");
+    }
+
+    const handleClick = (event: React.MouseEvent) => {
+        event.preventDefault();
+        handleSendMessage();
+    };
+
+    const handleKeyDown = (event: React.KeyboardEvent<HTMLTextAreaElement>) => {
+        if (event.key === "Enter" && !event.shiftKey) {
+            event.preventDefault();
+            handleSendMessage();
         }
-    ];
+    };
+
     return (
         <div className={styles.chat}>
             <PanelTitle title={"Collaborate?"}/>
             <div className={styles.chatContainerParentContainer}>
                 <div className={`${styles.chatMessagesContainer} ${styles.scrollbarContainer}`}>
-                    {messages.map((message) => <ChatMessage message={message.message} key={message.id}/>)}
+                    {messages.map((message) => <ChatMessage {...message} key={message.id}/>)}
                 </div>
             </div>
             <div className={styles.chatInputContainer}>
                 <label className={styles.chatLabel} htmlFor="chat-input">
-                    <textarea id="chat-input" className={styles.chatInput} placeholder="Want to collaborate?"></textarea>
+                    <textarea id="chat-input"
+                              className={styles.chatInput}
+                              placeholder="Want to collaborate?"
+                              value={state.message}
+                              onChange={(e) => setField("message", e.target.value)}
+                              onKeyDown={handleKeyDown}
+                    ></textarea>
                 </label>
-                <button className={styles.chatButton}>Send</button>
+                <button
+                    className={styles.chatButton}
+                    onClick={handleClick}
+                >Send
+                </button>
             </div>
         </div>
     );
