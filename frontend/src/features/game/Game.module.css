@@ -215,6 +215,10 @@
     gap: 1rem;
 }
 
+.chat-label {
+    width: 100%;
+}
+
 .chat-input {
     padding: 1rem;
     color: var(--text-color);

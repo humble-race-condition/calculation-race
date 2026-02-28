@@ -62,11 +62,6 @@ export function Chat() {
                 </div>
             </div>
             <div className={styles.chatInputContainer}>
-                <label>
-                    <textarea className={styles.chatInput} placeholder="Want to collaborate?"></textarea>
-                </label>
-            </div>
-            <div className={styles.chatInputContainer}>
                 <label className={styles.chatLabel} htmlFor="chat-input">
                     <textarea id="chat-input" className={styles.chatInput} placeholder="Want to collaborate?"></textarea>
                 </label>
