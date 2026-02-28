@@ -199,7 +199,7 @@
 }
 
 .chat-input-container {
-    padding: 0 2rem 0rem 1rem;
+    padding: 0 2rem 0 1rem;
     height: var(--chat-input-wrapper-height);
     display: flex;
     flex-direction: column;
