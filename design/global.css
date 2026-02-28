@@ -27,6 +27,7 @@
     --scoreboard-header-table-wrapper-height: 4rem;
     --chat-input-wrapper-height: 10rem;
     --button-width: 300px;
+    --small-button-width: calc(--button-width / 2);
 }
 
 * {

@@ -229,7 +229,7 @@
 
 .chat-button {
     padding: 0.5rem;
-    width: calc(var(--button-width) / 2);
+    width: var(--small-button-width);
     background-color: var(--background-color);
     color: var(--text-color);
     font-size: var(--font-size);
