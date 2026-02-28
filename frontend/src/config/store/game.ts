@@ -4,7 +4,7 @@ import {GameState} from "../../shared/constants.ts";
 export interface GameState {
     game: GameDetails | null;
     scores: string[] | null;
-    chatMessages: string[] | null;
+    chatMessages: ChatMessage[] | null;
 }
 
 export type GameStateType = typeof GameState[keyof typeof GameState];
@@ -17,6 +17,12 @@ export interface GameDetails {
     player: string;
     isHost: boolean;
     state: GameStateType;
+}
+
+export interface ChatMessage {
+    id: string;
+    player: string;
+    message: string;
 }
 
 export interface InitializeGameState {
@@ -32,7 +38,7 @@ const initialState: GameState = {
     scores: null
 }
 
-export const game = createSlice({
+const game = createSlice({
     name: "game",
     initialState,
     reducers: {
@@ -73,10 +79,18 @@ export const game = createSlice({
             state.game = null;
             state.chatMessages = null;
             state.scores = null;
+        },
+        addMessage: (state, action: PayloadAction<ChatMessage>) => {
+            if (!state.chatMessages) {
+                state.chatMessages = [];
+            }
+
+            const chatMessage = action.payload;
+            state.chatMessages.push(chatMessage);
         }
     },
 })
 
-export const {initializeGame, joinGame, loadGame, startGame, endGame, resetGame} = game.actions
+export const {initializeGame, joinGame, loadGame, startGame, endGame, resetGame, addMessage} = game.actions
 
 export default game.reducer
