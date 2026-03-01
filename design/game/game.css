@@ -184,7 +184,7 @@
 .chat {
     grid-area: chat;
     height: calc(100vh - var(--header-height) - var(--footer-height));
-    border-left: var(--navigation-border);
+    border-left: var(--border-width) var(--ghost-color);
     flex-direction: column;
     justify-content: start;
     align-items: center;
