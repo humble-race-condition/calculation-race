@@ -28,30 +28,30 @@ export default function Layout() {
     }, [theme, setSearchParams]);
 
     useEffect(() => {
-        const root = document.documentElement
-        const backgroundColor = '--background-color';
-        const textColor = '--text-color';
-        const navigationBorderColor = '--navigation-border-color';
-        const elementBorderColor = '--element-border-color';
+        const root = document.documentElement;
+        const primaryColor = '--primary-color';
+        const secondaryColor = '--secondary-color';
+        const errorColor = '--error-color';
+        const ghostColor = '--ghost-color';
 
         switch (theme) {
             case Theme.LIGHT:
-                root.style.setProperty(backgroundColor, '#ffffff');
-                root.style.setProperty(textColor, '#121791');
-                root.style.setProperty(navigationBorderColor, '#e1e9ea');
-                root.style.setProperty(elementBorderColor, '#121791');
+                root.style.setProperty(primaryColor, '#121791');
+                root.style.setProperty(secondaryColor, '#ffffff');
+                root.style.setProperty(errorColor, '#e51f1f');
+                root.style.setProperty(ghostColor, '#e1e9ea');
                 break;
             case Theme.DARK:
-                root.style.setProperty(backgroundColor, '#333333');
-                root.style.setProperty(textColor, '#FFA100');
-                root.style.setProperty(navigationBorderColor, '#444444');
-                root.style.setProperty(elementBorderColor, '#FFA100');
+                root.style.setProperty(primaryColor, '#FFA100');
+                root.style.setProperty(secondaryColor, '#333333');
+                root.style.setProperty(errorColor, '#e51f1f');
+                root.style.setProperty(ghostColor, '#444444');
                 break;
             default:
-                root.style.setProperty(backgroundColor, '#ffffff');
-                root.style.setProperty(textColor, '#121791');
-                root.style.setProperty(navigationBorderColor, '#e1e9ea');
-                root.style.setProperty(elementBorderColor, '#121791');
+                root.style.setProperty(primaryColor, '#121791');
+                root.style.setProperty(secondaryColor, '#ffffff');
+                root.style.setProperty(errorColor, '#e51f1f');
+                root.style.setProperty(ghostColor, '#e1e9ea');
         }
     }, [theme]);
 

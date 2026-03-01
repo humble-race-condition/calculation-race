@@ -8,7 +8,6 @@
     --ghost-color: #e1e9ea;
     --border-width: 0.125rem solid;
 
-    --navigation-border: var(--border-width) var(--ghost-color);
     --element-border: var(--border-width) var(--primary-color);
     --secondary-font-size: 1.6rem;
     --border-radius: 1rem;

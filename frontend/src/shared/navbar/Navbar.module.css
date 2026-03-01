@@ -4,7 +4,7 @@
     display: flex;
     justify-content: start;
     align-items: center;
-    border-bottom: var(--navigation-border);
+    border-bottom: var(--border-width) var(--ghost-color);
 }
 
 .header-list {

@@ -1,6 +1,6 @@
 .footer {
     padding: 0.5rem 0;
-    border-top: var(--navigation-border);
+    border-top: var(--border-width) var(--ghost-color);
     grid-area: footer;
     display: flex;
     justify-content: center;

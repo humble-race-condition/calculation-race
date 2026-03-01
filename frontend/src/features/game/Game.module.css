@@ -36,7 +36,7 @@
 .scoreboard {
     grid-area: scoreboard;
     height: calc(100vh - var(--header-height) - var(--footer-height));
-    border-right: var(--navigation-border);
+    border-right: var(--border-width) var(--ghost-color);
     display: flex;
     flex-direction: column;
     justify-content: start;
@@ -191,7 +191,7 @@
 .chat {
     grid-area: chat;
     height: calc(100vh - var(--header-height) - var(--footer-height));
-    border-left: var(--navigation-border);
+    border-left: var(--border-width) var(--ghost-color);
     flex-direction: column;
     justify-content: start;
     align-items: center;
