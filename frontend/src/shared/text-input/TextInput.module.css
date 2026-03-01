@@ -10,7 +10,7 @@
     width: var(--button-width);
     font-size: var(--secondary-font-size);
     text-align: center;
-    border: var(--element-border);
+    border: var(--border-width) var(--primary-color);
     border-radius: var(--border-radius);
     color: var(--primary-color);
     background-color: var(--secondary-color);
