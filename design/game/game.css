@@ -108,6 +108,28 @@
     background-color: var(--secondary-color);
 }
 
+.game-title-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    padding: 0 1rem;
+}
+
+.game-title-left-spacer {
+    flex: 1;
+}
+
+.game-title-right-spacer {
+    flex: 1;
+    display: flex;
+    justify-content: flex-end;
+}
+
+.game-title {
+    flex: 3;
+}
+
 .game-container {
     display: flex;
     flex-direction: column;
