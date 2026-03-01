@@ -53,8 +53,8 @@
 }
 
 .game-type-input:checked + .game-type-label {
-    background-color: var(--text-color);
-    color: var(--background-color);
+    background-color: var(--primary-color);
+    color: var(--secondary-color);
     transition: .2s ease-out;
 }
 

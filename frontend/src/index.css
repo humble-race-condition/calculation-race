@@ -2,18 +2,14 @@
     /* can be overridden by a class for dark theme */
     --font-size: 16px;
     --font-family: Arial, Helvetica, sans-serif;
-    --background-color: #ffffff;
-    --text-color: #121791;
-    --navigation-border-color: #e1e9ea;
-    --element-border-color: #121791;
+    --primary-color: #121791;
+    --secondary-color: #ffffff;
+    --error-color: #e51f1f;
+    --ghost-color: #e1e9ea;
+    --border-width: 0.125rem solid;
 
-    /*--background-color: #333333;*/
-    /*--text-color: #FFA100;*/
-    /*--navigation-border-color: #444444;*/
-    /*--element-border-color: #FFA100;*/
-
-    --navigation-border: 0.125rem solid var(--navigation-border-color);
-    --element-border: 0.125rem solid var(--element-border-color);
+    --navigation-border: var(--border-width) var(--ghost-color);
+    --element-border: var(--border-width) var(--primary-color);
     --secondary-font-size: 1.6rem;
     --border-radius: 1rem;
     --small-border-radius: calc(var(--border-radius) / 2);

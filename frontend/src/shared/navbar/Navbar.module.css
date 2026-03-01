@@ -19,8 +19,8 @@
 
 .header-list-element {
     margin-right: 1rem;
-    color: var(--text-color);
-    background-color: var(--background-color);
+    color: var(--primary-color);
+    background-color: var(--secondary-color);
     border-radius: var(--border-radius);
     transition: var(--on-hover-button-transition);
 }
@@ -29,15 +29,15 @@
 }
 
 .header-list-element:has(.active) {
-    color: var(--background-color);
-    background-color: var(--text-color);
+    color: var(--secondary-color);
+    background-color: var(--primary-color);
     text-decoration: var(--text-decoration);
     cursor: var(--cursor);
 }
 
 .header-list-element:hover {
-    color: var(--background-color);
-    background-color: var(--text-color);
+    color: var(--secondary-color);
+    background-color: var(--primary-color);
     text-decoration: var(--text-decoration);
     cursor: var(--cursor);
 }
@@ -70,7 +70,7 @@
     position: absolute;
     cursor: pointer;
     content: "";
-    background-color: var(--text-color);
+    background-color: var(--primary-color);
     top: 0;
     left: 0;
     right: 0;
@@ -86,7 +86,7 @@
     width: 18px;
     left: 3px;
     bottom: 3px;
-    background: var(--background-color);
+    background: var(--secondary-color);
     transition: .4s;
     border-radius: 50%;
 }

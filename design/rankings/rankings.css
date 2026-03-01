@@ -74,8 +74,8 @@
     padding: var(--element-padding);
     height: var(--element-height);
     width: var(--element-width);
-    background-color: var(--text-color);
-    color: var(--background-color);
+    background-color: var(--primary-color);
+    color: var(--secondary-color);
     border: var(--element-border);
     border-bottom-left-radius: var(--border-radius);
     border-top-left-radius: var(--border-radius);
@@ -97,8 +97,8 @@
     padding: var(--element-padding);
     height: var(--element-height);
     width: var(--element-width);
-    background-color: var(--text-color);
-    color: var(--background-color);
+    background-color: var(--primary-color);
+    color: var(--secondary-color);
     border: var(--element-border);
     border-bottom-right-radius: var(--border-radius);
     border-top-right-radius: var(--border-radius);

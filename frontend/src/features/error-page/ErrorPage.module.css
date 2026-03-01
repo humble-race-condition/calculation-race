@@ -9,8 +9,8 @@
 .link {
     padding: 1rem;
     width: var(--button-width);
-    background-color: var(--background-color);
-    color: var(--text-color);
+    background-color: var(--secondary-color);
+    color: var(--primary-color);
     font-size: var(--secondary-font-size);
     border: var(--element-border);
     border-radius: var(--border-radius);
@@ -21,8 +21,8 @@
 }
 
 .link:hover {
-    background-color: var(--text-color);
-    color: var(--background-color);
+    background-color: var(--primary-color);
+    color: var(--secondary-color);
 }
 
 .link-container {

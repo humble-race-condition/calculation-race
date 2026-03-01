@@ -116,7 +116,7 @@
     flex-direction: column;
     justify-content: start;
     align-items: center;
-    background-color: var(--background-color);
+    background-color: var(--secondary-color);
 }
 
 .game-container {
@@ -221,8 +221,8 @@
 
 .chat-input {
     padding: 1rem;
-    color: var(--text-color);
-    background-color: var(--background-color);
+    color: var(--primary-color);
+    background-color: var(--secondary-color);
     font-size: 1rem;
     border: var(--element-border);
     border-radius: var(--border-radius);
@@ -237,8 +237,8 @@
 .small-button {
     padding: 0.5rem;
     width: var(--small-button-width);
-    background-color: var(--background-color);
-    color: var(--text-color);
+    background-color: var(--secondary-color);
+    color: var(--primary-color);
     font-size: var(--font-size);
     border: var(--element-border);
     border-radius: var(--small-border-radius);
@@ -249,8 +249,8 @@
 }
 
 .small-button:hover {
-    background-color: var(--text-color);
-    color: var(--background-color);
+    background-color: var(--primary-color);
+    color: var(--secondary-color);
 }
 
 .chat-messages-container {
