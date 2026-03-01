@@ -9,6 +9,7 @@ import {useSetStateField} from "../../shared/set-state-utilities/setStateFieldHo
 import ChatMessage from "./ChatMessage.tsx";
 import React, {useEffect, useRef} from "react";
 import {toast} from "react-toastify";
+import SmallButton from "../../shared/button/SmallButton.tsx";
 
 interface Message {
     id: string | null;
@@ -88,11 +89,7 @@ export function Chat() {
                               onKeyDown={handleKeyDown}
                     ></textarea>
                 </label>
-                <button
-                    className={styles.chatButton}
-                    onClick={handleClick}
-                >Send
-                </button>
+                <SmallButton text={"Send"} onClick={handleClick}/>
             </div>
         </div>
     );
