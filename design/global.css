@@ -242,13 +242,13 @@ body, html {
     color: var(--secondary-color);
 }
 
-.error-small-button {
+.small-error-button {
     padding: 0.5rem;
     width: var(--small-button-width);
     background-color: var(--secondary-color);
-    color: var(--primary-color);
+    color: var(--error-color);
     font-size: var(--font-size);
-    border: var(--border-width) var(--primary-color);
+    border: var(--border-width) var(--error-color);
     border-radius: var(--small-border-radius);
     text-align: center;
     text-decoration: var(--text-decoration);
@@ -256,8 +256,8 @@ body, html {
     transition: var(--on-hover-button-transition);
 }
 
-.error-small-button:hover {
-    background-color: var(--primary-color);
+.small-error-button:hover {
+    background-color: var(--error-color);
     color: var(--secondary-color);
 }
 
