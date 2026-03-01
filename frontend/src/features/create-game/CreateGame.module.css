@@ -45,7 +45,7 @@
     margin: 0 0.5rem;
     width: var(--button-width);
     font-size: var(--secondary-font-size);
-    border: var(--element-border);
+    border: var(--border-width) var(--primary-color);
     border-radius: var(--border-radius);
     text-align: center;
     text-decoration: var(--text-decoration);

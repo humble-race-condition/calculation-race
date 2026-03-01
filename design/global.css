@@ -196,7 +196,7 @@ body, html {
     width: var(--button-width);
     font-size: var(--secondary-font-size);
     text-align: center;
-    border: var(--element-border);
+    border: var(--border-width) var(--primary-color);
     border-radius: var(--border-radius);
     color: var(--primary-color);
     background-color: var(--secondary-color);
@@ -217,7 +217,7 @@ body, html {
     background-color: var(--secondary-color);
     color: var(--primary-color);
     font-size: var(--secondary-font-size);
-    border: var(--element-border);
+    border: var(--border-width) var(--primary-color);
     border-radius: var(--border-radius);
     text-align: center;
     text-decoration: var(--text-decoration);
