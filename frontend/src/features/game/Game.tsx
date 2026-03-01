@@ -8,6 +8,7 @@ import type {RootState} from "../../config/store/storeConfiguration.ts";
 import {useSetStateField} from "../../shared/set-state-utilities/setStateFieldHook.ts";
 import ChatMessage from "./ChatMessage.tsx";
 import React from "react";
+import {toast} from "react-toastify";
 
 interface Message {
     id: string | null;
@@ -28,14 +29,21 @@ export function Chat() {
         message: ""
     });
 
-    //ToDo auto scroll to bottom
-    //ToDo validate input
+    function isStateValid() {
+        if (!state.message || state.message.length === 0 || state.message.length > 200) {
+            toast.error("Message must be between 1 and 200 characters");
+            return false;
+        }
 
+        return true;
+    }
+
+    //ToDo auto scroll to bottom
     function handleSendMessage() {
-        // const isValid = isStateValid();
-        // if (!isValid) {
-        //     return;
-        // }
+        const isValid = isStateValid();
+        if (!isValid) {
+            return;
+        }
 
         dispatch(addMessage({
             ...state,
