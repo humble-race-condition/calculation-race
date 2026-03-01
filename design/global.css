@@ -6,15 +6,8 @@
     --primary-color: #121791;
     --error-color: #e51f1f;
     --ghost-color: #e1e9ea;
-    --element-border-color: #121791;
 
-    /*--background-color: #333333;*/
-    /*--text-color: #FFA100;*/
-    /*--navigation-border-color: #444444;*/
-    /*--element-border-color: #FFA100;*/
-
-    --navigation-border: 0.125rem solid var(--ghost-color);
-    --element-border: 0.125rem solid var(--element-border-color);
+    --border-width: 0.125rem solid;
     --secondary-font-size: 1.6rem;
     --border-radius: 1rem;
     --small-border-radius: calc(var(--border-radius) / 2);
