@@ -223,6 +223,44 @@ body, html {
     color: var(--secondary-color);
 }
 
+.small-button {
+    padding: 0.5rem;
+    width: var(--small-button-width);
+    background-color: var(--secondary-color);
+    color: var(--primary-color);
+    font-size: var(--font-size);
+    border: var(--border-width) var(--primary-color);
+    border-radius: var(--small-border-radius);
+    text-align: center;
+    text-decoration: var(--text-decoration);
+    cursor: var(--cursor);
+    transition: var(--on-hover-button-transition);
+}
+
+.small-button:hover {
+    background-color: var(--primary-color);
+    color: var(--secondary-color);
+}
+
+.error-small-button {
+    padding: 0.5rem;
+    width: var(--small-button-width);
+    background-color: var(--secondary-color);
+    color: var(--primary-color);
+    font-size: var(--font-size);
+    border: var(--border-width) var(--primary-color);
+    border-radius: var(--small-border-radius);
+    text-align: center;
+    text-decoration: var(--text-decoration);
+    cursor: var(--cursor);
+    transition: var(--on-hover-button-transition);
+}
+
+.error-small-button:hover {
+    background-color: var(--primary-color);
+    color: var(--secondary-color);
+}
+
 .footer {
     padding: 0.5rem 0;
     border-bottom: var(--border-width) var(--ghost-color);

@@ -227,25 +227,6 @@
     outline: none;
 }
 
-.small-button {
-    padding: 0.5rem;
-    width: var(--small-button-width);
-    background-color: var(--background-color);
-    color: var(--text-color);
-    font-size: var(--font-size);
-    border: var(--element-border);
-    border-radius: var(--small-border-radius);
-    text-align: center;
-    text-decoration: var(--text-decoration);
-    cursor: var(--cursor);
-    transition: var(--on-hover-button-transition);
-}
-
-.small-button:hover {
-    background-color: var(--text-color);
-    color: var(--background-color);
-}
-
 .chat-messages-container {
     height: 100%;
     width: 100%;
