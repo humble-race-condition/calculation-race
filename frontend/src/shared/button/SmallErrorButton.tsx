@@ -9,7 +9,7 @@ interface ButtonProps {
 export default function SmallErrorButton({text, onClick}: ButtonProps) {
     return (
         <>
-            <button type="button" className={styles.smallErrorButton} onClick={onClick}>{text}</button>
+            <button type="button" className={`${styles.smallButton} ${styles.errorColor}`} onClick={onClick}>{text}</button>
         </>
     );
 }

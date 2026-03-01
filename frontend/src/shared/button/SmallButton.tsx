@@ -9,7 +9,7 @@ interface ButtonProps {
 export default function SmallButton({text, onClick}: ButtonProps) {
     return (
         <>
-            <button type="button" className={styles.smallButton} onClick={onClick}>{text}</button>
+            <button type="button" className={`${styles.smallButton} ${styles.primaryColor}`} onClick={onClick}>{text}</button>
         </>
     );
 }

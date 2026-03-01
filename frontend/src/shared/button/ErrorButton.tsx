@@ -6,10 +6,10 @@ interface ButtonProps {
     onClick: (e: React.MouseEvent) => void;
 }
 
-export default function Button({text, onClick}: ButtonProps) {
+export default function ErrorButton({text, onClick}: ButtonProps) {
     return (
         <>
-            <button type="button" className={`${styles.button} ${styles.primaryColor}`} onClick={onClick}>{text}</button>
+            <button type="button" className={`${styles.button} ${styles.errorColor}`} onClick={onClick}>{text}</button>
         </>
     );
 }
