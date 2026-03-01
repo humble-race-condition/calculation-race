@@ -57,11 +57,11 @@
 .scoreboard-header-row {
     margin-left: 3rem;
     margin-right: 3rem;
-    border-bottom: var(--element-border);
+    border-bottom: var(--border-width) var(--primary-color);
 }
 
 .scoreboard-row-border {
-    border: var(--element-border);
+    border: var(--border-width) var(--primary-color);
     border-radius: var(--border-radius);
 }
 
