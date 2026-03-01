@@ -7,7 +7,7 @@ import {useDispatch, useSelector} from "react-redux";
 import type {RootState} from "../../config/store/storeConfiguration.ts";
 import {useSetStateField} from "../../shared/set-state-utilities/setStateFieldHook.ts";
 import ChatMessage from "./ChatMessage.tsx";
-import React from "react";
+import React, {useEffect, useRef} from "react";
 import {toast} from "react-toastify";
 
 interface Message {
@@ -18,16 +18,21 @@ interface Message {
 
 export function Chat() {
     const dispatch = useDispatch();
-    const player: string = useSelector((state: RootState) => state.gameSlice.game?.player) ?? "";
+    const player: string = useSelector((state: RootState) => state.gameSlice.game?.player) ?? "Unknown";
 
     const messages: ChatMessageValue[] =
-        useSelector((state: RootState) => state.gameSlice.chatMessages) ?? [];
+        useSelector((state: RootState) => state.gameSlice.chatMessages);
 
     const {state, setField} = useSetStateField<Message>({
         id: null,
         player,
         message: ""
     });
+
+    const bottomRef = useRef<HTMLDivElement | null>(null);
+    useEffect(() => {
+        bottomRef.current?.scrollIntoView({ behavior: "smooth" });
+    }, [messages]);
 
     function isStateValid() {
         if (!state.message || state.message.length === 0 || state.message.length > 200) {
@@ -38,7 +43,6 @@ export function Chat() {
         return true;
     }
 
-    //ToDo auto scroll to bottom
     function handleSendMessage() {
         const isValid = isStateValid();
         if (!isValid) {
@@ -71,6 +75,7 @@ export function Chat() {
             <div className={styles.chatContainerParentContainer}>
                 <div className={`${styles.chatMessagesContainer} ${styles.scrollbarContainer}`}>
                     {messages.map((message) => <ChatMessage {...message} key={message.id}/>)}
+                    <div ref={bottomRef} />
                 </div>
             </div>
             <div className={styles.chatInputContainer}>

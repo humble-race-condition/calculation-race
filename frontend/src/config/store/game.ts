@@ -4,7 +4,7 @@ import {GameState} from "../../shared/constants.ts";
 export interface GameState {
     game: GameDetails | null;
     scores: string[] | null;
-    chatMessages: ChatMessage[] | null;
+    chatMessages: ChatMessage[];
 }
 
 export type GameStateType = typeof GameState[keyof typeof GameState];
@@ -34,8 +34,8 @@ export interface InitializeGameState {
 
 const initialState: GameState = {
     game: null,
-    chatMessages: null,
-    scores: null
+    chatMessages: [],
+    scores: []
 }
 
 const game = createSlice({
@@ -77,8 +77,8 @@ const game = createSlice({
         },
         resetGame: (state) => {
             state.game = null;
-            state.chatMessages = null;
-            state.scores = null;
+            state.chatMessages = [];
+            state.scores = [];
         },
         addMessage: (state, action: PayloadAction<ChatMessage>) => {
             if (!state.chatMessages) {
@@ -86,7 +86,7 @@ const game = createSlice({
             }
 
             const chatMessage = action.payload;
-            state.chatMessages.push(chatMessage);
+            state.chatMessages = [...state.chatMessages, chatMessage];
         }
     },
 })
