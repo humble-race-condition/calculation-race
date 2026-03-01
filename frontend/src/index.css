@@ -16,6 +16,7 @@
     --element-border: 0.125rem solid var(--element-border-color);
     --secondary-font-size: 1.6rem;
     --border-radius: 1rem;
+    --small-border-radius: calc(var(--border-radius) / 2);
 
     --on-hover-button-transition: background-color .2s ease-out, color .2s ease-out;
     --cursor: pointer;

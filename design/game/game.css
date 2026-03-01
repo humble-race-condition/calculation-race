@@ -234,7 +234,7 @@
     color: var(--text-color);
     font-size: var(--font-size);
     border: var(--element-border);
-    border-radius: calc(var(--border-radius) / 2);
+    border-radius: var(--small-border-radius);
     text-align: center;
     text-decoration: var(--text-decoration);
     cursor: var(--cursor);
