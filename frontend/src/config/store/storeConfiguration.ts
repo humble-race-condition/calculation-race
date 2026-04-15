@@ -11,7 +11,7 @@ const loggerMiddleware: Middleware = store => next => action => {
 };
 
 
-//ToDo linter to add semicolons
+// ToDo linter to add semicolons
 export const storeConfiguration = configureStore({
     reducer: {
         globalSlice: globalReducer,

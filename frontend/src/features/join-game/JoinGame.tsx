@@ -63,7 +63,7 @@ export default function JoinGame() {
         }
 
         dispatch(joinGame(state.playerName));
-        //ToDo create call
+        // ToDo create call
         navigate(`/game/${state.gameName}`);
     };
 

@@ -91,14 +91,14 @@ export default function CreateGame() {
 
         const initializeGameState: InitializeGameState = {
             playerName: state.playerName,
-            //ToDo this needs to be an Id
+            // ToDo this needs to be an Id
             gameId: state.gameName,
             gameName: state.gameName,
             gameType: state.gameType,
         }
 
         dispatch(initializeGame(initializeGameState));
-        //ToDo create call
+        // ToDo create call
         navigate(`/game/${initializeGameState.gameId}`);
     };
 

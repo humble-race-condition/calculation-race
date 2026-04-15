@@ -38,7 +38,7 @@
     margin-bottom: 1rem;
 }
 
-/*ToDo header gets squished on low resolutions. Need to make it a dropdown. This also squishes the button for the theme*/
+/* ToDo header gets squished on low resolutions. Need to make it a dropdown. This also squishes the button for the theme*/
 .game-type-label {
     display: inline-block;
     padding: 1rem;
