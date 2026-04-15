@@ -1,7 +1,25 @@
+.title-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    padding: 0 1rem;
+}
+
 .panel-title {
     padding: 1rem;
     height: var(--panel-title-height);
     width: 100%;
     text-align: center;
     font-size: var(--panel-title-font-size);
+}
+
+.left-spacer {
+    flex: 1;
+}
+
+.right-spacer {
+    flex: 1;
+    display: flex;
+    justify-content: flex-end;
 }
