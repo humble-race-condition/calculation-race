@@ -1,5 +1,5 @@
 .button {
-    padding: 1rem;
+    padding: var(--button-padding);
     width: var(--button-width);
     font-size: var(--large-font-size);
     border-radius: var(--border-radius);
@@ -10,7 +10,7 @@
 }
 
 .small-button {
-    padding: 0.5rem;
+    padding: var(--small-button-padding);
     width: var(--small-button-width);
     font-size: var(--font-size);
     border-radius: var(--small-border-radius);

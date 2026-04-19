@@ -7,7 +7,7 @@
 }
 
 .link {
-    padding: 1rem;
+    padding: var(--button-padding);
     width: var(--button-width);
     background-color: var(--secondary-color);
     color: var(--primary-color);

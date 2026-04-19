@@ -6,7 +6,7 @@
 }
 
 .text-input {
-    padding: 1rem;
+    padding: var(--button-padding);
     width: var(--button-width);
     font-size: var(--large-font-size);
     text-align: center;

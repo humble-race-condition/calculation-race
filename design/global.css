@@ -21,7 +21,9 @@
     --footer-height: 1.5rem;
     --scoreboard-header-table-wrapper-height: 4rem;
     --chat-input-wrapper-height: 10rem;
+    --button-padding: 1rem;
     --button-width: 300px;
+    --small-button-padding: calc(var(--button-padding) / 2);
     --small-button-width: calc(var(--button-width) / 2);
 }
 
@@ -185,7 +187,7 @@ body, html {
 }
 
 .base-text-input {
-    padding: 1rem;
+    padding: var(--button-padding);
     width: var(--button-width);
     font-size: var(--large-font-size);
     text-align: center;
@@ -205,7 +207,7 @@ body, html {
 }
 
 .button {
-    padding: 1rem;
+    padding: var(--button-padding);
     width: var(--button-width);
     background-color: var(--secondary-color);
     color: var(--primary-color);
@@ -224,7 +226,7 @@ body, html {
 }
 
 .small-button {
-    padding: 0.5rem;
+    padding: var(--small-button-padding);
     width: var(--small-button-width);
     background-color: var(--secondary-color);
     color: var(--primary-color);
