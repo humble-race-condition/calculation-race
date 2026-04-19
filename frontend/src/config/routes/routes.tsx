@@ -5,6 +5,7 @@ import Game from "../../features/game/Chat.tsx";
 import JoinGame from "../../features/join-game/JoinGame.tsx";
 import {UrlPath} from "../../shared/constants.ts";
 import ErrorPage from "../../features/error-page/ErrorPage.tsx";
+import RankingsDashboard from "../../features/rankings/RankingsDashboard.tsx";
 
 const router = createBrowserRouter([
     {
@@ -28,6 +29,11 @@ const router = createBrowserRouter([
             {
                 path: UrlPath.JOIN_GAME_PATH,
                 element: <JoinGame/>,
+                children: []
+            },
+            {
+                path: UrlPath.RANKINGS_PATH,
+                element: <RankingsDashboard/>,
                 children: []
             },
             {
