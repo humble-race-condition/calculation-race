@@ -8,7 +8,7 @@
     --ghost-color: #e1e9ea;
 
     --border-width: 0.125rem solid;
-    --secondary-font-size: 1.6rem;
+    --large-font-size: 1.6rem;
     --border-radius: 1rem;
     --small-border-radius: calc(var(--border-radius) / 2);
 
@@ -112,7 +112,7 @@ body, html {
     padding: 0.5rem 1rem;
     text-decoration: var(--text-decoration);
     font-weight: normal;
-    font-size: var(--secondary-font-size);
+    font-size: var(--large-font-size);
     color: inherit;
 }
 
@@ -173,7 +173,7 @@ body, html {
 .panel-description {
     padding: 1rem;
     margin-top: 1rem;
-    font-size: var(--secondary-font-size);
+    font-size: var(--large-font-size);
     text-align: center;
 }
 
@@ -187,7 +187,7 @@ body, html {
 .base-text-input {
     padding: 1rem;
     width: var(--button-width);
-    font-size: var(--secondary-font-size);
+    font-size: var(--large-font-size);
     text-align: center;
     border: var(--border-width) var(--primary-color);
     border-radius: var(--border-radius);
@@ -200,7 +200,7 @@ body, html {
 }
 
 .base-label {
-    font-size: var(--secondary-font-size);
+    font-size: var(--large-font-size);
     padding: 1rem;
 }
 
@@ -209,7 +209,7 @@ body, html {
     width: var(--button-width);
     background-color: var(--secondary-color);
     color: var(--primary-color);
-    font-size: var(--secondary-font-size);
+    font-size: var(--large-font-size);
     border: var(--border-width) var(--primary-color);
     border-radius: var(--border-radius);
     text-align: center;

@@ -1,7 +1,7 @@
 .button {
     padding: 1rem;
     width: var(--button-width);
-    font-size: var(--secondary-font-size);
+    font-size: var(--large-font-size);
     border-radius: var(--border-radius);
     text-align: center;
     text-decoration: var(--text-decoration);

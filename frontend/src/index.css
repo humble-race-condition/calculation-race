@@ -9,7 +9,7 @@
     --border-width: 0.125rem solid;
 
     --element-border: var(--border-width) var(--primary-color);
-    --secondary-font-size: 1.6rem;
+    --large-font-size: 1.6rem;
     --border-radius: 1rem;
     --small-border-radius: calc(var(--border-radius) / 2);
 

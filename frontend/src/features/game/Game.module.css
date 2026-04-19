@@ -136,7 +136,7 @@
 
 .game-timer-title {
     margin-top: 1rem;
-    font-size: var(--secondary-font-size);
+    font-size: var(--large-font-size);
     text-align: center;
 }
 
@@ -151,7 +151,7 @@
 .game-formula {
     display: flex;
     align-items: center;
-    font-size: var(--secondary-font-size);
+    font-size: var(--large-font-size);
     text-align: center;
     flex: 5;
 }
