@@ -29,35 +29,52 @@
     align-items: center;
 }
 
-.rankings-row {
-    margin: 0.5rem 0;
-    padding: 0.5rem;
+.filter-container {
     display: flex;
-    justify-content: space-evenly;
+    justify-content: center;
+    align-items: center;
+    gap: 3rem;
+}
+
+.filter-label {
+    padding: 1rem 0;
+}
+
+.filter-input {
+    padding: 0.5rem;
+    width: var(--small-button-width);
+    font-size: var(--font-size);
+    text-align: center;
+    border: var(--border-width) var(--primary-color);
+    border-radius: var(--small-border-radius);
+    color: var(--primary-color);
+    background-color: var(--secondary-color);
+}
+
+.filter-input:hover {
+    outline: none;
+}
+
+.rankings-row {
+    padding: 1rem;
+    display: flex;
+    justify-content: space-between;
     align-items: center;
     border-bottom: var(--border-width) var(--primary-color);
 }
 
-.rankings-table-position-column {
-    margin-left: 1rem;
+.rankings-table-column {
     flex: 1;
-    text-align: left;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
-.rankings-table-username-column {
-    flex: 1;
-    text-align: center;
-}
-
-.rankings-table-game-name-column {
-    flex: 1;
-    text-align: center;
-}
-
-.rankings-table-score-column {
-    margin-right: 1rem;
-    flex: 1;
-    text-align: right;
+.rankings-table-end-column {
+    flex: 0.5;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 .rankings-page-container {
@@ -65,7 +82,7 @@
     justify-content: end;
     align-items: center;
     gap: 1rem;
-    margin-top: 1rem;
+    padding-top: 1rem;
 }
 
 .page-number {

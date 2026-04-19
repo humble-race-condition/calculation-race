@@ -23,34 +23,49 @@
     </nav>
     <div class="main">
         <h1 class="panel-title">Rankings</h1>
+        <form class="filter-container">
+            <label for="player-filter" class="filter-label">
+                <input type="text" id="player-filter" placeholder="Player" class="filter-input"/>
+            </label>
+            <label for="game-filter" class="filter-label">
+                <input type="text" id="game-filter" placeholder="Game" class="filter-input"/>
+            </label>
+            <div class="button-container">
+                <button class="small-button" type="button">Search</button>
+            </div>
+        </form>
         <div class="rankings-table-container">
             <table class="rankings-table">
                 <thead>
-                <tr class="rankings-row rankings-border">
-                    <th class="rankings-table-position-column">Position</th>
-                    <th class="rankings-table-username-column">Username</th>
-                    <th class="rankings-table-game-name-column">Game name</th>
-                    <th class="rankings-table-score-column">Score</th>
+                <tr class="rankings-row">
+                    <th class="rankings-table-end-column">Position</th>
+                    <th class="rankings-table-column">Player</th>
+                    <th class="rankings-table-column">Game</th>
+                    <th class="rankings-table-column">Player Score</th>
+                    <th class="rankings-table-end-column">Room Score</th>
                 </tr>
                 </thead>
                 <tbody>
-                <tr class="rankings-row rankings-border">
-                    <td class="rankings-table-position-column">1</td>
-                    <td class="rankings-table-username-column">Gosho</td>
-                    <td class="rankings-table-game-name-column">Gosho</td>
-                    <td class="rankings-table-score-column">15</td>
+                <tr class="rankings-row">
+                    <td class=rankings-table-end-column>1</td>
+                    <td class="rankings-table-column">Gosho</td>
+                    <td class="rankings-table-column">Gosho</td>
+                    <td class="rankings-table-column">25</td>
+                    <td class="rankings-table-end-column">15</td>
                 </tr>
-                <tr class="rankings-row rankings-border">
-                    <td class="rankings-table-position-column">1</td>
-                    <td class="rankings-table-username-column">Gosho</td>
-                    <td class="rankings-table-game-name-column">Gosho</td>
-                    <td class="rankings-table-score-column">15</td>
+                <tr class="rankings-row">
+                    <td class="rankings-table-end-column">1</td>
+                    <td class="rankings-table-column">Gosho</td>
+                    <td class="rankings-table-column">Gosho</td>
+                    <td class="rankings-table-column">36</td>
+                    <td class="rankings-table-end-column">15</td>
                 </tr>
-                <tr class="rankings-row rankings-border">
-                    <td class="rankings-table-position-column">1</td>
-                    <td class="rankings-table-username-column">Gosho</td>
-                    <td class="rankings-table-game-name-column">Gosho</td>
-                    <td class="rankings-table-score-column">15</td>
+                <tr class="rankings-row">
+                    <td class="rankings-table-end-column">1</td>
+                    <td class="rankings-table-column">Gosho</td>
+                    <td class="rankings-table-column">Gosho</td>
+                    <td class="rankings-table-column">31</td>
+                    <td class="rankings-table-end-column">15</td>
                 </tr>
                 </tbody>
             </table>
