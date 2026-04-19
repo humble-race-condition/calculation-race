@@ -22,7 +22,9 @@
     --footer-height: 1.5rem;
     --scoreboard-header-table-wrapper-height: 4rem;
     --chat-input-wrapper-height: 10rem;
+    --button-padding: 1rem;
     --button-width: 300px;
+    --small-button-padding: calc(var(--button-padding) / 2);
     --small-button-width: calc(var(--button-width) / 2);
 }
 
