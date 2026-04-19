@@ -1,0 +1,90 @@
+@media screen and (max-width: 992px) {
+    .rankings-table-container {
+        width: 90%;
+    }
+}
+
+@media screen and (min-width: 993px) and (max-width: 1200px) {
+    .rankings-table-container {
+        width: 80%;
+    }
+}
+
+@media screen and (min-width: 1201px) {
+    .rankings-table-container {
+        width: 60%;
+    }
+}
+
+.rankings-table {
+    width: 100%;
+    border-spacing: unset;
+}
+
+.main {
+    grid-area: main;
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    align-items: center;
+}
+
+.filter-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 3rem;
+}
+
+.filter-label {
+    padding: 1rem 0;
+}
+
+.filter-input {
+    padding: var(--small-button-padding);
+    width: var(--small-button-width);
+    font-size: var(--font-size);
+    text-align: center;
+    border: var(--border-width) var(--primary-color);
+    border-radius: var(--small-border-radius);
+    color: var(--primary-color);
+    background-color: var(--secondary-color);
+}
+
+.filter-input:hover {
+    outline: none;
+}
+
+.rankings-row {
+    padding: 1rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: var(--border-width) var(--primary-color);
+}
+
+.rankings-table-column {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.rankings-table-end-column {
+    flex: 0.5;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.rankings-page-container {
+    display: flex;
+    justify-content: end;
+    align-items: center;
+    gap: 1rem;
+    padding-top: 1rem;
+}
+
+.page-number {
+    font-weight: bold;
+}
