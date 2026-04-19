@@ -64,45 +64,10 @@
     display: flex;
     justify-content: end;
     align-items: center;
+    gap: 1rem;
     margin-top: 1rem;
-    --element-padding: 0.5rem;
-    --element-height: 2rem;
-    --element-width: 2rem;
-}
-
-.previous-page-button {
-    padding: var(--element-padding);
-    height: var(--element-height);
-    width: var(--element-width);
-    background-color: var(--primary-color);
-    color: var(--secondary-color);
-    border: var(--border-width) var(--primary-color);
-    border-bottom-left-radius: var(--border-radius);
-    border-top-left-radius: var(--border-radius);
-    text-align: center;
-    text-decoration: var(--text-decoration);
-    cursor: var(--cursor);
 }
 
 .page-number {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    padding: var(--element-padding);
-    height: var(--element-height);
-    width: var(--element-width);
-}
-
-.next-page-button {
-    padding: var(--element-padding);
-    height: var(--element-height);
-    width: var(--element-width);
-    background-color: var(--primary-color);
-    color: var(--secondary-color);
-    border: var(--border-width) var(--primary-color);
-    border-bottom-right-radius: var(--border-radius);
-    border-top-right-radius: var(--border-radius);
-    text-align: center;
-    text-decoration: var(--text-decoration);
-    cursor: var(--cursor);
+    font-weight: bold;
 }
